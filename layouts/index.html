@@ -1,0 +1,536 @@
+{{ define "main" }}
+<!-- 首页 -->
+<div class="home-page">
+    <!-- 首页轮播（展示传统文化主题图文） -->
+    {{ if .Site.Params.hero.enabled }}
+    <section class="hero-section">
+        <div class="hero-slider" id="heroSlider">
+            {{ range first .Site.Params.hero.maxItems (where .Site.RegularPages "Params.featured" true) }}
+                <div class="hero-slide" data-title="{{ .Title }}" data-url="{{ .RelPermalink }}">
+                    {{ if .Params.image }}
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="hero-image">
+                    {{ else }}
+                        <div class="hero-placeholder">
+                            <span>{{ substr .Title 0 2 }}</span>
+                        </div>
+                    {{ end }}
+                    <div class="hero-content">
+                        <h1 class="hero-title">{{ .Title }}</h1>
+                        <p class="hero-excerpt">{{ .Summary | truncate 50 }}</p>
+                        <a href="{{ .RelPermalink }}" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+        
+        <!-- 轮播控制 -->
+        <button class="hero-nav hero-prev" aria-label="上一张">‹</button>
+        <button class="hero-nav hero-next" aria-label="下一张">›</button>
+        
+        <!-- 轮播指示器 -->
+        <div class="hero-dots" id="heroDots"></div>
+    </section>
+    {{ end }}
+    
+    <!-- 分类导航（诗词/书法/茶道等） -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">文化分类</h2>
+            <div class="categories-grid">
+                {{ $categories := slice "艺术" "传统文化" "历史" "建筑" "工艺" "传统节日" }}
+                {{ range $cat := $categories }}
+                    {{ $count := 0 }}
+                    {{ range $.Site.RegularPages }}
+                        {{ if .Params.categories }}
+                            {{ range .Params.categories }}
+                                {{ if eq . $cat }}
+                                    {{ $count = add $count 1 }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $path := $cat | urlize }}
+                    <a href="{{ "/categories/" | relURL }}{{ $path }}" class="category-card">
+                        <div class="category-icon">{{ substr $cat 0 1 }}</div>
+                        <h3 class="category-name">{{ $cat }}</h3>
+                        <span class="category-count">{{ $count }} 篇</span>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    
+    <!-- 最新文章 -->
+    <section class="latest-posts-section">
+        <div class="container">
+            <h2 class="section-title">最新文章</h2>
+            <div class="posts-grid">
+                {{ range first 6 (where .Site.RegularPages "Draft" false).ByDate.Reverse }}
+                    <article class="card post-card">
+                        {{ if .Params.image }}
+                            <a href="{{ .RelPermalink }}" class="card-image-link">
+                                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="card-image">
+                            </a>
+                        {{ end }}
+                        <div class="card-content">
+                            <div class="card-meta">
+                                {{ range first 1 .Params.categories }}
+                                    {{ $categoryName := . }}
+                                    {{ $displayName := . }}
+                                    {{ if eq . "hanfu" }}{{ $displayName = "汉服" }}{{ end }}
+                                    {{ if eq . "poetry" }}{{ $displayName = "诗词" }}{{ end }}
+                                    {{ if eq . "calligraphy" }}{{ $displayName = "书画" }}{{ end }}
+                                    {{ if eq . "tea-ceremony" }}{{ $displayName = "茶道" }}{{ end }}
+                                    {{ if eq . "traditional-festivals" }}{{ $displayName = "传统节日" }}{{ end }}
+                                    {{ if eq . "hundred-schools" }}{{ $displayName = "诸子百家" }}{{ end }}
+                                    <span class="post-category">{{ $displayName }}</span>
+                                {{ end }}
+                                <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="card-excerpt">{{ .Summary | plainify | truncate 80 }}</p>
+                            <a href="{{ .RelPermalink }}" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+            
+            {{ if gt (len (where .Site.RegularPages "Draft" false)) 6 }}
+                <div class="section-footer text-center">
+                    <a href="{{ "posts" | relURL }}" class="btn">查看全部文章</a>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    
+    <!-- 节气专栏 -->
+    <section class="solar-term-section">
+        <div class="container">
+            <h2 class="section-title">二十四节气</h2>
+            <div class="solar-term-grid">
+                {{ $currentMonth := now.Format "01" }}
+                {{ range slice 
+                    (dict "name" "立春" "month" "02" "desc" "万物复苏，春回大地")
+                    (dict "name" "雨水" "month" "02" "desc" "雨量渐增，草木萌动")
+                    (dict "name" "惊蛰" "month" "03" "desc" "春雷乍动，万物生长")
+                    (dict "name" "春分" "month" "03" "desc" "昼夜平分，春色正浓")
+                    (dict "name" "清明" "month" "04" "desc" "气清景明，万物皆显")
+                    (dict "name" "谷雨" "month" "04" "desc" "雨生百谷，万物生长")
+                    (dict "name" "立夏" "month" "05" "desc" "夏日初临，万物繁茂")
+                    (dict "name" "小满" "month" "05" "desc" "麦粒渐满，丰收在望")
+                    (dict "name" "芒种" "month" "06" "desc" "芒种时节，忙于耕种")
+                    (dict "name" "夏至" "month" "06" "desc" "夏日最长，阳气最盛")
+                    (dict "name" "小暑" "month" "07" "desc" "暑气渐盛，夏日炎炎")
+                    (dict "name" "大暑" "month" "07" "desc" "暑气最盛，炎热难耐")
+                    (dict "name" "立秋" "month" "08" "desc" "秋意初现，暑去凉来")
+                    (dict "name" "处暑" "month" "08" "desc" "暑气渐消，秋高气爽")
+                    (dict "name" "白露" "month" "09" "desc" "露凝而白，秋意渐浓")
+                    (dict "name" "秋分" "month" "09" "desc" "昼夜平分，秋色宜人")
+                    (dict "name" "寒露" "month" "10" "desc" "露水渐寒，秋意更深")
+                    (dict "name" "霜降" "month" "10" "desc" "霜降时节，深秋已至")
+                    (dict "name" "立冬" "month" "11" "desc" "冬日初临，万物收藏")
+                    (dict "name" "小雪" "month" "11" "desc" "小雪时节，天气渐寒")
+                    (dict "name" "大雪" "month" "12" "desc" "大雪纷飞，冬日正浓")
+                    (dict "name" "冬至" "month" "12" "desc" "冬至阳生，一阳来复")
+                    (dict "name" "小寒" "month" "01" "desc" "小寒时节，寒冷将至")
+                    (dict "name" "大寒" "month" "01" "desc" "大寒节气，一年将尽")
+                }}
+                    <div class="solar-term-card{{ if eq $currentMonth .month }} current{{ end }}">
+                        <div class="solar-term-name">{{ .name }}</div>
+                        <div class="solar-term-desc">{{ .desc }}</div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 首页样式 -->
+<style>
+/* 英雄轮播区 */
+.hero-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: var(--ink-black);
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bamboo-green), var(--ink-black));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.hero-placeholder span {
+    font-family: var(--font-serif);
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--rice-white);
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--rice-white);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-excerpt {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--rice-white);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+}
+
+.hero-nav:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-prev {
+    left: var(--spacing-md);
+}
+
+.hero-next {
+    right: var(--spacing-md);
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.hero-dot.active {
+    background: var(--cinnabar-red);
+    transform: scale(1.2);
+}
+
+/* 分类导航区 */
+.categories-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-primary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--cinnabar-red);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
+}
+
+.category-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--ink-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rice-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.category-name {
+    font-size: 1.1rem;
+    color: var(--ink-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.category-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* 最新文章区 */
+.latest-posts-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-secondary);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.card-image-link {
+    display: block;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.post-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.post-category {
+    color: var(--cinnabar-red);
+    font-weight: 500;
+    margin-right: var(--spacing-sm);
+}
+
+.post-date {
+    color: var(--text-muted);
+}
+
+.card-title a {
+    color: var(--ink-black);
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: var(--cinnabar-red);
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    color: var(--cinnabar-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-link::after {
+    content: ' →';
+    transition: margin-left var(--transition-fast);
+}
+
+.btn-link:hover::after {
+    margin-left: 4px;
+}
+
+.section-footer {
+    margin-top: var(--spacing-xl);
+}
+
+/* 节气专栏区 */
+.solar-term-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-primary);
+}
+
+.solar-term-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.solar-term-card {
+    padding: var(--spacing-md);
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.solar-term-card:hover {
+    border-color: var(--cinnabar-red);
+    box-shadow: var(--shadow-sm);
+}
+
+.solar-term-card.current {
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--cinnabar-light));
+    color: var(--rice-white);
+    border-color: var(--cinnabar-red);
+}
+
+.solar-term-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.solar-term-card.current .solar-term-name {
+    color: var(--rice-white);
+}
+
+.solar-term-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.solar-term-card.current .solar-term-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-excerpt {
+        font-size: 0.95rem;
+    }
+    
+    .hero-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .categories-grid,
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .solar-term-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .solar-term-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+{{ end }}

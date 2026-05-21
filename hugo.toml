@@ -1,0 +1,141 @@
+baseURL = 'https://l22.org/'
+languageCode = 'zh-cn'
+title = '归云集'
+
+# 网站描述
+description = "归云集 - 传承中华文化，弘扬民族精神。涵盖诗词、书法、国画、茶道、汉服、传统节日、诸子百家等中国传统文化内容。"
+
+# 网站关键词
+keywords = "中国传统文化, 诗词, 书法, 国画, 茶道, 汉服, 传统节日, 诸子百家, 国学"
+
+# 作者信息
+author = "归云集"
+
+# 网站语言
+defaultContentLanguage = "zh-cn"
+
+# 主题配置
+theme = ""
+
+# 启用功能
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+
+# 分页配置
+paginate = 20
+paginatePath = "page"
+
+# 税务配置
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "诗词"
+    url = "/categories/poetry"
+    weight = 2
+  [[menu.main]]
+    name = "书画"
+    url = "/categories/calligraphy"
+    weight = 3
+  [[menu.main]]
+    name = "茶道"
+    url = "/categories/tea-ceremony"
+    weight = 4
+  [[menu.main]]
+    name = "汉服"
+    url = "/categories/hanfu"
+    weight = 5
+  [[menu.main]]
+    name = "传统节日"
+    url = "/categories/traditional-festivals"
+    weight = 6
+  [[menu.main]]
+    name = "诸子百家"
+    url = "/categories/hundred-schools"
+    weight = 7
+  [[menu.main]]
+    name = "关于"
+    url = "/about"
+    weight = 8
+
+# 参数配置
+[params]
+  # 网站 Logo
+  logo = ""
+
+  # Open Graph 图片
+  ogImage = "/images/og-default.jpg"
+
+  # 邮箱
+  email = "contact@l22.org"
+
+  # 微信
+  wechat = ""
+
+  # ICP 备案号
+  icp = ""
+
+  # 谷歌站点验证
+  googleSiteVerification = ""
+
+  # 百度站点验证
+  baiduSiteVerification = ""
+
+  # 英雄轮播区配置
+  [params.hero]
+    enabled = true
+    maxItems = 5
+
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+# 隐私配置
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+# 标记配置
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+# 服务配置
+[services]
+  [services.googleAnalytics]
+    ID = ""

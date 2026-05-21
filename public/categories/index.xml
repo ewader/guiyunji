@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 归云集</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on 归云集</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 24 Feb 2026 13:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>建筑</title>
+      <link>http://localhost:1313/categories/%E5%BB%BA%E7%AD%91/</link>
+      <pubDate>Tue, 24 Feb 2026 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%BB%BA%E7%AD%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>文化</title>
+      <link>http://localhost:1313/categories/%E6%96%87%E5%8C%96/</link>
+      <pubDate>Tue, 24 Feb 2026 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E6%96%87%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>传统节日</title>
+      <link>http://localhost:1313/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</link>
+      <pubDate>Tue, 24 Feb 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>传统文化</title>
+      <link>http://localhost:1313/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</link>
+      <pubDate>Tue, 24 Feb 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>艺术</title>
+      <link>http://localhost:1313/categories/%E8%89%BA%E6%9C%AF/</link>
+      <pubDate>Tue, 24 Feb 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E8%89%BA%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>历史</title>
+      <link>http://localhost:1313/categories/%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Tue, 24 Feb 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%8E%86%E5%8F%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工艺</title>
+      <link>http://localhost:1313/categories/%E5%B7%A5%E8%89%BA/</link>
+      <pubDate>Tue, 24 Feb 2026 07:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%B7%A5%E8%89%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>音乐</title>
+      <link>http://localhost:1313/categories/%E9%9F%B3%E4%B9%90/</link>
+      <pubDate>Tue, 24 Feb 2026 06:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E9%9F%B3%E4%B9%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生活</title>
+      <link>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Tue, 24 Feb 2026 05:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>体育</title>
+      <link>http://localhost:1313/categories/%E4%BD%93%E8%82%B2/</link>
+      <pubDate>Tue, 24 Feb 2026 05:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E4%BD%93%E8%82%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>科技</title>
+      <link>http://localhost:1313/categories/%E7%A7%91%E6%8A%80/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E7%A7%91%E6%8A%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poetry</title>
+      <link>http://localhost:1313/categories/poetry/</link>
+      <pubDate>Mon, 23 Feb 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/poetry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Calligraphy</title>
+      <link>http://localhost:1313/categories/calligraphy/</link>
+      <pubDate>Sun, 22 Feb 2026 15:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/calligraphy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Traditional-Festivals</title>
+      <link>http://localhost:1313/categories/traditional-festivals/</link>
+      <pubDate>Sat, 21 Feb 2026 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/traditional-festivals/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tea-Ceremony</title>
+      <link>http://localhost:1313/categories/tea-ceremony/</link>
+      <pubDate>Fri, 20 Feb 2026 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/tea-ceremony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hanfu</title>
+      <link>http://localhost:1313/categories/hanfu/</link>
+      <pubDate>Thu, 19 Feb 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/categories/hanfu/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta name="generator" content="Hugo 0.161.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#f7f4ed">
+    
+    <title>归云集</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/decorations.css">
+    
+    
+    
+        <link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/index.xml" title="归云集">
+    
+    
+    
+    <meta property="og:title" content="归云集">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:image" content="/images/og-default.jpg">
+    <meta property="og:site_name" content="归云集">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="归云集">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-default.jpg">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/decorations.css">
+</head>
+<body class="fade-in">
+    
+<header class="site-header">
+    <div class="container">
+        
+        <div class="header-decoration"></div>
+        
+        
+        <nav class="site-nav">
+            
+            <a href="http://localhost:1313/" class="site-brand">
+                
+                <span class="site-title">归云集</span>
+            </a>
+            
+            
+            <div class="nav-menu" id="navMenu">
+                
+                
+                    
+                    <a href="/" class="nav-item active">
+                        首页
+                    </a>
+                
+                    
+                    <a href="/categories/poetry" class="nav-item">
+                        诗词
+                    </a>
+                
+                    
+                    <a href="/categories/calligraphy" class="nav-item">
+                        书画
+                    </a>
+                
+                    
+                    <a href="/categories/tea-ceremony" class="nav-item">
+                        茶道
+                    </a>
+                
+                    
+                    <a href="/categories/hanfu" class="nav-item">
+                        汉服
+                    </a>
+                
+                    
+                    <a href="/categories/traditional-festivals" class="nav-item">
+                        传统节日
+                    </a>
+                
+                    
+                    <a href="/categories/hundred-schools" class="nav-item">
+                        诸子百家
+                    </a>
+                
+                    
+                    <a href="/about" class="nav-item">
+                        关于
+                    </a>
+                
+            </div>
+            
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<style>
+ 
+.site-header {
+    background: var(--bg-primary);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-decoration {
+    height: 3px;
+    background: linear-gradient(90deg, var(--cinnabar-red), var(--bamboo-green), var(--ink-black));
+    opacity: 0.6;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.site-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-black);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-xl);
+    list-style: none;
+}
+
+.nav-item {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--cinnabar-red);
+    transition: width var(--transition-normal), left var(--transition-normal);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--cinnabar-red);
+}
+
+ 
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    background: var(--cinnabar-red);
+    border-radius: 50%;
+}
+
+ 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink-black);
+    transition: all var(--transition-normal);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.25rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+    }
+    
+    .nav-item {
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .nav-item:hover::after,
+    .nav-item.active::after {
+        width: 0;
+    }
+}
+</style>
+    
+    <main>
+        
+
+<div class="home-page">
+    
+    
+    <section class="hero-section">
+        <div class="hero-slider" id="heroSlider">
+            
+                <div class="hero-slide" data-title="唐诗三百首鉴赏：李白《静夜思》" data-url="/posts/%E5%94%90%E8%AF%97%E4%B8%89%E7%99%BE%E9%A6%96%E9%89%B4%E8%B5%8F/">
+                    
+                        <img src="https://images.pexels.com/photos/12836050/pexels-photo-12836050.jpeg" alt="唐诗三百首鉴赏：李白《静夜思》" class="hero-image">
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">唐诗三百首鉴赏：李白《静夜思》</h1>
+                        <p class="hero-excerpt"><p>《静夜思》
+[唐] 李白</p>
+<p>床前明月光，  疑是地上霜。  举头望明月，  低头思故乡。</p>
+<p>《静夜思》是 …</p></p>
+                        <a href="/posts/%E5%94%90%E8%AF%97%E4%B8%89%E7%99%BE%E9%A6%96%E9%89%B4%E8%B5%8F/" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            
+                <div class="hero-slide" data-title="王羲之《兰亭序》书法艺术赏析" data-url="/posts/%E7%8E%8B%E7%BE%B2%E4%B9%8B%E5%85%B0%E4%BA%AD%E5%BA%8F%E4%B9%A6%E6%B3%95%E8%B5%8F%E6%9E%90/">
+                    
+                        <img src="https://images.pexels.com/photos/8627038/pexels-photo-8627038.jpeg" alt="王羲之《兰亭序》书法艺术赏析" class="hero-image">
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">王羲之《兰亭序》书法艺术赏析</h1>
+                        <p class="hero-excerpt"><p>东晋永和九年（公元353年）三月初三，王羲之与谢安、孙绰等四十一位文人雅士，在会稽山阴的兰亭举行 …</p></p>
+                        <a href="/posts/%E7%8E%8B%E7%BE%B2%E4%B9%8B%E5%85%B0%E4%BA%AD%E5%BA%8F%E4%B9%A6%E6%B3%95%E8%B5%8F%E6%9E%90/" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            
+                <div class="hero-slide" data-title="清明节：追思故人，踏青赏春" data-url="/posts/%E6%B8%85%E6%98%8E%E8%8A%82%E7%9A%84%E7%94%B1%E6%9D%A5%E4%B8%8E%E4%B9%A0%E4%BF%97/">
+                    
+                        <img src="https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg" alt="清明节：追思故人，踏青赏春" class="hero-image">
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">清明节：追思故人，踏青赏春</h1>
+                        <p class="hero-excerpt"><p>清明节是中国传统节日中最重要的祭祀节日之一，通常在公历4月4日至6日之间交节。清明节不仅是祭祖扫墓的 …</p></p>
+                        <a href="/posts/%E6%B8%85%E6%98%8E%E8%8A%82%E7%9A%84%E7%94%B1%E6%9D%A5%E4%B8%8E%E4%B9%A0%E4%BF%97/" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            
+                <div class="hero-slide" data-title="中国茶道：一叶知秋，品味人生" data-url="/posts/%E4%B8%AD%E5%9B%BD%E8%8C%B6%E9%81%93%E6%96%87%E5%8C%96/">
+                    
+                        <img src="https://images.pexels.com/photos/34271013/pexels-photo-34271013.jpeg" alt="中国茶道：一叶知秋，品味人生" class="hero-image">
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">中国茶道：一叶知秋，品味人生</h1>
+                        <p class="hero-excerpt"><p>中国是茶的故乡，茶道文化源远流长。相传茶起源于神农时代，&ldquo;神农尝百草，日遇七十二毒，得茶 …</p></p>
+                        <a href="/posts/%E4%B8%AD%E5%9B%BD%E8%8C%B6%E9%81%93%E6%96%87%E5%8C%96/" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            
+                <div class="hero-slide" data-title="汉服之美：千年传承的文化瑰宝" data-url="/posts/%E6%B1%89%E6%9C%8D%E4%B9%8B%E7%BE%8E/">
+                    
+                        <img src="https://images.pexels.com/photos/31027049/pexels-photo-31027049.jpeg" alt="汉服之美：千年传承的文化瑰宝" class="hero-image">
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">汉服之美：千年传承的文化瑰宝</h1>
+                        <p class="hero-excerpt"><p>汉服，全称&quot;汉民族传统服饰&quot;，是指从黄帝即位到公元17世纪中叶（明末清初），在汉 …</p></p>
+                        <a href="/posts/%E6%B1%89%E6%9C%8D%E4%B9%8B%E7%BE%8E/" class="btn btn-outline">阅读全文</a>
+                    </div>
+                </div>
+            
+        </div>
+        
+        
+        <button class="hero-nav hero-prev" aria-label="上一张">‹</button>
+        <button class="hero-nav hero-next" aria-label="下一张">›</button>
+        
+        
+        <div class="hero-dots" id="heroDots"></div>
+    </section>
+    
+    
+    
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">文化分类</h2>
+            <div class="categories-grid">
+                
+                
+                    
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E8%89%BA%E6%9C%AF" class="category-card">
+                        <div class="category-icon">艺</div>
+                        <h3 class="category-name">艺术</h3>
+                        <span class="category-count">12 篇</span>
+                    </a>
+                
+                    
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96" class="category-card">
+                        <div class="category-icon">传</div>
+                        <h3 class="category-name">传统文化</h3>
+                        <span class="category-count">7 篇</span>
+                    </a>
+                
+                    
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E5%8E%86%E5%8F%B2" class="category-card">
+                        <div class="category-icon">历</div>
+                        <h3 class="category-name">历史</h3>
+                        <span class="category-count">6 篇</span>
+                    </a>
+                
+                    
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E5%BB%BA%E7%AD%91" class="category-card">
+                        <div class="category-icon">建</div>
+                        <h3 class="category-name">建筑</h3>
+                        <span class="category-count">4 篇</span>
+                    </a>
+                
+                    
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E5%B7%A5%E8%89%BA" class="category-card">
+                        <div class="category-icon">工</div>
+                        <h3 class="category-name">工艺</h3>
+                        <span class="category-count">3 篇</span>
+                    </a>
+                
+                    
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                        
+                    
+                    
+                    <a href="/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5" class="category-card">
+                        <div class="category-icon">传</div>
+                        <h3 class="category-name">传统节日</h3>
+                        <span class="category-count">2 篇</span>
+                    </a>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="latest-posts-section">
+        <div class="container">
+            <h2 class="section-title">最新文章</h2>
+            <div class="posts-grid">
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">建筑</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/suzhou-gardens-poetic-living/">苏州园林 - 江南水乡的诗意栖居</a>
+                            </h3>
+                            <p class="card-excerpt">苏州园林，是中国古典园林的杰出代表，以其精美的建筑、巧妙的设计和深厚的文化内涵，被誉为&quot;咫尺之内再造乾坤&quot;的艺术杰作。苏州园林不仅是建筑艺术 …</p>
+                            <a href="/posts/suzhou-gardens-poetic-living/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">传统节日</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/mid-autumn-festival-moon-reunion/">中秋节 - 月圆人团圆</a>
+                            </h3>
+                            <p class="card-excerpt">中秋节，又称月夕、秋节、仲秋节、八月节等，是中国的传统节日之一，时间为每年农历八月十五。中秋节以月之圆兆人之团圆，寄托着思念故乡、思念亲人之情，是中国最具诗意的 …</p>
+                            <a href="/posts/mid-autumn-festival-moon-reunion/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">艺术</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/peking-opera-quintessence-of-art/">京剧 - 国粹艺术的魅力</a>
+                            </h3>
+                            <p class="card-excerpt">京剧，被誉为中国的&quot;国粹&quot;，是中国最具代表性的传统戏曲形式之一。它以其独特的表演风格、丰富的艺术内涵和深厚的文化底蕴，成为了中华优秀传统文化 …</p>
+                            <a href="/posts/peking-opera-quintessence-of-art/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">历史</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/forbidden-city-ming-qing-palace/">故宫 - 明清皇宫的辉煌</a>
+                            </h3>
+                            <p class="card-excerpt">故宫，又称紫禁城，是中国明清两代的皇家宫殿，位于北京中轴线的中心。作为世界上现存规模最大、保存最为完整的木质结构古建筑群，故宫以其恢弘的建筑规模和深厚的文化底蕴 …</p>
+                            <a href="/posts/forbidden-city-ming-qing-palace/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">传统节日</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/dragon-boat-festival/">端午节 - 龙舟竞渡与粽子飘香</a>
+                            </h3>
+                            <p class="card-excerpt">端午节，又称端阳节、重午节、龙舟节，是中国重要的传统节日之一，时间为每年农历五月初五。端午节以其丰富的民俗活动和深厚的文化内涵，成为了中华文化的重要组成部分。 …</p>
+                            <a href="/posts/dragon-boat-festival/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+                    <article class="card post-card">
+                        
+                        <div class="card-content">
+                            <div class="card-meta">
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <span class="post-category">历史</span>
+                                
+                                <span class="post-date">2026-02-24</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="/posts/great-wall-chinas-symbol/">长城 - 中国的象征</a>
+                            </h3>
+                            <p class="card-excerpt">长城，作为中国最著名的历史遗迹之一，被誉为&quot;万里长城&quot;，是世界上最伟大的古代建筑工程之一。它不仅是一道军事防御工事，更是中华民族智慧的结晶和 …</p>
+                            <a href="/posts/great-wall-chinas-symbol/" class="btn-link">阅读更多</a>
+                        </div>
+                    </article>
+                
+            </div>
+            
+            
+                <div class="section-footer text-center">
+                    <a href="/posts" class="btn">查看全部文章</a>
+                </div>
+            
+        </div>
+    </section>
+    
+    
+    <section class="solar-term-section">
+        <div class="container">
+            <h2 class="section-title">二十四节气</h2>
+            <div class="solar-term-grid">
+                
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">立春</div>
+                        <div class="solar-term-desc">万物复苏，春回大地</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">雨水</div>
+                        <div class="solar-term-desc">雨量渐增，草木萌动</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">惊蛰</div>
+                        <div class="solar-term-desc">春雷乍动，万物生长</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">春分</div>
+                        <div class="solar-term-desc">昼夜平分，春色正浓</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">清明</div>
+                        <div class="solar-term-desc">气清景明，万物皆显</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">谷雨</div>
+                        <div class="solar-term-desc">雨生百谷，万物生长</div>
+                    </div>
+                
+                    <div class="solar-term-card current">
+                        <div class="solar-term-name">立夏</div>
+                        <div class="solar-term-desc">夏日初临，万物繁茂</div>
+                    </div>
+                
+                    <div class="solar-term-card current">
+                        <div class="solar-term-name">小满</div>
+                        <div class="solar-term-desc">麦粒渐满，丰收在望</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">芒种</div>
+                        <div class="solar-term-desc">芒种时节，忙于耕种</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">夏至</div>
+                        <div class="solar-term-desc">夏日最长，阳气最盛</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">小暑</div>
+                        <div class="solar-term-desc">暑气渐盛，夏日炎炎</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">大暑</div>
+                        <div class="solar-term-desc">暑气最盛，炎热难耐</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">立秋</div>
+                        <div class="solar-term-desc">秋意初现，暑去凉来</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">处暑</div>
+                        <div class="solar-term-desc">暑气渐消，秋高气爽</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">白露</div>
+                        <div class="solar-term-desc">露凝而白，秋意渐浓</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">秋分</div>
+                        <div class="solar-term-desc">昼夜平分，秋色宜人</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">寒露</div>
+                        <div class="solar-term-desc">露水渐寒，秋意更深</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">霜降</div>
+                        <div class="solar-term-desc">霜降时节，深秋已至</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">立冬</div>
+                        <div class="solar-term-desc">冬日初临，万物收藏</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">小雪</div>
+                        <div class="solar-term-desc">小雪时节，天气渐寒</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">大雪</div>
+                        <div class="solar-term-desc">大雪纷飞，冬日正浓</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">冬至</div>
+                        <div class="solar-term-desc">冬至阳生，一阳来复</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">小寒</div>
+                        <div class="solar-term-desc">小寒时节，寒冷将至</div>
+                    </div>
+                
+                    <div class="solar-term-card">
+                        <div class="solar-term-name">大寒</div>
+                        <div class="solar-term-desc">大寒节气，一年将尽</div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<style>
+ 
+.hero-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: var(--ink-black);
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bamboo-green), var(--ink-black));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.hero-placeholder span {
+    font-family: var(--font-serif);
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--rice-white);
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--rice-white);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-excerpt {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--rice-white);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+}
+
+.hero-nav:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-prev {
+    left: var(--spacing-md);
+}
+
+.hero-next {
+    right: var(--spacing-md);
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.hero-dot.active {
+    background: var(--cinnabar-red);
+    transform: scale(1.2);
+}
+
+ 
+.categories-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-primary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--cinnabar-red);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
+}
+
+.category-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--ink-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rice-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.category-name {
+    font-size: 1.1rem;
+    color: var(--ink-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.category-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+ 
+.latest-posts-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-secondary);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.card-image-link {
+    display: block;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.post-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.post-category {
+    color: var(--cinnabar-red);
+    font-weight: 500;
+    margin-right: var(--spacing-sm);
+}
+
+.post-date {
+    color: var(--text-muted);
+}
+
+.card-title a {
+    color: var(--ink-black);
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: var(--cinnabar-red);
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    color: var(--cinnabar-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-link::after {
+    content: ' →';
+    transition: margin-left var(--transition-fast);
+}
+
+.btn-link:hover::after {
+    margin-left: 4px;
+}
+
+.section-footer {
+    margin-top: var(--spacing-xl);
+}
+
+ 
+.solar-term-section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--bg-primary);
+}
+
+.solar-term-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.solar-term-card {
+    padding: var(--spacing-md);
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.solar-term-card:hover {
+    border-color: var(--cinnabar-red);
+    box-shadow: var(--shadow-sm);
+}
+
+.solar-term-card.current {
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--cinnabar-light));
+    color: var(--rice-white);
+    border-color: var(--cinnabar-red);
+}
+
+.solar-term-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.solar-term-card.current .solar-term-name {
+    color: var(--rice-white);
+}
+
+.solar-term-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.solar-term-card.current .solar-term-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+ 
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-excerpt {
+        font-size: 0.95rem;
+    }
+    
+    .hero-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .categories-grid,
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .solar-term-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .solar-term-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+    </main>
+    
+    
+<footer class="site-footer">
+    
+    <div class="footer-decoration">
+        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 Q40,20 60,35 Q80,15 100,30 Q120,10 140,30 Q160,15 180,50 Z" 
+                  fill="var(--border-light)" opacity="0.4"/>
+        </svg>
+    </div>
+    
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>归云集</h3>
+                <p class="footer-description"></p>
+                <div class="footer-links">
+                    
+                        <a href="/">首页</a>
+                    
+                        <a href="/categories/poetry">诗词</a>
+                    
+                        <a href="/categories/calligraphy">书画</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>内容分类</h3>
+                <nav class="footer-nav">
+                    
+                        
+                    
+                        
+                            <a href="/categories/poetry">诗词</a>
+                        
+                    
+                        
+                            <a href="/categories/calligraphy">书画</a>
+                        
+                    
+                        
+                            <a href="/categories/tea-ceremony">茶道</a>
+                        
+                    
+                        
+                            <a href="/categories/hanfu">汉服</a>
+                        
+                    
+                </nav>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <div class="footer-contact">
+                    
+                        <p>邮箱: <a href="mailto:contact@l22.org">contact@l22.org</a></p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2026 归云集. 保留所有权利。</p>
+                <p class="footer-slogan">传承中华文化，弘扬民族精神</p>
+            </div>
+            <div class="footer-meta">
+                <p>
+                    <span>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></span>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+ 
+.site-footer {
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.footer-decoration {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-decoration svg {
+    width: 200px;
+    height: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--ink-black);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--cinnabar-red);
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links,
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-links a,
+.footer-nav a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-nav a:hover {
+    color: var(--cinnabar-red);
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-contact a {
+    color: var(--cinnabar-red);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.copyright p,
+.footer-meta p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.footer-slogan {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--bamboo-green);
+    margin-top: var(--spacing-xs);
+}
+
+.footer-meta a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-meta a:hover {
+    color: var(--cinnabar-red);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-footer {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-slogan {
+        margin: var(--spacing-sm) 0;
+    }
+}
+</style>
+    
+    
+    <script src="/js/main.js"></script>
+    
+    
+</body>
+</html>
