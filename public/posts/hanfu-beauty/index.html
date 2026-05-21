@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#f7f4ed">
+    
+    <title>汉服之美：千年传承的文化瑰宝 - 归云集</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/decorations.css">
+    
+    
+    
+    
+    
+    <meta property="og:title" content="汉服之美：千年传承的文化瑰宝">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://l22.org/posts/hanfu-beauty/">
+    <meta property="og:image" content="/images/og-default.jpg">
+    <meta property="og:site_name" content="归云集">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="汉服之美：千年传承的文化瑰宝">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-default.jpg">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/decorations.css">
+</head>
+<body class="fade-in">
+    
+<header class="site-header">
+    <div class="container">
+        
+        <div class="header-decoration"></div>
+        
+        
+        <nav class="site-nav">
+            
+            <a href="https://l22.org/" class="site-brand">
+                
+                <span class="site-title">归云集</span>
+            </a>
+            
+            
+            <div class="nav-menu" id="navMenu">
+                
+                
+                    
+                    <a href="/" class="nav-item">
+                        首页
+                    </a>
+                
+                    
+                    <a href="/categories/poetry" class="nav-item">
+                        诗词
+                    </a>
+                
+                    
+                    <a href="/categories/calligraphy" class="nav-item">
+                        书画
+                    </a>
+                
+                    
+                    <a href="/categories/tea-ceremony" class="nav-item">
+                        茶道
+                    </a>
+                
+                    
+                    <a href="/categories/hanfu" class="nav-item">
+                        汉服
+                    </a>
+                
+                    
+                    <a href="/categories/traditional-festivals" class="nav-item">
+                        传统节日
+                    </a>
+                
+                    
+                    <a href="/categories/hundred-schools" class="nav-item">
+                        诸子百家
+                    </a>
+                
+                    
+                    <a href="/about" class="nav-item">
+                        关于
+                    </a>
+                
+            </div>
+            
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<style>
+ 
+.site-header {
+    background: var(--bg-primary);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-decoration {
+    height: 3px;
+    background: linear-gradient(90deg, var(--cinnabar-red), var(--bamboo-green), var(--ink-black));
+    opacity: 0.6;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.site-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-black);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-xl);
+    list-style: none;
+}
+
+.nav-item {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--cinnabar-red);
+    transition: width var(--transition-normal), left var(--transition-normal);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--cinnabar-red);
+}
+
+ 
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    background: var(--cinnabar-red);
+    border-radius: 50%;
+}
+
+ 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink-black);
+    transition: all var(--transition-normal);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.25rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+    }
+    
+    .nav-item {
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .nav-item:hover::after,
+    .nav-item.active::after {
+        width: 0;
+    }
+}
+</style>
+    
+    <main>
+        
+
+<article class="article-page">
+    <div class="container">
+        <div class="article-layout">
+            
+            <div class="article-main">
+                
+                <header class="article-header">
+                    
+                        <div class="article-categories">
+                            
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <a href="/categories/hanfu" class="article-category">汉服</a>
+                            
+                        </div>
+                    
+                    
+                    <h1 class="article-title">汉服之美：千年传承的文化瑰宝</h1>
+                    
+                    <div class="article-meta">
+                        
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <time datetime="2026-02-19">2026年02月19日</time>
+                        </span>
+                        
+                        
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                归云集
+                            </span>
+                        
+                        
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            阅读时间: 1 分钟
+                        </span>
+                    </div>
+                    
+                    
+                        <div class="article-featured-image">
+                            <img src="https://images.pexels.com/photos/31027049/pexels-photo-31027049.jpeg" alt="汉服之美：千年传承的文化瑰宝">
+                        </div>
+                    
+                </header>
+                
+                
+                <div class="article-content">
+                    <p>汉服，全称&quot;汉民族传统服饰&quot;，是指从黄帝即位到公元17世纪中叶（明末清初），在汉族的主要居住区，以&quot;华夏－汉&quot;文化为背景和主导思想，以华夏礼仪文化为中心，通过自然演化而形成的具有独特汉民族风貌性格，明显区别于其他民族的传统服装和配饰体系。</p>
+<h3 id="历史渊源">历史渊源</h3>
+<p>汉服的起源可以追溯到黄帝时期。《史记》记载：&ldquo;黄帝之前，未有衣裳屋宇。及黄帝造屋宇，制衣服，营殡葬，万民故免存亡之难。&ldquo;这标志着中国服饰文明的开始。</p>
+<p>&ldquo;中国有礼仪之大，故称夏；有服章之美，谓之华。&ldquo;汉服不仅是服饰，更是礼仪、文化、美学的集中体现，承载着中华民族的文化基因和审美情趣。</p>
+<h2 id="汉服的基本特征">汉服的基本特征</h2>
+<p>汉服的基本特征可以概括为：交领右衽、宽袍大袖、系带隐扣、线条流畅。</p>
+<h3 id="1-交领右衽">1. 交领右衽</h3>
+<p>交领右衽是汉服最显著的特征之一。左片压住右片，领口呈&quot;y&quot;字形。这种设计不仅美观，还蕴含着深刻的文化内涵——右为尊，左为卑，体现了中国传统的尊卑观念。</p>
+<h3 id="2-宽袍大袖">2. 宽袍大袖</h3>
+<p>汉服以宽松舒适为美，衣袖宽大，不仅便于活动，还体现了中国人崇尚自然、追求自由的审美理念。宽大的衣袖也成为了汉服飘逸灵动之美的重要来源。</p>
+<h3 id="3-系带隐扣">3. 系带隐扣</h3>
+<p>汉服不使用拉链、纽扣等现代服装配件，而是通过系带将衣物固定。这种设计不仅保持了服饰的简洁之美，也体现了中国传统文化中&quot;含蓄内敛&quot;的审美追求。</p>
+<h3 id="4-线条流畅">4. 线条流畅</h3>
+<p>汉服注重线条的流畅美，衣身的剪裁顺应人体自然曲线，既保持了服饰的整体美感，又确保了穿着的舒适度。</p>
+<h2 id="汉服的主要形制">汉服的主要形制</h2>
+<p>汉服的形制丰富多彩，根据不同的场合、身份、季节，有着不同的款式。</p>
+<h3 id="1-上衣下裳">1. 上衣下裳</h3>
+<p>上衣下裳是最古老的汉服形制，即上身穿衣，下身穿裙。这种形制体现了中国传统的&quot;上衣下裳&quot;制度，是汉服最基本的形制。</p>
+<h3 id="2-深衣">2. 深衣</h3>
+<p>深衣是将上衣和下裳缝合在一起的长袍，是汉代最常见的服饰之一。深衣的形制严谨，体现了中国古代的礼仪文化。</p>
+<h3 id="3-襦裙">3. 襦裙</h3>
+<p>襦裙是上身穿短衣，下身穿长裙的服饰，是女性汉服的常见形制。襦裙轻盈飘逸，深受女性喜爱。</p>
+<h3 id="4-袍服">4. 袍服</h3>
+<p>袍服是长袍形式的服饰，男女皆可穿着。袍服庄重大方，适合正式场合。</p>
+<h3 id="5-褙子">5. 褙子</h3>
+<p>褙子是宋代流行的女性服饰，是对襟长袖的外衣，穿在襦裙外面，既保暖又美观。</p>
+<h2 id="汉服的文化内涵">汉服的文化内涵</h2>
+<p>汉服不仅是一件衣服，更是一种文化的载体。</p>
+<h3 id="1-礼仪文化">1. 礼仪文化</h3>
+<p>汉服的设计充分体现了中国古代的礼仪文化。不同的场合、不同的身份，穿着的汉服形制也不相同。这种严格的服饰制度，体现了中国古代社会的等级观念和礼仪规范。</p>
+<h3 id="2-审美文化">2. 审美文化</h3>
+<p>汉服体现了中国人独特的审美理念——含蓄内敛、自然飘逸、端庄大方。这种审美理念，是中国传统文化的重要组成部分。</p>
+<h3 id="3-哲学思想">3. 哲学思想</h3>
+<p>汉服的设计蕴含着深刻的哲学思想。如&quot;天人合一&quot;的思想体现在汉服顺应人体自然曲线的剪裁上；&ldquo;中庸之道&quot;体现在汉服不偏不倚、中正平和的整体风格上。</p>
+<h2 id="汉服的复兴">汉服的复兴</h2>
+<p>近年来，随着中国传统文化的复兴，汉服也重新回到了人们的视野。</p>
+<h3 id="复兴的意义">复兴的意义</h3>
+<p>汉服复兴不仅仅是服饰的回归，更是文化的回归。通过穿着汉服，年轻一代能够更好地了解和传承中国传统文化，增强民族自豪感和文化认同感。</p>
+<h3 id="现代汉服">现代汉服</h3>
+<p>现代汉服在保留传统形制的基础上，进行了适当的改良，使其更符合现代生活的需要。现代汉服既保留了传统之美，又具备了实用性，受到了越来越多年轻人的喜爱。</p>
+<h2 id="汉服与礼仪">汉服与礼仪</h2>
+<p>汉服与礼仪密不可分。穿着汉服时，有一套完整的礼仪规范。</p>
+<h3 id="站姿">站姿</h3>
+<p>站立时，身体要端正，双手自然下垂或交叠于腹前。男性左手在外，右手在内；女性右手在外，左手在内。</p>
+<h3 id="行走">行走</h3>
+<p>行走时要步履稳健，不疾不徐。衣袖要自然摆动，体现飘逸之美。</p>
+<h3 id="坐姿">坐姿</h3>
+<p>坐姿要端正，双腿并拢或交叠，身体保持正直。古人有&quot;坐如钟&quot;的说法，强调坐姿的端庄。</p>
+<h3 id="作揖">作揖</h3>
+<p>作揖是汉服礼仪中的重要内容，表示尊敬和问候。作揖时，双手合抱于胸前，微微弯腰，动作要优雅庄重。</p>
+<h2 id="结语">结语</h2>
+<p>汉服是中华文明的重要组成部分，承载着数千年的历史和文化。它不仅是一件衣服，更是一种文化符号，一种精神传承。</p>
+<p>在现代化的今天，汉服的复兴不是简单的复古，而是在传承中创新，在创新中发展。让我们一起感受汉服之美，传承中华文化，让这千年传承的文化瑰宝在新时代焕发新的光彩。</p>
+<p>汉服之美，美在形制，美在文化，美在精神。让我们一起守护这份美丽，传承这份文化。</p>
+
+                </div>
+                
+                
+                
+                    <div class="article-tags">
+                        
+                            <a href="/tags/%E6%B1%89%E6%9C%8D" class="tag">#汉服</a>
+                        
+                            <a href="/tags/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96" class="tag">#传统文化</a>
+                        
+                            <a href="/tags/%E6%9C%8D%E9%A5%B0" class="tag">#服饰</a>
+                        
+                            <a href="/tags/%E7%BE%8E%E5%AD%A6" class="tag">#美学</a>
+                        
+                    </div>
+                
+                
+                
+                <nav class="article-navigation">
+                    
+                    
+                    
+                        <a href="/posts/chinese-tea-ceremony-culture/" class="nav-link nav-next">
+                            <span class="nav-label">下一篇</span>
+                            <span class="nav-title">中国茶道：一叶知秋，品味人生</span>
+                        </a>
+                    
+                </nav>
+                
+                
+                <div class="article-share">
+                    <span class="share-label">分享：</span>
+                    <button class="share-btn" data-platform="weibo" title="分享到微博">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.6 16.2c0 2.9-2.8 5.2-6.2 5.2s-6.2-2.3-6.2-5.2 2.8-5.2 6.2-5.2 6.2 2.3 6.2 5.2zm-10.4 0c0 1.8 1.9 3.3 4.2 3.3s4.2-1.5 4.2-3.3-1.9-3.3-4.2-3.3-4.2 1.5-4.2 3.3zm9.4-6.3c-.8.3-1.7.5-2.7.6-2.4.3-5 .3-7.5.1-.3 0-.6-.1-.8-.2-2.5-.7-3.9-2.3-3.5-4.3.3-1.7 2.1-2.9 4.4-2.9 2.7 0 5.1 1.5 5.4 3.7.1.6-.1 1.2-.4 1.7-.4.6-1.1 1-1.9 1.1-.6.1-1.2 0-1.8-.2-.7-.3-1.1-.8-1-1.5.1-.6.6-1.1 1.3-1.2.6-.1 1.2.1 1.6.5.2.2.2.4.2.6 0 .2-.1.4-.3.5-.2.1-.5.1-.7 0-.1 0-.2-.1-.3-.2 0 0 0 0 0 0-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.3.1-.1.2-.1.3-.1.1 0 .2 0 .3.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1 0 .1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.5-.1.7.1.9.3.1.5 0 .8-.2.3-.2.5-.5.6-.8.2-.5.2-1 .1-1.5-.3-1.5-2-2.6-3.9-2.6-1.6 0-3 .8-3.2 2-.2 1.2.7 2.3 2.2 2.8.2.1.4.1.6.2 2.2.2 4.5.2 6.7-.1.9-.1 1.7-.3 2.4-.5 1.4-.4 2.3-1.3 2.3-2.4 0-1.4-1.5-2.6-3.6-2.8-2.7-.2-5.4-.2-8.1 0-.3 0-.5 0-.8-.1-2.9-.4-4.8-2.1-4.3-4 .4-1.6 2.5-2.7 5.1-2.7 3.1 0 5.8 1.6 6.1 4 .1.6-.1 1.2-.5 1.8-.4.6-1.1 1.1-2 1.2-.6.1-1.3 0-1.9-.2-.8-.3-1.3-.9-1.1-1.6.1-.7.7-1.2 1.5-1.3.7-.1 1.4.1 1.8.5.2.2.3.5.2.7-.1.2-.2.5-.4.6-.2.1-.5.2-.8.1-.1 0-.2-.1-.4-.2 0 0 0 0 0 0-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.3.1-.1.3-.2.4-.2.1 0 .3 0 .4.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.6-.1.8.1.9.3.1.5 0 .9-.2.3-.2.6-.5.7-.9.2-.5.2-1.1.1-1.6-.3-1.7-2.2-2.9-4.3-2.9-1.8 0-3.4.9-3.6 2.2-.2 1.3.8 2.5 2.4 3 .2.1.5.1.7.2 2.5.2 5 .2 7.4-.1 1-.1 1.9-.3 2.7-.5 1.6-.4 2.6-1.4 2.6-2.6 0-1.5-1.6-2.8-4-3-2.9-.2-5.9-.2-8.8 0-.3 0-.6 0-.9-.1-3.2-.4-5.3-2.3-4.8-4.3.5-1.7 2.8-3 5.7-3 3.4 0 6.4 1.7 6.8 4.4.1.6-.1 1.3-.5 1.9-.5.7-1.3 1.2-2.2 1.3-.7.1-1.4 0-2.1-.2-.9-.3-1.4-1-1.2-1.8.1-.8.8-1.3 1.7-1.4.8-.1 1.5.1 2 .5.2.2.3.5.2.8-.1.3-.2.5-.5.7-.2.1-.5.2-.8.1-.1 0-.2-.1-.4-.2 0 0 0 0 0 0-.1-.1-.2-.2-.1-.4 0-.1 0-.3.1-.4.1-.1.3-.2.4-.2.1 0 .3 0 .4.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.7-.1 1 .1.1.3 0 1-.2.3-.3.7-.5 1-.2.6-.2 1.2-.1 1.7-.4 1.9-2.4 3.2-4.8 3.2-2 0-3.7-1-4-2.4-.2-1.4.9-2.7 2.6-3.3.2-.1.5-.1.8-.2 2.7-.2 5.5-.2 8.2.1 1.1.1 2.1.3 3 .5 1.8.5 2.9 1.6 2.9 2.9 0 1.7-1.8 3.1-4.4 3.3-3.2.2-6.5.2-9.7-.1-.3 0-.7 0-1-.1-3.5-.5-5.8-2.5-5.2-4.7.5-1.9 3.1-3.3 6.3-3.3 3.7 0 7 1.9 7.4 4.8.1.7-.1 1.4-.6 2-.5.7-1.4 1.3-2.4 1.4-.8.1-1.6 0-2.3-.2-1-.4-1.6-1.1-1.4-2 .2-.9.9-1.5 1.9-1.6.9-.1 1.7.1 2.2.6.2.2.4.6.2.9-.1.3-.3.6-.6.7-.3.1-.6.2-.9.1-.1 0-.3-.1-.4-.2 0 0 0 0 0 0-.1-.1-.2-.2-.2-.4 0-.1 0-.3.1-.4.1-.1.3-.2.5-.2.1 0 .3 0 .5.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.7-.2 1.1.1.2.3 0 1.1-.3.3-.4.8-.5 1.1-.2.7-.2 1.4-.1 2-.5 2.1-2.7 3.5-5.3 3.5-2.2 0-4.2-1.1-4.4-2.7-.3-1.5 1-2.9 2.9-3.6.3-.1.5-.2.9-.2 3-.2 6-.2 9.1.1 1.2.1 2.3.3 3.3.6 2 .5 3.2 1.7 3.2 3.1 0 1.8-2 3.4-4.9 3.6-3.5.2-7.1.2-10.7-.1-.4 0-.7 0-1.1-.1-3.9-.5-6.4-2.8-5.8-5.2.6-2.1 3.4-3.6 7-3.6 4.1 0 7.7 2.1 8.2 5.3.1.8-.1 1.5-.6 2.2-.6.8-1.6 1.4-2.7 1.5-.9.1-1.7 0-2.6-.2-1.1-.4-1.7-1.2-1.5-2.2.2-1 1-1.6 2.1-1.8 1-.1 1.9.1 2.5.7.3.3.4.7.3 1-.1.4-.4.7-.7.8-.3.1-.7.2-1 .1-.2 0-.3-.1-.5-.2 0 0 0 0 0 0-.2-.1-.2-.3-.2-.5 0-.2 0-.4.1-.5.1-.2.4-.3.5-.3.2 0 .3 0 .5.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.8-.3 1.2.1.2.4 0 1.2-.3.4-.4.9-.6 1.2-.2.7-.3 1.5-.1 2.2-.5 2.3-3 3.9-5.9 3.9-2.4 0-4.6-1.2-4.9-3-.3-1.7 1.1-3.2 3.2-4 .3-.1.6-.2 1-.2 3.3-.2 6.7-.2 10.1.1 1.3.1 2.5.4 3.7.6 2.2.6 3.6 1.9 3.6 3.5 0 2-2.2 3.7-5.4 4-3.9.2-7.9.2-11.8-.1-.4 0-.8 0-1.2-.1-4.3-.6-7.1-3.1-6.4-5.8.6-2.3 3.8-4 7.7-4 4.5 0 8.5 2.3 9.1 5.9.1.9-.1 1.7-.7 2.5-.6.9-1.7 1.5-3 1.7-1 .1-1.9 0-2.9-.2-1.2-.5-1.9-1.3-1.7-2.4.2-1.1 1.1-1.8 2.3-2 1.1-.1 2.1.1 2.7.8.3.3.5.8.3 1.1-.1.4-.4.8-.8.9-.4.1-.8.2-1.2.1-.2 0-.4-.1-.5-.2 0 0 0 0 0 0-.2-.1-.2-.3-.2-.5 0-.2.1-.4.2-.5.1-.2.4-.3.6-.3.2 0 .4 0 .6.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.9-.3 1.3.1.2.4 0 1.4-.4.4-.5 1-.7 1.4-.2.8-.3 1.7-.1 2.4-.6 2.6-3.3 4.3-6.5 4.3-2.7 0-5.1-1.3-5.4-3.3-.3-1.9 1.2-3.5 3.5-4.4.3-.1.7-.2 1.1-.2 3.7-.2 7.4-.2 11.1.1 1.5.1 2.8.4 4.1.7 2.4.6 3.9 2.1 3.9 3.8 0 2.2-2.4 4.1-6 4.4"/>
+                        </svg>
+                    </button>
+                    <button class="share-btn" data-platform="weixin" title="分享到微信">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                        </svg>
+                    </button>
+                    <button class="share-btn" data-platform="copy" title="复制链接">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <aside class="article-sidebar">
+                
+                
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">文章目录</h3>
+                        <div class="widget-content">
+                            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#历史渊源">历史渊源</a></li>
+      </ul>
+    </li>
+    <li><a href="#汉服的基本特征">汉服的基本特征</a>
+      <ul>
+        <li><a href="#1-交领右衽">1. 交领右衽</a></li>
+        <li><a href="#2-宽袍大袖">2. 宽袍大袖</a></li>
+        <li><a href="#3-系带隐扣">3. 系带隐扣</a></li>
+        <li><a href="#4-线条流畅">4. 线条流畅</a></li>
+      </ul>
+    </li>
+    <li><a href="#汉服的主要形制">汉服的主要形制</a>
+      <ul>
+        <li><a href="#1-上衣下裳">1. 上衣下裳</a></li>
+        <li><a href="#2-深衣">2. 深衣</a></li>
+        <li><a href="#3-襦裙">3. 襦裙</a></li>
+        <li><a href="#4-袍服">4. 袍服</a></li>
+        <li><a href="#5-褙子">5. 褙子</a></li>
+      </ul>
+    </li>
+    <li><a href="#汉服的文化内涵">汉服的文化内涵</a>
+      <ul>
+        <li><a href="#1-礼仪文化">1. 礼仪文化</a></li>
+        <li><a href="#2-审美文化">2. 审美文化</a></li>
+        <li><a href="#3-哲学思想">3. 哲学思想</a></li>
+      </ul>
+    </li>
+    <li><a href="#汉服的复兴">汉服的复兴</a>
+      <ul>
+        <li><a href="#复兴的意义">复兴的意义</a></li>
+        <li><a href="#现代汉服">现代汉服</a></li>
+      </ul>
+    </li>
+    <li><a href="#汉服与礼仪">汉服与礼仪</a>
+      <ul>
+        <li><a href="#站姿">站姿</a></li>
+        <li><a href="#行走">行走</a></li>
+        <li><a href="#坐姿">坐姿</a></li>
+        <li><a href="#作揖">作揖</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+                        </div>
+                    </div>
+                
+                
+                
+                
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">关于作者</h3>
+                        <div class="widget-content author-widget">
+                            <div class="author-avatar">
+                                
+                                    <span>归</span>
+                                
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">归云集</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+                
+                
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">相关推荐</h3>
+                    <div class="widget-content related-posts">
+                        
+                        
+                            
+                                <a href="/posts/suzhou-gardens-poetic-living/" class="related-post">
+                                    <span class="related-title">苏州园林 - 江南水乡的诗意栖居</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/peking-opera-quintessence-of-art/" class="related-post">
+                                    <span class="related-title">京剧 - 国粹艺术的魅力</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/mid-autumn-festival-moon-reunion/" class="related-post">
+                                    <span class="related-title">中秋节 - 月圆人团圆</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/dragon-boat-festival/" class="related-post">
+                                    <span class="related-title">端午节 - 龙舟竞渡与粽子飘香</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/forbidden-city-ming-qing-palace/" class="related-post">
+                                    <span class="related-title">故宫 - 明清皇宫的辉煌</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                        
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</article>
+
+
+<style>
+.article-page {
+    padding: var(--spacing-2xl) 0;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--spacing-2xl);
+}
+
+ 
+.article-main {
+    min-width: 0;
+}
+
+.article-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.article-categories {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.article-category {
+    padding: 4px 12px;
+    background: var(--cinnabar-light);
+    color: var(--cinnabar-red);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.article-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-lg);
+    color: var(--ink-black);
+}
+
+.article-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.meta-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+.article-featured-image {
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ 
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-primary);
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content h2 {
+    font-size: 1.75rem;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+}
+
+.article-content h4 {
+    font-size: 1.25rem;
+}
+
+.article-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content a {
+    color: var(--cinnabar-red);
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--cinnabar-red);
+    padding-left: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.article-content code {
+    background: var(--bg-secondary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.9em;
+}
+
+.article-content pre {
+    background: var(--ink-black);
+    color: var(--rice-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin: var(--spacing-lg) 0;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-lg) 0;
+}
+
+ 
+.article-tags {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 6px 14px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all var(--transition-fast);
+}
+
+.tag:hover {
+    background: var(--cinnabar-light);
+    color: var(--cinnabar-red);
+}
+
+ 
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-light);
+    gap: var(--spacing-lg);
+}
+
+.nav-link {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.nav-link:hover {
+    background: var(--border-light);
+    transform: translateY(-2px);
+}
+
+.nav-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.nav-title {
+    font-size: 1rem;
+    color: var(--ink-black);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+ 
+.article-share {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.share-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.share-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--bg-card);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    color: var(--text-secondary);
+}
+
+.share-btn:hover {
+    background: var(--cinnabar-red);
+    color: var(--rice-white);
+    transform: scale(1.1);
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+ 
+.article-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.sidebar-widget {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+}
+
+.widget-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--cinnabar-red);
+    position: relative;
+}
+
+.widget-content {
+    font-size: 0.9rem;
+}
+
+ 
+.widget-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.widget-content a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: block;
+    padding: 4px 0;
+}
+
+.widget-content a:hover {
+    color: var(--cinnabar-red);
+}
+
+.widget-content ul ul {
+    padding-left: var(--spacing-md);
+}
+
+ 
+.author-widget {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--bamboo-green));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rice-white);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.author-bio {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+ 
+.term-item {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.term-item:last-child {
+    border-bottom: none;
+}
+
+.term-name {
+    display: block;
+    font-weight: 600;
+    color: var(--ink-black);
+    margin-bottom: 2px;
+}
+
+.term-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+ 
+.related-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.related-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.related-post:hover {
+    transform: translateX(4px);
+}
+
+.related-title {
+    flex: 1;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.related-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-left: var(--spacing-sm);
+}
+
+ 
+@media (max-width: 1024px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.75rem;
+    }
+    
+    .article-navigation {
+        flex-direction: column;
+    }
+    
+    .article-share {
+        flex-wrap: wrap;
+    }
+}
+</style>
+
+    </main>
+    
+    
+<footer class="site-footer">
+    
+    <div class="footer-decoration">
+        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 Q40,20 60,35 Q80,15 100,30 Q120,10 140,30 Q160,15 180,50 Z" 
+                  fill="var(--border-light)" opacity="0.4"/>
+        </svg>
+    </div>
+    
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>归云集</h3>
+                <p class="footer-description"></p>
+                <div class="footer-links">
+                    
+                        <a href="/">首页</a>
+                    
+                        <a href="/categories/poetry">诗词</a>
+                    
+                        <a href="/categories/calligraphy">书画</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>内容分类</h3>
+                <nav class="footer-nav">
+                    
+                        
+                    
+                        
+                            <a href="/categories/poetry">诗词</a>
+                        
+                    
+                        
+                            <a href="/categories/calligraphy">书画</a>
+                        
+                    
+                        
+                            <a href="/categories/tea-ceremony">茶道</a>
+                        
+                    
+                        
+                            <a href="/categories/hanfu">汉服</a>
+                        
+                    
+                </nav>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <div class="footer-contact">
+                    
+                        <p>邮箱: <a href="mailto:contact@l22.org">contact@l22.org</a></p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2026 归云集. 保留所有权利。</p>
+                <p class="footer-slogan">传承中华文化，弘扬民族精神</p>
+            </div>
+            <div class="footer-meta">
+                <p>
+                    <span>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></span>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+ 
+.site-footer {
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.footer-decoration {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-decoration svg {
+    width: 200px;
+    height: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--ink-black);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--cinnabar-red);
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links,
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-links a,
+.footer-nav a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-nav a:hover {
+    color: var(--cinnabar-red);
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-contact a {
+    color: var(--cinnabar-red);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.copyright p,
+.footer-meta p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.footer-slogan {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--bamboo-green);
+    margin-top: var(--spacing-xs);
+}
+
+.footer-meta a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-meta a:hover {
+    color: var(--cinnabar-red);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-footer {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-slogan {
+        margin: var(--spacing-sm) 0;
+    }
+}
+</style>
+    
+    
+    <script src="/js/main.js"></script>
+    
+    
+</body>
+</html>

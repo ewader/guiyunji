@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#f7f4ed">
+    
+    <title>清明节：追思故人，踏青赏春 - 归云集</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/decorations.css">
+    
+    
+    
+    
+    
+    <meta property="og:title" content="清明节：追思故人，踏青赏春">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://l22.org/posts/qingming-festival-customs/">
+    <meta property="og:image" content="/images/og-default.jpg">
+    <meta property="og:site_name" content="归云集">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="清明节：追思故人，踏青赏春">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-default.jpg">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/decorations.css">
+</head>
+<body class="fade-in">
+    
+<header class="site-header">
+    <div class="container">
+        
+        <div class="header-decoration"></div>
+        
+        
+        <nav class="site-nav">
+            
+            <a href="https://l22.org/" class="site-brand">
+                
+                <span class="site-title">归云集</span>
+            </a>
+            
+            
+            <div class="nav-menu" id="navMenu">
+                
+                
+                    
+                    <a href="/" class="nav-item">
+                        首页
+                    </a>
+                
+                    
+                    <a href="/categories/poetry" class="nav-item">
+                        诗词
+                    </a>
+                
+                    
+                    <a href="/categories/calligraphy" class="nav-item">
+                        书画
+                    </a>
+                
+                    
+                    <a href="/categories/tea-ceremony" class="nav-item">
+                        茶道
+                    </a>
+                
+                    
+                    <a href="/categories/hanfu" class="nav-item">
+                        汉服
+                    </a>
+                
+                    
+                    <a href="/categories/traditional-festivals" class="nav-item">
+                        传统节日
+                    </a>
+                
+                    
+                    <a href="/categories/hundred-schools" class="nav-item">
+                        诸子百家
+                    </a>
+                
+                    
+                    <a href="/about" class="nav-item">
+                        关于
+                    </a>
+                
+            </div>
+            
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<style>
+ 
+.site-header {
+    background: var(--bg-primary);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-decoration {
+    height: 3px;
+    background: linear-gradient(90deg, var(--cinnabar-red), var(--bamboo-green), var(--ink-black));
+    opacity: 0.6;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.site-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-black);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-xl);
+    list-style: none;
+}
+
+.nav-item {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--cinnabar-red);
+    transition: width var(--transition-normal), left var(--transition-normal);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--cinnabar-red);
+}
+
+ 
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    background: var(--cinnabar-red);
+    border-radius: 50%;
+}
+
+ 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink-black);
+    transition: all var(--transition-normal);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.25rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+    }
+    
+    .nav-item {
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .nav-item:hover::after,
+    .nav-item.active::after {
+        width: 0;
+    }
+}
+</style>
+    
+    <main>
+        
+
+<article class="article-page">
+    <div class="container">
+        <div class="article-layout">
+            
+            <div class="article-main">
+                
+                <header class="article-header">
+                    
+                        <div class="article-categories">
+                            
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <a href="/categories/traditional-festivals" class="article-category">传统节日</a>
+                            
+                        </div>
+                    
+                    
+                    <h1 class="article-title">清明节：追思故人，踏青赏春</h1>
+                    
+                    <div class="article-meta">
+                        
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <time datetime="2026-02-21">2026年02月21日</time>
+                        </span>
+                        
+                        
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                归云集
+                            </span>
+                        
+                        
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            阅读时间: 1 分钟
+                        </span>
+                    </div>
+                    
+                    
+                        <div class="article-featured-image">
+                            <img src="https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg" alt="清明节：追思故人，踏青赏春">
+                        </div>
+                    
+                </header>
+                
+                
+                <div class="article-content">
+                    <p>清明节是中国传统节日中最重要的祭祀节日之一，通常在公历4月4日至6日之间交节。清明节不仅是祭祖扫墓的日子，也是踏青赏春的好时节。</p>
+<h3 id="寒食节与清明节的融合">寒食节与清明节的融合</h3>
+<p>清明节最初只是一个节气，用来指导农耕。后来与寒食节逐渐融合，形成了现在的清明节。</p>
+<p>寒食节的起源可以追溯到春秋时期。相传晋文公重耳流亡期间，随臣介子推曾&quot;割股充饥&quot;。重耳即位后，介子推不愿受封，与母亲隐居绵山。晋文公为逼介子推下山，下令三面烧山，不料介子推和母亲被烧死。晋文公悲痛万分，遂下令将介子推烧死的那一天定为寒食节，禁止生火做饭，只吃冷食。</p>
+<p>随着时间的推移，寒食节与清明节逐渐合二为一，寒食禁火的习俗也成为清明节的重要传统之一。</p>
+<h2 id="主要习俗">主要习俗</h2>
+<h3 id="1-扫墓祭祖">1. 扫墓祭祖</h3>
+<p>扫墓祭祖是清明节最重要的活动。人们会携带酒食、果品、纸钱等到墓地，祭拜祖先，清理墓地，表达对先人的思念和敬意。</p>
+<p>传统的扫墓仪式包括：</p>
+<ul>
+<li><strong>修整墓地</strong>：清除杂草，添土培坟</li>
+<li><strong>供奉祭品</strong>：摆上酒食、水果、糕点等</li>
+<li><strong>焚烧纸钱</strong>：为祖先送去&quot;钱财&quot;</li>
+<li><strong>叩首行礼</strong>：表达对祖先的尊敬和怀念</li>
+</ul>
+<h3 id="2-踏青赏春">2. 踏青赏春</h3>
+<p>清明节正值春暖花开之际，人们也会利用这个机会走出户外，踏青赏春，感受春天的气息。</p>
+<p>踏青活动丰富多彩，包括：</p>
+<ul>
+<li><strong>游园赏花</strong>：到公园、郊外欣赏春天的花卉</li>
+<li><strong>放风筝</strong>：将风筝放上高空，寓意放走晦气</li>
+<li><strong>荡秋千</strong>：这是古代清明节的习俗之一</li>
+<li><strong>插柳</strong>：将柳枝插在门上，寓意驱邪避灾</li>
+</ul>
+<h3 id="3-吃青团">3. 吃青团</h3>
+<p>青团是清明节的传统食品，用艾草汁拌进糯米粉里，再包裹豆沙、莲蓉等馅料制成。青团色泽碧绿，口感软糯，是清明节不可缺少的美味。</p>
+<h3 id="4-蹴鞠">4. 蹴鞠</h3>
+<p>蹴鞠是中国古代的足球运动，也是清明节的传统活动之一。古人在清明节时举行蹴鞠比赛，既能锻炼身体，又能增添节日的欢乐气氛。</p>
+<h2 id="文化内涵">文化内涵</h2>
+<h3 id="1-慎终追远">1. 慎终追远</h3>
+<p>清明节的核心精神是&quot;慎终追远&quot;。通过祭祖扫墓，人们表达对祖先的怀念和敬意，体现了中华民族孝道文化的传承。</p>
+<h3 id="2-生死观">2. 生死观</h3>
+<p>清明节既是对逝者的追思，也是对生命的礼赞。在缅怀先人的同时，人们也通过踏青赏春，感受生命的美好。这种生与死的对比，体现了中国人对生命意义的深刻思考。</p>
+<h3 id="3-人与自然和谐相处">3. 人与自然和谐相处</h3>
+<p>清明节正值春天，人们走出户外，感受自然之美。这体现了中国传统文化中&quot;天人合一&quot;的思想，强调人与自然的和谐共处。</p>
+<h2 id="经典诗词">经典诗词</h2>
+<p>清明节是中国文人墨客最喜欢的题材之一，留下了许多脍炙人口的诗篇。</p>
+<h3 id="杜牧清明">杜牧《清明》</h3>
+<blockquote>
+<p>清明时节雨纷纷，<br>
+路上行人欲断魂。<br>
+借问酒家何处有，<br>
+牧童遥指杏花村。</p>
+</blockquote>
+<p>这首诗描绘了清明时节雨纷纷的景象，表达了游子在异乡的思乡之情。</p>
+<h3 id="黄庭坚清明">黄庭坚《清明》</h3>
+<blockquote>
+<p>佳节清明桃李笑，<br>
+野田荒冢只生愁。<br>
+雷惊天地龙蛇蛰，<br>
+雨足郊原草木柔。</p>
+</blockquote>
+<p>这首诗将节日的欢乐与对逝者的怀念形成对比，体现了清明节的双重意义。</p>
+<h2 id="现代意义">现代意义</h2>
+<p>在现代社会，清明节的意义更加丰富。它不仅是传承传统文化的载体，也是家庭团聚、增进感情的好时机。</p>
+<p>通过清明节的祭祖活动，年轻一代能够了解家族历史，增强家族凝聚力。通过踏青赏春，人们可以放松身心，亲近自然，缓解现代生活的压力。</p>
+<h2 id="结语">结语</h2>
+<p>清明节是一个承载着深厚文化内涵的传统节日。它既是对逝者的缅怀，也是对生命的礼赞；既是对传统的传承，也是对自然的拥抱。在快节奏的现代生活中，清明节提醒我们不忘初心，珍惜当下，感恩生命。</p>
+<p>让我们在清明节这一天，既缅怀先人，也珍惜眼前的美好时光，让这个古老的节日在新时代焕发新的光彩。</p>
+
+                </div>
+                
+                
+                
+                    <div class="article-tags">
+                        
+                            <a href="/tags/%E6%B8%85%E6%98%8E%E8%8A%82" class="tag">#清明节</a>
+                        
+                            <a href="/tags/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5" class="tag">#传统节日</a>
+                        
+                            <a href="/tags/%E5%AF%92%E9%A3%9F%E8%8A%82" class="tag">#寒食节</a>
+                        
+                            <a href="/tags/%E8%B8%8F%E9%9D%92" class="tag">#踏青</a>
+                        
+                    </div>
+                
+                
+                
+                <nav class="article-navigation">
+                    
+                        <a href="/posts/chinese-tea-ceremony-culture/" class="nav-link nav-prev">
+                            <span class="nav-label">上一篇</span>
+                            <span class="nav-title">中国茶道：一叶知秋，品味人生</span>
+                        </a>
+                    
+                    
+                    
+                        <a href="/posts/lantingxu-calligraphy-appreciation/" class="nav-link nav-next">
+                            <span class="nav-label">下一篇</span>
+                            <span class="nav-title">王羲之《兰亭序》书法艺术赏析</span>
+                        </a>
+                    
+                </nav>
+                
+                
+                <div class="article-share">
+                    <span class="share-label">分享：</span>
+                    <button class="share-btn" data-platform="weibo" title="分享到微博">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.6 16.2c0 2.9-2.8 5.2-6.2 5.2s-6.2-2.3-6.2-5.2 2.8-5.2 6.2-5.2 6.2 2.3 6.2 5.2zm-10.4 0c0 1.8 1.9 3.3 4.2 3.3s4.2-1.5 4.2-3.3-1.9-3.3-4.2-3.3-4.2 1.5-4.2 3.3zm9.4-6.3c-.8.3-1.7.5-2.7.6-2.4.3-5 .3-7.5.1-.3 0-.6-.1-.8-.2-2.5-.7-3.9-2.3-3.5-4.3.3-1.7 2.1-2.9 4.4-2.9 2.7 0 5.1 1.5 5.4 3.7.1.6-.1 1.2-.4 1.7-.4.6-1.1 1-1.9 1.1-.6.1-1.2 0-1.8-.2-.7-.3-1.1-.8-1-1.5.1-.6.6-1.1 1.3-1.2.6-.1 1.2.1 1.6.5.2.2.2.4.2.6 0 .2-.1.4-.3.5-.2.1-.5.1-.7 0-.1 0-.2-.1-.3-.2 0 0 0 0 0 0-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.3.1-.1.2-.1.3-.1.1 0 .2 0 .3.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1 0 .1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.5-.1.7.1.9.3.1.5 0 .8-.2.3-.2.5-.5.6-.8.2-.5.2-1 .1-1.5-.3-1.5-2-2.6-3.9-2.6-1.6 0-3 .8-3.2 2-.2 1.2.7 2.3 2.2 2.8.2.1.4.1.6.2 2.2.2 4.5.2 6.7-.1.9-.1 1.7-.3 2.4-.5 1.4-.4 2.3-1.3 2.3-2.4 0-1.4-1.5-2.6-3.6-2.8-2.7-.2-5.4-.2-8.1 0-.3 0-.5 0-.8-.1-2.9-.4-4.8-2.1-4.3-4 .4-1.6 2.5-2.7 5.1-2.7 3.1 0 5.8 1.6 6.1 4 .1.6-.1 1.2-.5 1.8-.4.6-1.1 1.1-2 1.2-.6.1-1.3 0-1.9-.2-.8-.3-1.3-.9-1.1-1.6.1-.7.7-1.2 1.5-1.3.7-.1 1.4.1 1.8.5.2.2.3.5.2.7-.1.2-.2.5-.4.6-.2.1-.5.2-.8.1-.1 0-.2-.1-.4-.2 0 0 0 0 0 0-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.3.1-.1.3-.2.4-.2.1 0 .3 0 .4.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.6-.1.8.1.9.3.1.5 0 .9-.2.3-.2.6-.5.7-.9.2-.5.2-1.1.1-1.6-.3-1.7-2.2-2.9-4.3-2.9-1.8 0-3.4.9-3.6 2.2-.2 1.3.8 2.5 2.4 3 .2.1.5.1.7.2 2.5.2 5 .2 7.4-.1 1-.1 1.9-.3 2.7-.5 1.6-.4 2.6-1.4 2.6-2.6 0-1.5-1.6-2.8-4-3-2.9-.2-5.9-.2-8.8 0-.3 0-.6 0-.9-.1-3.2-.4-5.3-2.3-4.8-4.3.5-1.7 2.8-3 5.7-3 3.4 0 6.4 1.7 6.8 4.4.1.6-.1 1.3-.5 1.9-.5.7-1.3 1.2-2.2 1.3-.7.1-1.4 0-2.1-.2-.9-.3-1.4-1-1.2-1.8.1-.8.8-1.3 1.7-1.4.8-.1 1.5.1 2 .5.2.2.3.5.2.8-.1.3-.2.5-.5.7-.2.1-.5.2-.8.1-.1 0-.2-.1-.4-.2 0 0 0 0 0 0-.1-.1-.2-.2-.1-.4 0-.1 0-.3.1-.4.1-.1.3-.2.4-.2.1 0 .3 0 .4.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.2.3-.2.7-.1 1 .1.1.3 0 1-.2.3-.3.7-.5 1-.2.6-.2 1.2-.1 1.7-.4 1.9-2.4 3.2-4.8 3.2-2 0-3.7-1-4-2.4-.2-1.4.9-2.7 2.6-3.3.2-.1.5-.1.8-.2 2.7-.2 5.5-.2 8.2.1 1.1.1 2.1.3 3 .5 1.8.5 2.9 1.6 2.9 2.9 0 1.7-1.8 3.1-4.4 3.3-3.2.2-6.5.2-9.7-.1-.3 0-.7 0-1-.1-3.5-.5-5.8-2.5-5.2-4.7.5-1.9 3.1-3.3 6.3-3.3 3.7 0 7 1.9 7.4 4.8.1.7-.1 1.4-.6 2-.5.7-1.4 1.3-2.4 1.4-.8.1-1.6 0-2.3-.2-1-.4-1.6-1.1-1.4-2 .2-.9.9-1.5 1.9-1.6.9-.1 1.7.1 2.2.6.2.2.4.6.2.9-.1.3-.3.6-.6.7-.3.1-.6.2-.9.1-.1 0-.3-.1-.4-.2 0 0 0 0 0 0-.1-.1-.2-.2-.2-.4 0-.1 0-.3.1-.4.1-.1.3-.2.5-.2.1 0 .3 0 .5.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.7-.2 1.1.1.2.3 0 1.1-.3.3-.4.8-.5 1.1-.2.7-.2 1.4-.1 2-.5 2.1-2.7 3.5-5.3 3.5-2.2 0-4.2-1.1-4.4-2.7-.3-1.5 1-2.9 2.9-3.6.3-.1.5-.2.9-.2 3-.2 6-.2 9.1.1 1.2.1 2.3.3 3.3.6 2 .5 3.2 1.7 3.2 3.1 0 1.8-2 3.4-4.9 3.6-3.5.2-7.1.2-10.7-.1-.4 0-.7 0-1.1-.1-3.9-.5-6.4-2.8-5.8-5.2.6-2.1 3.4-3.6 7-3.6 4.1 0 7.7 2.1 8.2 5.3.1.8-.1 1.5-.6 2.2-.6.8-1.6 1.4-2.7 1.5-.9.1-1.7 0-2.6-.2-1.1-.4-1.7-1.2-1.5-2.2.2-1 1-1.6 2.1-1.8 1-.1 1.9.1 2.5.7.3.3.4.7.3 1-.1.4-.4.7-.7.8-.3.1-.7.2-1 .1-.2 0-.3-.1-.5-.2 0 0 0 0 0 0-.2-.1-.2-.3-.2-.5 0-.2 0-.4.1-.5.1-.2.4-.3.5-.3.2 0 .3 0 .5.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.8-.3 1.2.1.2.4 0 1.2-.3.4-.4.9-.6 1.2-.2.7-.3 1.5-.1 2.2-.5 2.3-3 3.9-5.9 3.9-2.4 0-4.6-1.2-4.9-3-.3-1.7 1.1-3.2 3.2-4 .3-.1.6-.2 1-.2 3.3-.2 6.7-.2 10.1.1 1.3.1 2.5.4 3.7.6 2.2.6 3.6 1.9 3.6 3.5 0 2-2.2 3.7-5.4 4-3.9.2-7.9.2-11.8-.1-.4 0-.8 0-1.2-.1-4.3-.6-7.1-3.1-6.4-5.8.6-2.3 3.8-4 7.7-4 4.5 0 8.5 2.3 9.1 5.9.1.9-.1 1.7-.7 2.5-.6.9-1.7 1.5-3 1.7-1 .1-1.9 0-2.9-.2-1.2-.5-1.9-1.3-1.7-2.4.2-1.1 1.1-1.8 2.3-2 1.1-.1 2.1.1 2.7.8.3.3.5.8.3 1.1-.1.4-.4.8-.8.9-.4.1-.8.2-1.2.1-.2 0-.4-.1-.5-.2 0 0 0 0 0 0-.2-.1-.2-.3-.2-.5 0-.2.1-.4.2-.5.1-.2.4-.3.6-.3.2 0 .4 0 .6.1 0 0 .1 0 .1.1 0 0 0 0 0 0 0 0 .1 0 .1 0 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 .1.1.1.1 0 0 0 .1 0 .1 0 0 0 .1 0 .1 0 0 0 0 0 0 0 0 0 0 0 0 0-.1.1-.1.1-.2.2-.3.3-.4.9-.3 1.3.1.2.4 0 1.4-.4.4-.5 1-.7 1.4-.2.8-.3 1.7-.1 2.4-.6 2.6-3.3 4.3-6.5 4.3-2.7 0-5.1-1.3-5.4-3.3-.3-1.9 1.2-3.5 3.5-4.4.3-.1.7-.2 1.1-.2 3.7-.2 7.4-.2 11.1.1 1.5.1 2.8.4 4.1.7 2.4.6 3.9 2.1 3.9 3.8 0 2.2-2.4 4.1-6 4.4"/>
+                        </svg>
+                    </button>
+                    <button class="share-btn" data-platform="weixin" title="分享到微信">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                        </svg>
+                    </button>
+                    <button class="share-btn" data-platform="copy" title="复制链接">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <aside class="article-sidebar">
+                
+                
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">文章目录</h3>
+                        <div class="widget-content">
+                            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#寒食节与清明节的融合">寒食节与清明节的融合</a></li>
+      </ul>
+    </li>
+    <li><a href="#主要习俗">主要习俗</a>
+      <ul>
+        <li><a href="#1-扫墓祭祖">1. 扫墓祭祖</a></li>
+        <li><a href="#2-踏青赏春">2. 踏青赏春</a></li>
+        <li><a href="#3-吃青团">3. 吃青团</a></li>
+        <li><a href="#4-蹴鞠">4. 蹴鞠</a></li>
+      </ul>
+    </li>
+    <li><a href="#文化内涵">文化内涵</a>
+      <ul>
+        <li><a href="#1-慎终追远">1. 慎终追远</a></li>
+        <li><a href="#2-生死观">2. 生死观</a></li>
+        <li><a href="#3-人与自然和谐相处">3. 人与自然和谐相处</a></li>
+      </ul>
+    </li>
+    <li><a href="#经典诗词">经典诗词</a>
+      <ul>
+        <li><a href="#杜牧清明">杜牧《清明》</a></li>
+        <li><a href="#黄庭坚清明">黄庭坚《清明》</a></li>
+      </ul>
+    </li>
+    <li><a href="#现代意义">现代意义</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+                        </div>
+                    </div>
+                
+                
+                
+                
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">关于作者</h3>
+                        <div class="widget-content author-widget">
+                            <div class="author-avatar">
+                                
+                                    <span>归</span>
+                                
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">归云集</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+                
+                
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">相关推荐</h3>
+                    <div class="widget-content related-posts">
+                        
+                        
+                            
+                                <a href="/posts/suzhou-gardens-poetic-living/" class="related-post">
+                                    <span class="related-title">苏州园林 - 江南水乡的诗意栖居</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/peking-opera-quintessence-of-art/" class="related-post">
+                                    <span class="related-title">京剧 - 国粹艺术的魅力</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/mid-autumn-festival-moon-reunion/" class="related-post">
+                                    <span class="related-title">中秋节 - 月圆人团圆</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/dragon-boat-festival/" class="related-post">
+                                    <span class="related-title">端午节 - 龙舟竞渡与粽子飘香</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                                <a href="/posts/forbidden-city-ming-qing-palace/" class="related-post">
+                                    <span class="related-title">故宫 - 明清皇宫的辉煌</span>
+                                    <span class="related-date">02-24</span>
+                                </a>
+                            
+                        
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</article>
+
+
+<style>
+.article-page {
+    padding: var(--spacing-2xl) 0;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--spacing-2xl);
+}
+
+ 
+.article-main {
+    min-width: 0;
+}
+
+.article-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.article-categories {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.article-category {
+    padding: 4px 12px;
+    background: var(--cinnabar-light);
+    color: var(--cinnabar-red);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.article-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-lg);
+    color: var(--ink-black);
+}
+
+.article-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.meta-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+.article-featured-image {
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ 
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-primary);
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content h2 {
+    font-size: 1.75rem;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+}
+
+.article-content h4 {
+    font-size: 1.25rem;
+}
+
+.article-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content a {
+    color: var(--cinnabar-red);
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--cinnabar-red);
+    padding-left: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.article-content code {
+    background: var(--bg-secondary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.9em;
+}
+
+.article-content pre {
+    background: var(--ink-black);
+    color: var(--rice-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin: var(--spacing-lg) 0;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-lg) 0;
+}
+
+ 
+.article-tags {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 6px 14px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all var(--transition-fast);
+}
+
+.tag:hover {
+    background: var(--cinnabar-light);
+    color: var(--cinnabar-red);
+}
+
+ 
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-light);
+    gap: var(--spacing-lg);
+}
+
+.nav-link {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.nav-link:hover {
+    background: var(--border-light);
+    transform: translateY(-2px);
+}
+
+.nav-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.nav-title {
+    font-size: 1rem;
+    color: var(--ink-black);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+ 
+.article-share {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.share-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.share-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--bg-card);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    color: var(--text-secondary);
+}
+
+.share-btn:hover {
+    background: var(--cinnabar-red);
+    color: var(--rice-white);
+    transform: scale(1.1);
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+ 
+.article-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.sidebar-widget {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+}
+
+.widget-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--cinnabar-red);
+    position: relative;
+}
+
+.widget-content {
+    font-size: 0.9rem;
+}
+
+ 
+.widget-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.widget-content a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: block;
+    padding: 4px 0;
+}
+
+.widget-content a:hover {
+    color: var(--cinnabar-red);
+}
+
+.widget-content ul ul {
+    padding-left: var(--spacing-md);
+}
+
+ 
+.author-widget {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cinnabar-red), var(--bamboo-green));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rice-white);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.author-bio {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+ 
+.term-item {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.term-item:last-child {
+    border-bottom: none;
+}
+
+.term-name {
+    display: block;
+    font-weight: 600;
+    color: var(--ink-black);
+    margin-bottom: 2px;
+}
+
+.term-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+ 
+.related-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.related-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.related-post:hover {
+    transform: translateX(4px);
+}
+
+.related-title {
+    flex: 1;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.related-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-left: var(--spacing-sm);
+}
+
+ 
+@media (max-width: 1024px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.75rem;
+    }
+    
+    .article-navigation {
+        flex-direction: column;
+    }
+    
+    .article-share {
+        flex-wrap: wrap;
+    }
+}
+</style>
+
+    </main>
+    
+    
+<footer class="site-footer">
+    
+    <div class="footer-decoration">
+        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 Q40,20 60,35 Q80,15 100,30 Q120,10 140,30 Q160,15 180,50 Z" 
+                  fill="var(--border-light)" opacity="0.4"/>
+        </svg>
+    </div>
+    
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>归云集</h3>
+                <p class="footer-description"></p>
+                <div class="footer-links">
+                    
+                        <a href="/">首页</a>
+                    
+                        <a href="/categories/poetry">诗词</a>
+                    
+                        <a href="/categories/calligraphy">书画</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>内容分类</h3>
+                <nav class="footer-nav">
+                    
+                        
+                    
+                        
+                            <a href="/categories/poetry">诗词</a>
+                        
+                    
+                        
+                            <a href="/categories/calligraphy">书画</a>
+                        
+                    
+                        
+                            <a href="/categories/tea-ceremony">茶道</a>
+                        
+                    
+                        
+                            <a href="/categories/hanfu">汉服</a>
+                        
+                    
+                </nav>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <div class="footer-contact">
+                    
+                        <p>邮箱: <a href="mailto:contact@l22.org">contact@l22.org</a></p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2026 归云集. 保留所有权利。</p>
+                <p class="footer-slogan">传承中华文化，弘扬民族精神</p>
+            </div>
+            <div class="footer-meta">
+                <p>
+                    <span>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></span>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+ 
+.site-footer {
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.footer-decoration {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-decoration svg {
+    width: 200px;
+    height: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--ink-black);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--cinnabar-red);
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links,
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-links a,
+.footer-nav a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-nav a:hover {
+    color: var(--cinnabar-red);
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-contact a {
+    color: var(--cinnabar-red);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.copyright p,
+.footer-meta p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.footer-slogan {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--bamboo-green);
+    margin-top: var(--spacing-xs);
+}
+
+.footer-meta a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-meta a:hover {
+    color: var(--cinnabar-red);
+}
+
+ 
+@media (max-width: 768px) {
+    .site-footer {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-slogan {
+        margin: var(--spacing-sm) 0;
+    }
+}
+</style>
+    
+    
+    <script src="/js/main.js"></script>
+    
+    
+</body>
+</html>
