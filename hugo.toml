@@ -14,17 +14,15 @@ author = "归云集"
 # 网站语言
 defaultContentLanguage = "zh-cn"
 
-# 主题配置
-theme = ""
-
 # 启用功能
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
 
 # 分页配置
-paginate = 20
-paginatePath = "page"
+[pagination]
+pagerSize = 20
+path = "page"
 
 # 税务配置
 [taxonomies]
