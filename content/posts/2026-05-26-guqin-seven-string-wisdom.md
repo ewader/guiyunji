@@ -10,7 +10,7 @@ slug = 'guqin-seven-string-wisdom'
 
 琴之一字，在中国文化中地位卓然。**古琴**，又称七弦琴，是中国最古老的弹拨乐器之一，其历史可追溯至三千余年前的先秦时代。传说伏羲氏削桐为琴，制五弦；文王、武王各增一弦，遂成七弦，沿用至今。
 
-![古琴](https://images.pexels.com/photos/2846077/pexels-photo-2846077.jpeg/?auto=compress&cs=tinysrgb&w=800)
+![古琴](https://images.pexels.com/photos/5096447/pexels-photo-5096447.jpeg/?auto=compress&cs=tinysrgb&w=800)
 
 ## 文人之道，与琴为伴
 
