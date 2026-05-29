@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 27 May 2026 08:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Fri, 29 May 2026 08:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://www.l22.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>民俗</title>
+				<link>https://www.l22.org/categories/%E6%B0%91%E4%BF%97/</link>
+				<pubDate>Fri, 29 May 2026 08:00:00 +0800</pubDate>
+				<guid>https://www.l22.org/categories/%E6%B0%91%E4%BF%97/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>传统文化</title>
 				<link>https://www.l22.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</link>
@@ -25,13 +32,6 @@
 				<link>https://www.l22.org/categories/%E9%BD%90%E7%89%A9/</link>
 				<pubDate>Tue, 26 May 2026 08:00:00 +0800</pubDate>
 				<guid>https://www.l22.org/categories/%E9%BD%90%E7%89%A9/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>民俗</title>
-				<link>https://www.l22.org/categories/%E6%B0%91%E4%BF%97/</link>
-				<pubDate>Mon, 25 May 2026 08:00:00 +0800</pubDate>
-				<guid>https://www.l22.org/categories/%E6%B0%91%E4%BF%97/</guid>
 				<description></description>
 			</item>
 			<item>
