@@ -1,354 +1,48 @@
 {{ define "main" }}
-<!-- 列表页 -->
 <div class="list-page">
-    <div class="container">
-        <!-- 页面标题 -->
-        <header class="page-header">
-            <h1 class="page-title">
-                {{ if .IsHome }}
-                    {{ .Site.Title }}
-                {{ else if eq .Kind "term" }}
-                    {{ $term := .Data.Term }}
-                    {{ $displayName := $term }}
-                    {{ if eq $term "hanfu" }}{{ $displayName = "汉服" }}{{ end }}
-                    {{ if eq $term "poetry" }}{{ $displayName = "诗词" }}{{ end }}
-                    {{ if eq $term "calligraphy" }}{{ $displayName = "书画" }}{{ end }}
-                    {{ if eq $term "tea-ceremony" }}{{ $displayName = "茶道" }}{{ end }}
-                    {{ if eq $term "traditional-festivals" }}{{ $displayName = "传统节日" }}{{ end }}
-                    {{ if eq $term "hundred-schools" }}{{ $displayName = "诸子百家" }}{{ end }}
-                    {{ $displayName }}
-                {{ else if .Title }}
-                    {{ .Title }}
-                {{ else }}
-                    文章列表
-                {{ end }}
-            </h1>
-            
-            {{ if .Description }}
-                <p class="page-description">{{ .Description }}</p>
-            {{ end }}
-            
-            <!-- 面包屑导航 -->
-            {{ if not .IsHome }}
-                <nav class="breadcrumb" aria-label="面包屑">
-                    <a href="{{ .Site.BaseURL }}">首页</a>
-                    {{ if .Section }}
-                        <span class="breadcrumb-separator">›</span>
-                        {{ $sectionName := .Section }}
-                        {{ $displayName := .Section }}
-                        {{ if eq .Section "posts" }}{{ $displayName = "文章列表" }}{{ end }}
-                        {{ if eq .Section "hanfu" }}{{ $displayName = "汉服" }}{{ end }}
-                        {{ if eq .Section "poetry" }}{{ $displayName = "诗词" }}{{ end }}
-                        {{ if eq .Section "calligraphy" }}{{ $displayName = "书画" }}{{ end }}
-                        {{ if eq .Section "tea-ceremony" }}{{ $displayName = "茶道" }}{{ end }}
-                        {{ if eq .Section "traditional-festivals" }}{{ $displayName = "传统节日" }}{{ end }}
-                        {{ if eq .Section "hundred-schools" }}{{ $displayName = "诸子百家" }}{{ end }}
-                        {{ if eq .Section "categories" }}{{ $displayName = "分类" }}{{ end }}
-                        {{ if eq .Section "tags" }}{{ $displayName = "标签" }}{{ end }}
-                        <a href="{{ "/" | relLangURL }}{{ $sectionName }}">{{ $displayName }}</a>
-                    {{ end }}
-                    {{ if .Title }}
-                        <span class="breadcrumb-separator">›</span>
-                        {{ $breadcrumbTitle := .Title }}
-                        {{ if eq .Kind "term" }}
-                            {{ if eq .Title "Hanfu" }}{{ $breadcrumbTitle = "汉服" }}{{ end }}
-                            {{ if eq .Title "Poetry" }}{{ $breadcrumbTitle = "诗词" }}{{ end }}
-                            {{ if eq .Title "Calligraphy" }}{{ $breadcrumbTitle = "书画" }}{{ end }}
-                            {{ if eq .Title "Tea-ceremony" }}{{ $breadcrumbTitle = "茶道" }}{{ end }}
-                            {{ if eq .Title "Traditional-festivals" }}{{ $breadcrumbTitle = "传统节日" }}{{ end }}
-                            {{ if eq .Title "Hundred-schools" }}{{ $breadcrumbTitle = "诸子百家" }}{{ end }}
-                        {{ end }}
-                        <span class="breadcrumb-current">{{ $breadcrumbTitle }}</span>
-                    {{ end }}
-                </nav>
-            {{ end }}
-        </header>
-        
-        <!-- 文章列表 -->
-        <div class="posts-list">
-            {{ range .Paginator.Pages.ByDate.Reverse }}
-                {{ $wordCount := .WordCount }}
-                {{ $readTime := math.Ceil (div $wordCount 400.0) }}
-                <article class="post-item">
-                    <h2 class="post-title">
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </h2>
-                    <div class="post-meta">
-                        <span class="meta-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
-                        </span>
-                        <span class="meta-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            {{ $readTime }} 分钟
-                        </span>
-                    </div>
-                </article>
-            {{ end }}
-        </div>
+  <div class="container">
+    <header class="list-header">
+      <h1 class="list-title">
+        {{ if eq .Kind "term" }}
+          {{ partial "category-name" (dict "slug" .Data.Term "default" .Data.Term) }}
+        {{ else }}
+          {{ .Title }}
+        {{ end }}
+      </h1>
+      <p class="list-desc">{{ .Params.description | default (printf "共 %d 篇文章" (len .Pages)) }}</p>
+    </header>
 
-        <!-- 分页导航 -->
-        <nav class="pagination" aria-label="分页导航">
-                {{ if .Paginator.HasPrev }}
-                    <a href="{{ .Paginator.Prev.URL }}" class="pagination-link pagination-prev">
-                        <span>‹ 上一页</span>
-                    </a>
+    <div class="list-stream">
+      {{ range .Paginator.Pages.ByDate.Reverse }}
+        <article class="list-item">
+          <time class="list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          <div class="list-body">
+            <h2 class="list-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <p class="list-item-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
+            <div class="list-item-meta">
+              {{ if .Params.categories }}
+                {{ range first 1 .Params.categories }}
+                  <span class="meta-tag">{{ partial "category-name" (dict "slug" . "default" .) }}</span>
                 {{ end }}
-                
-                <div class="pagination-numbers">
-                    {{ $paginator := .Paginator }}
-                    {{ $adjacent_links := 2 }}
-                    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
-                    {{ $lower_limit := (add $adjacent_links 1) }}
-                    {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
-                    {{ if gt $paginator.TotalPages $max_links }}
-                        {{ if lt $paginator.PageNumber $lower_limit }}
-                            {{ range first $max_links $paginator.Pagers }}
-                                {{ if eq . $paginator }}
-                                    <span class="pagination-current">{{ .PageNumber }}</span>
-                                {{ else }}
-                                    <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
-                                {{ end }}
-                            {{ end }}
-                        {{ else if gt $paginator.PageNumber $upper_limit }}
-                            {{ range last $max_links $paginator.Pagers }}
-                                {{ if eq . $paginator }}
-                                    <span class="pagination-current">{{ .PageNumber }}</span>
-                                {{ else }}
-                                    <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
-                                {{ end }}
-                            {{ end }}
-                        {{ else }}
-                            {{ range $paginator.Pagers }}
-                                {{ if or (le (sub .PageNumber $paginator.PageNumber) $adjacent_links) (le (sub $paginator.PageNumber .PageNumber) $adjacent_links) }}
-                                    {{ if eq . $paginator }}
-                                        <span class="pagination-current">{{ .PageNumber }}</span>
-                                    {{ else }}
-                                        <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
-                                    {{ end }}
-                                {{ end }}
-                            {{ end }}
-                        {{ end }}
-                    {{ else }}
-                        {{ range $paginator.Pagers }}
-                            {{ if eq . $paginator }}
-                                <span class="pagination-current">{{ .PageNumber }}</span>
-                            {{ else }}
-                                <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                </div>
-                
-                {{ if .Paginator.HasNext }}
-                    <a href="{{ .Paginator.Next.URL }}" class="pagination-link pagination-next">
-                        <span>下一页 ›</span>
-                    </a>
-                {{ end }}
-            </nav>
+              {{ end }}
+              <span>{{ math.Ceil (div .WordCount 400.0) }} 分钟</span>
+            </div>
+          </div>
+        </article>
+      {{ end }}
     </div>
+
+    {{ if gt .Paginator.TotalPages 1 }}
+    <nav class="list-pagination">
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="page-link">‹ 上一页</a>
+      {{ end }}
+      <span class="page-current">{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="page-link">下一页 ›</a>
+      {{ end }}
+    </nav>
+    {{ end }}
+  </div>
 </div>
-
-<!-- 列表页样式 -->
-<style>
-.list-page {
-    padding: var(--spacing-2xl) 0;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-md);
-    color: var(--ink-black);
-}
-
-.page-description {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
-}
-
-/* 面包屑导航 */
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-top: var(--spacing-lg);
-}
-
-.breadcrumb a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.breadcrumb a:hover {
-    color: var(--cinnabar-red);
-}
-
-.breadcrumb-separator {
-    color: var(--border-color);
-}
-
-.breadcrumb-current {
-    color: var(--ink-black);
-    font-weight: 500;
-}
-
-/* 文章列表 */
-.posts-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.post-item {
-    padding: var(--spacing-lg);
-    background: var(--bg-card);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-light);
-    transition: all var(--transition-normal);
-}
-
-.post-item:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--cinnabar-red);
-}
-
-.post-title {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.post-title a {
-    color: var(--ink-black);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.post-title a:hover {
-    color: var(--cinnabar-red);
-}
-
-.post-meta {
-    display: flex;
-    gap: var(--spacing-lg);
-    flex-wrap: wrap;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.meta-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.meta-item svg {
-    width: 14px;
-    height: 14px;
-}
-
-/* 分页导航 */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-2xl);
-    flex-wrap: wrap;
-}
-
-.pagination-link {
-    min-width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 var(--spacing-md);
-    background: var(--bg-card);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-sm);
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-}
-
-.pagination-link:hover {
-    background: var(--cinnabar-light);
-    border-color: var(--cinnabar-red);
-    color: var(--cinnabar-red);
-}
-
-.pagination-current {
-    min-width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--cinnabar-red);
-    color: var(--rice-white);
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-}
-
-.pagination-numbers {
-    display: flex;
-    gap: var(--spacing-xs);
-}
-
-/* 响应式 */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    .post-item {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-    
-    .post-image {
-        order: -1;
-    }
-    
-    .post-image img {
-        height: 180px;
-    }
-    
-    .pagination {
-        gap: var(--spacing-xs);
-    }
-    
-    .pagination-link {
-        min-width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
-        padding: 0 var(--spacing-sm);
-    }
-    
-    .pagination-current {
-        min-width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
-    }
-}
-</style>
 {{ end }}

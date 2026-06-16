@@ -3,7 +3,7 @@ title = '中国瓷器——泥与火的艺术'
 date = '2026-06-13T08:00:00+08:00'
 draft = false
 categories = ['传统文化', '工艺']
-tags = ['瓷器', '陶瓷', '景德镇', '非物质文化遗产', '传统工艺', '青花瓷']
+tags = ['瓷器', '陶瓷', '景德镇', '非物质文化遗产', '工艺', '青花瓷']
 url = '/posts/chinese-porcelain-art-ceramics/'
 slug = 'chinese-porcelain-art-ceramics'
 +++

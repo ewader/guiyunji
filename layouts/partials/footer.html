@@ -1,205 +1,28 @@
-<!-- 站点页脚 -->
 <footer class="site-footer">
-    <!-- 祥云装饰 -->
-    <div class="footer-decoration">
-        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20,50 Q40,20 60,35 Q80,15 100,30 Q120,10 140,30 Q160,15 180,50 Z" 
-                  fill="var(--border-light)" opacity="0.4"/>
-        </svg>
-    </div>
-    
-    <div class="container">
-        <div class="footer-content">
-            <!-- 站点信息 -->
-            <div class="footer-section">
-                <h3>{{ .Site.Title }}</h3>
-                <p class="footer-description">{{ .Site.Params.description }}</p>
-                <div class="footer-links">
-                    {{ range first 3 .Site.Menus.main }}
-                        <a href="{{ .URL }}">{{ .Name }}</a>
-                    {{ end }}
-                </div>
-            </div>
-            
-            <!-- 分类导航 -->
-            <div class="footer-section">
-                <h3>内容分类</h3>
-                <nav class="footer-nav">
-                    {{ range first 5 .Site.Menus.main }}
-                        {{ if ne .Name "首页" }}
-                            <a href="{{ .URL }}">{{ .Name }}</a>
-                        {{ end }}
-                    {{ end }}
-                </nav>
-            </div>
-            
-            <!-- 联系方式 -->
-            <div class="footer-section">
-                <h3>联系我们</h3>
-                <div class="footer-contact">
-                    {{ if .Site.Params.email }}
-                        <p>邮箱: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
-                    {{ end }}
-                    {{ if .Site.Params.wechat }}
-                        <p>微信: {{ .Site.Params.wechat }}</p>
-                    {{ end }}
-                </div>
-            </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-seal">归</div>
+        <p class="footer-desc">{{ .Site.Params.description }}</p>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-heading">栏目</h4>
+        <div class="footer-links-inline">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="footer-link">{{ .Name }}</a>
+          {{ end }}
         </div>
-        
-        <!-- 版权信息 -->
-        <div class="footer-bottom">
-            <div class="copyright">
-                <p>&copy; {{ now.Year }} {{ .Site.Title }}. 保留所有权利。</p>
-                <p class="footer-slogan">传承中华文化，弘扬民族精神</p>
-            </div>
-            <div class="footer-meta">
-                <p>
-                    <span>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></span>
-                    {{ if .Site.Params.icp }}
-                        <span>| <a href="https://beian.miit.gov.cn" target="_blank">{{ .Site.Params.icp }}</a></span>
-                    {{ end }}
-                </p>
-            </div>
-        </div>
+      </div>
+      <div class="footer-meta">
+        <h4 class="footer-heading">联系</h4>
+        {{ with .Site.Params.email }}
+          <a href="mailto:{{ . }}" class="footer-link">{{ . }}</a>
+        {{ end }}
+      </div>
     </div>
+    <div class="footer-bottom">
+      <span>传承不泥古 · 创新不离宗</span>
+      <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
+    </div>
+  </div>
 </footer>
-
-<style>
-/* 页脚样式 */
-.site-footer {
-    background: var(--bg-secondary);
-    border-top: 2px solid var(--border-color);
-    margin-top: var(--spacing-2xl);
-    padding: var(--spacing-2xl) 0 var(--spacing-lg);
-}
-
-.footer-decoration {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--spacing-xl);
-}
-
-.footer-decoration svg {
-    width: 200px;
-    height: 60px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-}
-
-.footer-section h3 {
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--ink-black);
-    position: relative;
-    padding-bottom: var(--spacing-sm);
-}
-
-.footer-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: var(--cinnabar-red);
-}
-
-.footer-description {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-md);
-}
-
-.footer-links,
-.footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.footer-links a,
-.footer-nav a {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.footer-links a:hover,
-.footer-nav a:hover {
-    color: var(--cinnabar-red);
-}
-
-.footer-contact p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
-}
-
-.footer-contact a {
-    color: var(--cinnabar-red);
-    text-decoration: none;
-}
-
-.footer-bottom {
-    border-top: 1px solid var(--border-light);
-    padding-top: var(--spacing-lg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-}
-
-.copyright p,
-.footer-meta p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin: 0;
-}
-
-.footer-slogan {
-    font-family: var(--font-serif);
-    font-style: italic;
-    color: var(--bamboo-green);
-    margin-top: var(--spacing-xs);
-}
-
-.footer-meta a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.footer-meta a:hover {
-    color: var(--cinnabar-red);
-}
-
-/* 响应式 */
-@media (max-width: 768px) {
-    .site-footer {
-        padding: var(--spacing-xl) 0 var(--spacing-lg);
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-slogan {
-        margin: var(--spacing-sm) 0;
-    }
-}
-</style>

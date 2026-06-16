@@ -2,7 +2,7 @@
 title = '古琴：七弦之上的千年雅韵'
 date = '2026-05-26T08:00:00+08:00'
 draft = false
-categories = ['齐物']
+categories = ['诸子百家']
 tags = ['古琴', '民乐', '文人', '传统文化', '诸子百家']
 url = '/posts/guqin-seven-string-wisdom/'
 slug = 'guqin-seven-string-wisdom'

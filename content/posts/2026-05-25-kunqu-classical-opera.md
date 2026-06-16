@@ -2,7 +2,7 @@
 title = '昆曲：水磨腔里的百转情思'
 date = '2026-05-25T08:00:00+08:00'
 draft = false
-categories = ['戏剧']
+categories = ['艺术']
 tags = ['昆曲', '戏曲', '非遗', '百戏之祖', '水磨腔']
 url = '/posts/kunqu-classical-opera/'
 slug = 'kunqu-classical-opera'

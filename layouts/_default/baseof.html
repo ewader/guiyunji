@@ -1,68 +1,33 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
-    <meta name="author" content="{{ .Site.Params.author }}">
-    <meta name="theme-color" content="#f7f4ed">
-    
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if eq .Kind "term" }}{{ $term := .Data.Term }}{{ $displayName := $term }}{{ if eq $term "hanfu" }}{{ $displayName = "汉服" }}{{ end }}{{ if eq $term "poetry" }}{{ $displayName = "诗词" }}{{ end }}{{ if eq $term "calligraphy" }}{{ $displayName = "书画" }}{{ end }}{{ if eq $term "tea-ceremony" }}{{ $displayName = "茶道" }}{{ end }}{{ if eq $term "traditional-festivals" }}{{ $displayName = "传统节日" }}{{ end }}{{ if eq $term "hundred-schools" }}{{ $displayName = "诸子百家" }}{{ end }}{{ $displayName }} - {{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    
-    <!-- 预加载字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- 样式表 -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/decorations.css" | relURL }}">
-    
-    <!-- RSS -->
-    {{ with .OutputFormats.Get "RSS" }}
-        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
-    {{ end }}
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="{{ .Site.Params.ogImage | default "/images/og-default.jpg" }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="twitter:image" content="{{ .Site.Params.ogImage | default "/images/og-default.jpg" }}">
-    
-    <!-- 站点验证（可选） -->
-    {{ with .Site.Params.googleSiteVerification }}
-        <meta name="google-site-verification" content="{{ . }}">
-    {{ end }}
-    {{ with .Site.Params.baiduSiteVerification }}
-        <meta name="baidu-site-verification" content="{{ . }}">
-    {{ end }}
-    
-    {{ block "head" . }}{{ end }}
-    
-    <!-- 自定义头部内容 -->
-    {{ partial "head-custom.html" . }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="keywords" content="{{ .Site.Params.keywords }}">
+  <meta name="theme-color" content="#fcf9f5">
+
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+
+  {{ with .OutputFormats.Get "RSS" }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+  {{ end }}
 </head>
-<body class="fade-in">
-    {{ partial "header.html" . }}
-    
-    <main>
-        {{ block "main" . }}{{ end }}
-    </main>
-    
-    {{ partial "footer.html" . }}
-    
-    <!-- JavaScript -->
-    <script src="{{ "js/main.js" | relURL }}"></script>
-    
-    {{ block "scripts" . }}{{ end }}
+<body{{ if .IsHome }} class="home"{{ end }}>
+  {{ partial "header.html" . }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <script src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>

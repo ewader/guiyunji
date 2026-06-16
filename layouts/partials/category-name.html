@@ -1,0 +1,16 @@
+{{/* 
+  category-name.html — 分类名显示
+  所有分类现已统一为中文，此映射可作为安全兜底
+  用法: {{ partial "category-name" (dict "slug" .) }}
+        {{ partial "category-name" (dict "slug" $slug "default" "未分类") }}
+*/}}
+{{ $name := .default | default .slug }}
+{{ if eq .slug "poetry" }}{{ $name = "诗词" }}
+{{ else if eq .slug "calligraphy" }}{{ $name = "书画" }}
+{{ else if eq .slug "tea-ceremony" }}{{ $name = "茶道" }}
+{{ else if eq .slug "hanfu" }}{{ $name = "汉服" }}
+{{ else if eq .slug "traditional-festivals" }}{{ $name = "传统节日" }}
+{{ else if eq .slug "hundred-schools" }}{{ $name = "诸子百家" }}
+{{ else }}{{ $name = .slug }}
+{{ end }}
+{{ return $name }}

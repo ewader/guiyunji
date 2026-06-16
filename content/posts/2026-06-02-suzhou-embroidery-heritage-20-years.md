@@ -2,8 +2,8 @@
 title = '苏绣入非遗二十周年：一根丝线的二十载传承'
 date = '2026-06-02T08:00:00+08:00'
 draft = false
-categories = ['传统工艺', '传统文化']
-tags = ['苏绣', '非物质文化遗产', '传统工艺', '传承人', '非遗保护', '手工艺']
+categories = ['工艺', '传统文化']
+tags = ['苏绣', '非物质文化遗产', '工艺', '传承人', '非遗保护', '手工艺']
 url = '/posts/suzhou-embroidery-heritage-20-years/'
 slug = 'suzhou-embroidery-heritage-20-years'
 +++
