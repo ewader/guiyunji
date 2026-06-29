@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 26 Jun 2026 08:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Mon, 29 Jun 2026 08:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://guiyun.l22.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>民俗</title>
+				<link>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</link>
+				<pubDate>Mon, 29 Jun 2026 08:00:00 +0800</pubDate>
+				<guid>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>传统文化</title>
 				<link>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</link>
@@ -32,13 +39,6 @@
 				<link>https://guiyun.l22.org/categories/%E5%B7%A5%E8%89%BA/</link>
 				<pubDate>Sat, 13 Jun 2026 08:00:00 +0800</pubDate>
 				<guid>https://guiyun.l22.org/categories/%E5%B7%A5%E8%89%BA/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>民俗</title>
-				<link>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</link>
-				<pubDate>Wed, 03 Jun 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</guid>
 				<description></description>
 			</item>
 			<item>
