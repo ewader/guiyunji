@@ -15,9 +15,9 @@
           <div class="article-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 年 01 月 02 日" }}</time>
             <span class="meta-dot">·</span>
-            <span>{{ .WordCount }} 字</span>
+            <span>{{ strings.RuneCount .Plain }} 字</span>
             <span class="meta-dot">·</span>
-            <span>{{ math.Ceil (div .WordCount 400.0) }} 分钟阅读</span>
+            <span>{{ math.Ceil (div (float (strings.RuneCount .Plain)) 400.0) }} 分钟阅读</span>
           </div>
         </header>
 
