@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 28 Jul 2026 08:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Wed, 05 Aug 2026 08:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://guiyun.l22.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>传统节日</title>
+				<link>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</link>
+				<pubDate>Wed, 05 Aug 2026 08:00:00 +0800</pubDate>
+				<guid>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>传统文化</title>
 				<link>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</link>
@@ -60,13 +67,6 @@
 				<link>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</link>
 				<pubDate>Mon, 29 Jun 2026 08:00:00 +0800</pubDate>
 				<guid>https://guiyun.l22.org/categories/%E6%B0%91%E4%BF%97/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>传统节日</title>
-				<link>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</link>
-				<pubDate>Mon, 15 Jun 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/</guid>
 				<description></description>
 			</item>
 			<item>
