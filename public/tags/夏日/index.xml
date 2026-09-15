@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>夏日 on 归云集</title>
-		<link>https://guiyun.l22.org/tags/%E5%A4%8F%E6%97%A5/</link>
+		<link>http://localhost:1313/tags/%E5%A4%8F%E6%97%A5/</link>
 		<description>Recent content in 夏日 on 归云集</description>
 		<generator>Hugo</generator>
 		<language>zh-CN</language>
@@ -12,33 +12,33 @@
 		
 			<lastBuildDate>Tue, 14 Jul 2026 08:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="https://guiyun.l22.org/tags/%E5%A4%8F%E6%97%A5/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/%E5%A4%8F%E6%97%A5/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>中国古代冰文化：从冰鉴到冰窖</title>
-				<link>https://guiyun.l22.org/posts/ancient-chinese-ice-culture/</link>
+				<link>http://localhost:1313/posts/ancient-chinese-ice-culture/</link>
 				<pubDate>Tue, 14 Jul 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/ancient-chinese-ice-culture/</guid>
+				<guid>http://localhost:1313/posts/ancient-chinese-ice-culture/</guid>
 				<description>&lt;p&gt;大暑将至，酷暑难当。现代人有空调冰箱，古人如何度过炎炎夏日？其实，中国人用冰的历史远比我们想象的要早，而且发展出了一套完整的&amp;quot;冰文化&amp;quot;体系。&lt;/p&gt;&#xA;&lt;h2 id=&#34;冰鉴最早的冰箱&#34;&gt;冰鉴——最早的&amp;quot;冰箱&amp;quot;&lt;/h2&gt;&#xA;&lt;p&gt;&amp;ldquo;鉴&amp;quot;是先秦时期的一种大盆，用来盛冰保鲜食物或降温。《周礼·天官》记载：&amp;ldquo;凌人掌冰，春始治鉴。&amp;ldquo;凌人是周朝专管采冰、储冰、用冰的官职，可见早在三千年前，中国人就建立了系统的用冰制度。&lt;/p&gt;&#xA;&lt;p&gt;1978年，曾侯乙墓出土了一件震惊世界的青铜冰鉴。这件器物由外鉴内缶两层组成，外鉴与内缶之间的空间可放入冰块，缶中盛放酒水饮品，堪称世界上最早的&amp;quot;冰箱&amp;rdquo;。其设计之精巧、铸造之精美，令人叹为观止。&lt;/p&gt;&#xA;&lt;h2 id=&#34;冰窖古人的冷库&#34;&gt;冰窖——古人的&amp;quot;冷库&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;要让冰块在整个夏天都&amp;quot;续命&amp;rdquo;，关键在于储存。古人很早就掌握了修建冰窖的技术。冰窖通常建在地下深处，用砖石砌成，墙壁厚实，隔热效果极佳。冬季采集的天然河冰，层层码入冰窖，用稻草和锯末覆盖隔热，可保存至次年夏天。&lt;/p&gt;&#xA;&lt;p&gt;北京现存多处清代冰窖遗址，如北海东门附近的&amp;quot;雪池冰窖&amp;quot;、恭俭胡同的&amp;quot;恭俭冰窖&amp;quot;等。这些冰窖承担着紫禁城和皇室的夏日用冰需求。据记载，清代内务府每年从护城河凿冰约两万块，每块重约八十斤，存入官窖以备夏季之用。&lt;/p&gt;&#xA;&lt;h2 id=&#34;冰饮夏日的风雅享受&#34;&gt;冰饮——夏日的风雅享受&lt;/h2&gt;&#xA;&lt;p&gt;有了冰块，古人的夏日生活便多了许多风雅。唐代宫廷已有&amp;quot;冰盘&amp;quot;之设，将瓜果置于冰上冷镇。唐人诗云：&amp;ldquo;拂枕薰风扇渐微，冰盘荐果玉浆肥。&amp;ldquo;宋代更是将冰饮文化推向高峰——街头出现了专门的&amp;quot;冰雪&amp;quot;店铺，售卖冰雪冷元子、冰雪甘草汤、凉水荔枝膏等冷饮，颇似今日的冷饮店。&lt;/p&gt;&#xA;&lt;p&gt;明清时期，富户人家流行在酸梅汤中加入碎冰，制成&amp;quot;冰镇酸梅汤&amp;rdquo;，成为消暑佳品。《燕京岁时记》记载：&amp;ldquo;暑天则有冰杨梅、冰桃、冰杏诸品，以冰镇之，入口沁脾。&amp;rdquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;从宫廷到民间&#34;&gt;从宫廷到民间&lt;/h2&gt;&#xA;&lt;p&gt;值得注意的是，古代用冰长期是贵族的特权。《楚辞·招魂》中&amp;quot;挫糟冻饮，酎清凉些&amp;quot;描述的是楚国宫廷的冰饮享受。普通百姓无缘用冰，只能以井水浸泡瓜果，聊解暑热。直到明清时期，随着冰窖技术的普及和商业冰块的流通，冰才逐渐走入寻常百姓家。&lt;/p&gt;&#xA;&lt;p&gt;小小一块冰，折射出中国人三千年来对生活品质的不懈追求。从青铜冰鉴的庄重典雅，到冰窖匠人的默默坚守，再到街头冰饮的市井烟火，冰文化串联起了一部生动的中国古代生活史。盛夏读此，或可心生一丝清凉。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>荷韵清风——夏日荷花的文化意象</title>
-				<link>https://guiyun.l22.org/posts/lotus-summer-poetry-culture/</link>
+				<link>http://localhost:1313/posts/lotus-summer-poetry-culture/</link>
 				<pubDate>Thu, 09 Jul 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/lotus-summer-poetry-culture/</guid>
+				<guid>http://localhost:1313/posts/lotus-summer-poetry-culture/</guid>
 				<description>&lt;p&gt;七月流火，蝉鸣渐起，正是荷花盛放的时节。从皇家苑囿到江南水乡，从文人墨客的笔端到寻常百姓的庭院，荷花以&amp;quot;出淤泥而不染&amp;quot;的品格，成为中国文化中最富诗意的夏日意象之一。&lt;/p&gt;&#xA;&lt;h2 id=&#34;诗词中的荷韵&#34;&gt;诗词中的荷韵&lt;/h2&gt;&#xA;&lt;p&gt;荷花开在诗行里，也开在每一个中国人的文化记忆里。杨万里写&amp;quot;接天莲叶无穷碧，映日荷花别样红&amp;quot;，将西湖六月的壮阔荷景铺展在读者眼前；周敦颐以一篇《爱莲说》，赋予荷花&amp;quot;花之君子&amp;quot;的品格，使其从自然之花升格为精神符号。李清照&amp;quot;兴尽晚回舟，误入藕花深处&amp;quot;，则写出了少女的烂漫与荷塘的幽深。千百年来，荷花始终是中国诗词中最清凉的夏日注脚。&lt;/p&gt;&#xA;&lt;h2 id=&#34;夏日荷事&#34;&gt;夏日荷事&lt;/h2&gt;&#xA;&lt;p&gt;小暑前后，正是赏荷的最佳时节。古人讲究&amp;quot;夏看荷&amp;quot;，不仅为赏花，更为寻一份清凉心境。荷塘边设石凳、摆茶席，邀三五好友品茗论道，是文人雅士消夏的惯常做法。而在民间，莲蓬、藕节、荷叶皆可入食——荷叶粥清热解暑，莲子羹养心安神，藕粉则是老少皆宜的夏日甜品。一朵荷花，从审美到实用，滋养着中国人的整个夏天。&lt;/p&gt;&#xA;&lt;h2 id=&#34;荷花的吉祥寓意&#34;&gt;荷花的吉祥寓意&lt;/h2&gt;&#xA;&lt;p&gt;荷花在中国传统文化中寓意深远。&amp;ldquo;荷&amp;quot;与&amp;quot;和&amp;quot;谐音，象征和睦、和美；莲花与鲤鱼组合为&amp;quot;连年有余&amp;rdquo;，莲花配如意则为&amp;quot;和合如意&amp;quot;。佛教中，莲花更是圣洁的象征——佛像常端坐莲台之上，取其清净无染之意。从庙宇殿堂到婚庆喜事，荷花的身影无处不在，寄托着中国人对美好生活的朴素愿望。&lt;/p&gt;&#xA;&lt;h2 id=&#34;今日荷塘&#34;&gt;今日荷塘&lt;/h2&gt;&#xA;&lt;p&gt;如今，每逢盛夏，各地的荷塘依然吸引着无数游人。北京圆明园、杭州西湖、武汉东湖、南京玄武湖，各有各的荷景风姿。人们举着手机拍照，孩子们伸手够莲蓬，老人们在荷塘边摇着蒲扇——千年前古人消夏的场景，至今仍在延续。荷花不言，却年年如约而至，提醒我们：在这喧嚣的尘世中，总有一方清凉可寻。&lt;/p&gt;&#xA;&lt;p&gt;小暑已过，盛夏正浓。不如寻一处荷塘，听蛙声一片，看莲叶田田，让这份来自千年的清凉，润泽我们的心田。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>蝉鸣夏日长——中国古诗词中的蝉意象</title>
-				<link>https://guiyun.l22.org/posts/cicada-in-chinese-culture/</link>
+				<link>http://localhost:1313/posts/cicada-in-chinese-culture/</link>
 				<pubDate>Thu, 02 Jul 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/cicada-in-chinese-culture/</guid>
+				<guid>http://localhost:1313/posts/cicada-in-chinese-culture/</guid>
 				<description>&lt;p&gt;盛夏午后，万籁俱寂之中，唯有蝉声如沸。这种其貌不扬的小虫，凭借一腔长鸣，硬生生把自己唱进了中国文学的殿堂。翻开唐诗宋词，蝉的身影几乎贯穿了整个中国诗歌史——它不只是一只夏虫，更是一面映照文人内心的镜子。&lt;/p&gt;&#xA;&lt;h2 id=&#34;饮露而不食高洁的象征&#34;&gt;饮露而不食：高洁的象征&lt;/h2&gt;&#xA;&lt;p&gt;古人观察蝉，发现它栖息于高枝之上，以清露为食，不染人间烟火，于是蝉便成了&amp;quot;高洁&amp;quot;的代名词。曹植在《蝉赋》中写道：&amp;ldquo;实澹泊而寡欲兮，独怡乐而长吟。&amp;ldquo;这种&amp;quot;不食人间烟火&amp;quot;的形象，恰好契合了士大夫们对清高人格的向往。汉代以后，达官贵人的冠饰中出现了&amp;quot;蝉冠&amp;rdquo;，取其居高饮洁之意；更有甚者，汉代贵族下葬时常以玉蝉含于口中，寄托死后如蝉蜕皮般重获新生的愿望。一只夏虫，竟能贯穿生死两端，足见其在古人心中的分量。&lt;/p&gt;&#xA;&lt;h2 id=&#34;唐诗三绝三种人生三种蝉鸣&#34;&gt;唐诗三绝：三种人生，三种蝉鸣&lt;/h2&gt;&#xA;&lt;p&gt;唐代有三位大诗人不约而同地以蝉为题，却写出了截然不同的人生况味，被后人并称为&amp;quot;咏蝉三绝&amp;rdquo;。&lt;/p&gt;&#xA;&lt;p&gt;初唐宰相虞世南写的是&lt;strong&gt;得意之蝉&lt;/strong&gt;：&amp;ldquo;垂緌饮清露，流响出疏桐。居高声自远，非是藉秋风。&amp;ldquo;这里的蝉是自信的，它居于高枝，声音自然传得远，不靠秋风吹送——这是身居高位者从容不迫的自我写照。虞世南官至秘书监，深受唐太宗器重，他笔下的蝉，是一个不需借力便自然显达的君子。&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;初唐四杰&amp;quot;之一的骆宾王写的却是&lt;strong&gt;蒙冤之蝉&lt;/strong&gt;。因上书讽谏触怒武则天，他被诬以贪赃之罪投入狱中。《在狱咏蝉》开头便悲从中来：&amp;ldquo;西陆蝉声唱，南冠客思深。不堪玄鬓影，来对白头吟。&amp;ldquo;秋天的蝉还在高唱，而身陷囹圄的诗人已是白发苍苍。&amp;ldquo;露重飞难进，风多响易沉&amp;rdquo;——露水太重飞不动，风太大连声音都被淹没。蝉的命运，就是他自己的命运。&lt;/p&gt;&#xA;&lt;p&gt;到了晚唐，李商隐笔下的蝉变成了&lt;strong&gt;清贫之蝉&lt;/strong&gt;：&amp;ldquo;本以高难饱，徒劳恨费声。五更疏欲断，一树碧无情。&amp;ldquo;蝉栖身高处，却因&amp;quot;高&amp;quot;而难以饱腹；鸣声虽切，却得不到任何回应。满树碧绿，冷漠无情。这是李商隐一生沉沦下僚、怀才不遇的深切悲鸣。&lt;/p&gt;&#xA;&lt;p&gt;得意者见蝉之高，失意者见蝉之苦，困顿者见蝉之孤——同一只蝉，照出了三种截然不同的人生。&lt;/p&gt;&#xA;&lt;h2 id=&#34;蝉噪林逾静以声写寂的东方美学&#34;&gt;蝉噪林逾静：以声写寂的东方美学&lt;/h2&gt;&#xA;&lt;p&gt;中国诗人还有一种独特的本领：用声音写寂静。王籍的&amp;quot;蝉噪林逾静，鸟鸣山更幽&amp;rdquo;，十个字就道尽了东方美学中以动衬静的妙谛。蝉鸣越响，越显出夏日的空旷与悠长。它不是噪音，而是寂静的一部分。&lt;/p&gt;&#xA;&lt;p&gt;蝉生短促，一夏而已；但恰恰因为短暂，它鸣得格外用力。这大约就是中国文人对蝉情有独钟的深层原因——生命有限，但声音可以穿越千年。那些千年前的蝉鸣，透过诗句，至今仍在我们的夏日里回荡。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>古人夏天怎么过？冰窖、酥山、竹夫人的消暑智慧</title>
-				<link>https://guiyun.l22.org/posts/ancient-summer-cooling-wisdom/</link>
+				<link>http://localhost:1313/posts/ancient-summer-cooling-wisdom/</link>
 				<pubDate>Mon, 29 Jun 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/ancient-summer-cooling-wisdom/</guid>
+				<guid>http://localhost:1313/posts/ancient-summer-cooling-wisdom/</guid>
 				<description>&lt;p&gt;六月尾巴，暑气渐盛。小暑还有八天就要到了，三伏天也不远了。现代人夏天靠空调续命，随手打开冰箱就是冰西瓜冰可乐。但古人没有电，没有压缩机，他们是靠什么熬过漫长炎夏的？&lt;/p&gt;&#xA;&lt;p&gt;其实远比你想象的精彩。翻翻史料就知道——老祖宗的消暑花样，不光实用，还讲究得很。&lt;/p&gt;&#xA;&lt;h2 id=&#34;冰窖冬天存冰夏天取&#34;&gt;冰窖：冬天存冰，夏天取&lt;/h2&gt;&#xA;&lt;p&gt;早在周代，朝廷就设立了专门的&amp;quot;凌人&amp;quot;官职，负责冬天采冰、藏冰，夏天再取出来用。《诗经·七月》里那句&amp;quot;二之日凿冰冲冲，三之日纳于凌阴&amp;quot;，说的就是腊月凿冰、正月存入冰窖的场景。&lt;/p&gt;&#xA;&lt;p&gt;冰窖可不是随便挖个坑。北京的故宫冰窖至今还在，半地下式结构，墙体厚达两米，上面覆土种树遮阴。冬天从护城河或北海取冰，一层冰一层稻草码好，封窖。到了来年六月开窖取冰——有的冰块居然能存到中秋。&lt;/p&gt;&#xA;&lt;p&gt;民间也有冰窖，但规模小得多。普通百姓用不起冰怎么办？井水。把瓜果吊在井里，利用井水的恒低温&amp;quot;冰镇&amp;quot;，效果不比冰箱差。杨万里有句&amp;quot;帝城六月日卓午，市人如炊汗如雨。卖冰一声隔水来，行人未吃心眼开&amp;quot;——南宋杭州城里已经有沿街叫卖冰块的商贩了，夏天吃冰并不是什么新鲜事。&lt;/p&gt;&#xA;&lt;h2 id=&#34;酥山唐代版冰淇淋&#34;&gt;酥山：唐代版&amp;quot;冰淇淋&amp;quot;&lt;/h2&gt;&#xA;&lt;p&gt;有冰了，怎么吃？&lt;/p&gt;&#xA;&lt;p&gt;唐人发明了一道甜品：酥山。做法是把奶油加热到半融化状态，淋在碎冰上，一边淋一边塑形，做成山峦的样子，再点缀花草、果干。端上来的时候，冰气氤氲，&amp;ldquo;酥&amp;quot;像雪山一样立在盘中。王泠然在《苏合山赋》里写得天花乱坠，什么&amp;quot;味兼金房之蜜，势尽美人之情&amp;rdquo;——古人吃个冰也要吃出诗意来。&lt;/p&gt;&#xA;&lt;p&gt;到了宋代，花样更多。汴京街头有专卖&amp;quot;冰雪冷元子&amp;quot;的铺子，用黄豆粉和糖做的糯米圆子，浸在冰水里卖。还有&amp;quot;雪泡梅花酒&amp;quot;、&amp;ldquo;冰酪&amp;rdquo;、&amp;ldquo;沙糖绿豆汤&amp;rdquo;——基本上现在奶茶店夏天卖的那一套，宋人早玩了一遍。孟元老《东京梦华录》里记载，汴京州桥夜市的冷饮摊&amp;quot;直至三更&amp;quot;，跟今天的夜市没啥两样。&lt;/p&gt;&#xA;&lt;h2 id=&#34;凉屋和竹夫人&#34;&gt;凉屋和竹夫人&lt;/h2&gt;&#xA;&lt;p&gt;建筑上的消暑智慧更让人服气。&lt;/p&gt;&#xA;&lt;p&gt;唐代宫廷有&amp;quot;含凉殿&amp;quot;，据《唐语林》记载，殿内装了水力驱动的风扇——用水车把水引到屋顶，再沿屋檐流下形成水帘，同时带动殿内的扇轮旋转送风。这原理跟现在的空调扇一模一样，只不过动力是人力和水力，不是电。&lt;/p&gt;&#xA;&lt;p&gt;普通百姓造不起水力风扇，但有更朴素的智慧。夏日居室的标配是凉席、竹枕、瓷枕。瓷枕在宋代特别流行，冰冰凉凉的一整块，夏天枕上去沁人心脾。李清照那句&amp;quot;玉枕纱橱，半夜凉初透&amp;quot;，说的就是这种感觉。&lt;/p&gt;&#xA;&lt;p&gt;还有一种东西叫&lt;strong&gt;竹夫人&lt;/strong&gt;——其实就是一截镂空的竹笼子，长的，人可以抱着它睡觉。竹子导热快，抱着凉快；中空的，透气不闷汗。苏轼在《送竹几与谢秀才》里写过：&amp;ldquo;留我同行木上坐，赠君无语竹夫人。&amp;ldquo;把竹夫人送给朋友当礼物——又实用又风雅，很苏轼。&lt;/p&gt;&#xA;&lt;h2 id=&#34;心静自然凉&#34;&gt;心静自然凉&lt;/h2&gt;&#xA;&lt;p&gt;说到底，古人最厉害的消暑法，还不是这些器物。&lt;/p&gt;&#xA;&lt;p&gt;是心态。&lt;/p&gt;&#xA;&lt;p&gt;白居易写过一首《消暑》:&amp;ldquo;何以消烦暑，端坐一院中。眼前无长物，窗下有清风。散热由心静，凉生为室空。&amp;ldquo;说白了就是——别瞎折腾，找个院子坐着，心一静下来，风自然就来了。&lt;/p&gt;&#xA;&lt;p&gt;这话放到今天也管用。空调吹多了头昏，冰饮吃多了伤胃。有时候最舒服的夏天，不过是一把竹椅、一把蒲扇、一片树荫。&lt;/p&gt;&#xA;&lt;p&gt;古人不见得比我们凉快，但他们懂得怎么跟夏天相处。&lt;/p&gt;</description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>手工艺 on 归云集</title>
-		<link>https://guiyun.l22.org/tags/%E6%89%8B%E5%B7%A5%E8%89%BA/</link>
+		<link>http://localhost:1313/tags/%E6%89%8B%E5%B7%A5%E8%89%BA/</link>
 		<description>Recent content in 手工艺 on 归云集</description>
 		<generator>Hugo</generator>
 		<language>zh-CN</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Sun, 19 Jul 2026 08:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="https://guiyun.l22.org/tags/%E6%89%8B%E5%B7%A5%E8%89%BA/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/%E6%89%8B%E5%B7%A5%E8%89%BA/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>中国竹编艺术——竹丝篾片间的匠心传承</title>
-				<link>https://guiyun.l22.org/posts/chinese-bamboo-weaving-art/</link>
+				<link>http://localhost:1313/posts/chinese-bamboo-weaving-art/</link>
 				<pubDate>Sun, 19 Jul 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/chinese-bamboo-weaving-art/</guid>
+				<guid>http://localhost:1313/posts/chinese-bamboo-weaving-art/</guid>
 				<description>&lt;p&gt;盛夏时节，竹席清凉、竹扇生风、竹篮盛物——这些与日常生活紧密相连的器物，背后是延续数千年的竹编技艺。竹编，是以竹子为原料，经劈篾、刮青、分层、编织等工序，制成各类实用器物与艺术品的传统手工技艺，2008年被列入国家级非物质文化遗产名录。&lt;/p&gt;&#xA;&lt;h2 id=&#34;竹编的起源与发展&#34;&gt;竹编的起源与发展&lt;/h2&gt;&#xA;&lt;p&gt;中国是竹子的故乡，竹编历史可追溯至新石器时代。浙江河姆渡遗址出土的竹编残片，距今已有七千余年。早期竹编以实用为主——竹篓盛粮、竹席铺地、竹笠遮雨，几乎是先民生活的必需品。&lt;/p&gt;&#xA;&lt;p&gt;到了唐宋时期，竹编技艺趋于成熟，品种日益丰富。宋代出现了&amp;quot;瓷胎竹编&amp;quot;的雏形，即以竹丝编织包裹瓷器，兼具美观与防烫功能。明清两代，竹编工艺达到鼎盛，四川、浙江、福建等地涌现出各具特色的地方流派。其中，四川青神竹编、浙江东阳竹编、福建泉州竹编最具代表性，至今仍是国家级非遗项目。&lt;/p&gt;&#xA;&lt;h2 id=&#34;竹编的工艺之美&#34;&gt;竹编的工艺之美&lt;/h2&gt;&#xA;&lt;p&gt;竹编之美，在于&amp;quot;以刚化柔&amp;quot;。一根翠竹，经匠人之手，可劈成薄如蝉翼、细如发丝的竹篾。上等竹编用料，一厘米宽的竹片可分出十六层，每层薄如纸张，却韧性十足。&lt;/p&gt;&#xA;&lt;p&gt;编织技法多达数十种，常见的有：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;挑一压一&lt;/strong&gt;：最基础的编法，经纬竹篾交替穿插，形成平整的席面&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;人字编&lt;/strong&gt;：竹篾呈&amp;quot;人&amp;quot;字排列，常用于竹席和竹帘&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;六角编&lt;/strong&gt;：三根竹篾交叉形成六角形孔洞，轻盈透气，多用于花器&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;螺旋编&lt;/strong&gt;：竹篾围绕中心旋转编织，适合圆形器物如蒸笼、果篮&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;绞丝编&lt;/strong&gt;：将多根细竹丝绞合成绳状再编织，多见于高档工艺品&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;四川青神竹编的极致之作，是将竹丝编织在瓷胎之上，竹丝细过头发，肉眼几乎看不出编织痕迹，被誉为&amp;quot;东方竹艺的明珠&amp;quot;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;竹编与夏日生活&#34;&gt;竹编与夏日生活&lt;/h2&gt;&#xA;&lt;p&gt;竹编器物与中国人的夏日生活密不可分。竹席是千百年来的&amp;quot;天然空调&amp;quot;，竹的导热系数低、表面凉爽，睡在竹席上，暑气顿消。竹扇随手可摇，蒲扇虽已渐少，但竹骨纸扇仍是文人雅士的标配。竹篮盛夏瓜果，透气防闷；竹蒸笼蒸出的食物带着淡淡竹香，是中餐烹饪不可或缺的器具。&lt;/p&gt;&#xA;&lt;p&gt;在南方乡间，竹编更是渗透到生活的每个角落：竹椅纳凉、竹灯罩引光、竹花瓶插花、竹鸟笼养鸟。老一辈匠人常说：&amp;ldquo;竹编养人，人养竹编。&amp;ldquo;指尖与竹篾的摩擦，磨出了匠人的耐心，也磨出了器物的温度。&lt;/p&gt;&#xA;&lt;h2 id=&#34;守护与传承&#34;&gt;守护与传承&lt;/h2&gt;&#xA;&lt;p&gt;当代竹编面临机械化生产的冲击，年轻匠人日渐稀少。但近年来，随着&amp;quot;国潮&amp;quot;兴起和非遗保护意识增强，竹编工艺正焕发新生。设计师将竹编元素融入现代家居、时尚配饰，让这门古老技艺走进年轻人的视野。青神竹编、东阳竹编等传承基地也开设体验课程，让游客亲手感受&amp;quot;劈篾如纸、编竹成器&amp;quot;的奇妙过程。&lt;/p&gt;&#xA;&lt;p&gt;一把竹刀、一双巧手、一丛翠竹——中国竹编艺术，是人与自然最质朴的对话，也是指尖上流淌了七千年的东方智慧。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>风筝：一线牵起的千年风雅</title>
-				<link>https://guiyun.l22.org/posts/chinese-kite-culture-art/</link>
+				<link>http://localhost:1313/posts/chinese-kite-culture-art/</link>
 				<pubDate>Sun, 12 Jul 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/chinese-kite-culture-art/</guid>
+				<guid>http://localhost:1313/posts/chinese-kite-culture-art/</guid>
 				<description>&lt;p&gt;夏日傍晚，凉风初起，抬头便能望见天空中飘荡的风筝。这项看似简单的娱乐活动，在中国已有两千多年的历史，承载着匠人的巧思与文人的情怀，是中华传统文化中一道独特的风景。&lt;/p&gt;&#xA;&lt;h2 id=&#34;风筝的前世今生&#34;&gt;风筝的前世今生&lt;/h2&gt;&#xA;&lt;p&gt;风筝的起源可以追溯到春秋时期。相传鲁班用竹木做了能飞三天的木鹊，墨子也曾造过木鸢。不过那时的&amp;quot;风筝&amp;quot;还不能称其为真正意义上的风筝——它们没有弦线，不能发出声响。到了汉代，人们开始用纸糊制飞鸟形状的飞行器，并在上面系上竹笛，风一吹便发出呜呜之声，&amp;ldquo;风筝&amp;quot;之名由此而来。&lt;/p&gt;&#xA;&lt;p&gt;据说韩信曾用风筝测量未央宫的距离，诸葛亮也借助风筝传递信号。在军事用途之外，风筝逐渐走进民间，成为人们踏青游乐的雅事。唐代诗人高骈写过&amp;quot;夜静弦声响碧空，宫商信任往来风&amp;rdquo;，描绘的正是月夜放筝的诗意场景。&lt;/p&gt;&#xA;&lt;h2 id=&#34;潍坊世界风筝之都&#34;&gt;潍坊：世界风筝之都&lt;/h2&gt;&#xA;&lt;p&gt;说到风筝，不能不提山东潍坊。潍坊风筝的历史可追溯到明代，当地扎风筝的手艺代代相传，至今已形成独特的艺术风格。1984年，潍坊举办了第一届国际风筝会，此后每年四月，来自世界各地的风筝爱好者齐聚此地，潍坊也被授予&amp;quot;世界风筝之都&amp;quot;的称号。&lt;/p&gt;&#xA;&lt;p&gt;潍坊风筝的制作讲究&amp;quot;扎、糊、绘、放&amp;quot;四艺。骨架选用三年以上的毛竹，经过蒸煮、晾晒、劈削，弯曲成所需的形状；风筝面用真丝或无纺布绘制，色彩鲜艳，图案多取自民间吉祥纹样——龙凤呈祥、福寿双全、蝶恋花等。最经典的当属&amp;quot;龙头蜈蚣&amp;quot;风筝，长达数十米，由数百个圆形竹片串联而成，放飞时如同一条巨龙腾空，气势磅礴。&lt;/p&gt;&#xA;&lt;h2 id=&#34;南北风筝各有千秋&#34;&gt;南北风筝各有千秋&lt;/h2&gt;&#xA;&lt;p&gt;中国幅员辽阔，各地风筝也呈现出不同的地域特色。北京风筝以&amp;quot;沙燕&amp;quot;为代表，造型圆润饱满，色彩浓艳，具有浓郁的宫廷风格；天津风筝则以&amp;quot;软翅&amp;quot;见长，翅膀用丝绸蒙制，放飞时随风颤动，宛若活物；南通的板鹞风筝体型硕大，上面装有大小不一的哨口，放飞时百哨齐鸣，声震云霄，被称为&amp;quot;空中交响乐&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;南方风筝如广东的&amp;quot;苍鹰&amp;quot;、福建的&amp;quot;八角&amp;quot;，则多以写实为主，讲究逼真的形态和细腻的绑扎工艺。每一种风筝背后，都是一方水土养育出的审美趣味和手工智慧。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一线之上的哲学&#34;&gt;一线之上的哲学&lt;/h2&gt;&#xA;&lt;p&gt;放风筝看似简单，实则蕴含着中国传统的处世哲学。线拉得太紧，风筝会栽下来；线放得太松，风筝便飘走了。这恰如人生中的张弛之道——紧握与放手之间，需要的是对&amp;quot;度&amp;quot;的把握。风筝飞得再高，线始终在手中；人走得再远，根始终在故土。这或许就是为什么，无论时代如何变迁，中国人对风筝总有一份特殊的眷恋。&lt;/p&gt;&#xA;&lt;p&gt;2006年，风筝制作技艺被列入第一批国家级非物质文化遗产名录。在这根细细的线上，牵着的是匠人的心血，放飞的是千年的风雅。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>苏绣入非遗二十周年：一根丝线的二十载传承</title>
-				<link>https://guiyun.l22.org/posts/suzhou-embroidery-heritage-20-years/</link>
+				<link>http://localhost:1313/posts/suzhou-embroidery-heritage-20-years/</link>
 				<pubDate>Tue, 02 Jun 2026 08:00:00 +0800</pubDate>
-				<guid>https://guiyun.l22.org/posts/suzhou-embroidery-heritage-20-years/</guid>
+				<guid>http://localhost:1313/posts/suzhou-embroidery-heritage-20-years/</guid>
 				<description>&lt;p&gt;2026 年的初夏，对苏州刺绣这门古老手艺来说，是一个特殊的年份——距离它被列入&lt;strong&gt;第一批国家级非物质文化遗产名录&lt;/strong&gt;，整整二十年了。&lt;/p&gt;&#xA;&lt;p&gt;2006 年 5 月 20 日，国务院公布第一批国家级非物质文化遗产名录（国发〔2006〕18 号），&lt;strong&gt;苏绣&lt;/strong&gt;作为&amp;quot;传统美术&amp;quot;类项目入选，编号 VIII-5，保护单位为&lt;strong&gt;苏州市刺绣研究所&lt;/strong&gt;。同批入选的还有蜀绣、湘绣、粤绣——中国&amp;quot;四大名绣&amp;quot;自此全部进入国家级非遗保护体系。&lt;/p&gt;&#xA;&lt;p&gt;二十年过去，这门以&amp;quot;&lt;strong&gt;平、齐、细、密、和、光、顺、匀&lt;/strong&gt;&amp;ldquo;八字诀闻名的手艺，发生了什么？&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;一二十年里从抢救性保护到生产性保护&#34;&gt;一、二十年里，从&amp;quot;抢救性保护&amp;quot;到&amp;quot;生产性保护&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;非遗保护在中国走过三个阶段，苏绣恰好是这三条路径的样本。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;第一阶段（2006-2010）：建档 + 抢救&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;2006 年入非遗前，苏绣已经面临&amp;quot;&lt;strong&gt;十指绣娘难觅&lt;/strong&gt;&amp;ldquo;的窘境。1980 年代苏州城乡绣娘有近 4 万人，到 2000 年代初已不足 3000 人。苏州市刺绣研究所、苏州工艺美术博物馆牵头，对 80 岁以上的国家级老艺人（如&lt;strong&gt;顾文霞&lt;/strong&gt;、&lt;strong&gt;任嘒闲&lt;/strong&gt;）进行口述史、针法录像、代表作征集。这是典型的&lt;strong&gt;抢救性保护&lt;/strong&gt;——先保住&amp;quot;人&amp;quot;和&amp;quot;技&amp;rdquo;。&lt;/p&gt;&#xA;&lt;p&gt;2007 年，苏州刺绣研究所被文化部命名为&lt;strong&gt;苏绣项目保护单位&lt;/strong&gt;，专项资金开始注入。同年&amp;quot;顾文霞乱针绣&amp;quot;&amp;ldquo;任嘒闲细乱绣&amp;quot;被列入苏州市级非遗。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;第二阶段（2011-2015）：代表性传承人制度建立&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;2008 年文化部启动&amp;rdquo;&lt;strong&gt;国家级非遗项目代表性传承人&lt;/strong&gt;&amp;ldquo;认定，至 2012 年苏绣项目共评出&lt;strong&gt;顾文霞、任嘒闲&lt;/strong&gt;两位国家级代表性传承人（顾文霞 2008 年首批、任嘒闲 2012 年第三批）。两人均已年过八旬，传承人的&amp;rdquo;&lt;strong&gt;抢救&lt;/strong&gt;&amp;ldquo;由此进入实质阶段。&lt;/p&gt;&#xA;&lt;p&gt;任嘒闲后来回忆，她 2012 年被认定为传承人后做的第一件事，是&lt;strong&gt;把母亲沈寿的&amp;quot;仿真绣&amp;quot;针法技艺，整理成 8 万字图文资料&lt;/strong&gt;——这就是后来出版的《&lt;strong&gt;沈寿仿真绣传承录&lt;/strong&gt;》。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;第三阶段（2015 至今）：生产性保护 + 文旅融合&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;2011 年文化部启动&amp;rdquo;&lt;strong&gt;国家级非遗生产性保护示范基地&lt;/strong&gt;&amp;ldquo;建设，2014 年苏州高新区镇湖街道被命名为&amp;rdquo;&lt;strong&gt;中国刺绣艺术之乡&lt;/strong&gt;&amp;quot;——全国唯一以刺绣命名的艺术之乡。镇湖 8 平方公里内有绣庄 400 余家、绣娘 8000 余人，形成&amp;quot;研究所 + 院校 + 绣庄 + 绣娘&amp;quot;的产业链。&lt;/p&gt;&#xA;&lt;p&gt;这不是&amp;quot;原生态博物馆式保护&amp;quot;，而是让苏绣&lt;strong&gt;继续活着、继续在生产&lt;/strong&gt;——业内叫&amp;quot;&lt;strong&gt;生产性保护&lt;/strong&gt;&amp;quot;。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;二二十年的成绩单四代传承人--走出国门--数字化抢救&#34;&gt;二、二十年的成绩单：四代传承人 + 走出国门 + 数字化抢救&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 传承人谱系&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 	</channel>

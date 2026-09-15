@@ -3,43 +3,20 @@
 <div class="home-layout">  <!-- ═══ 主栏 ═══ -->
   <div class="home-main">
 
-    <!-- 1. 横幅 -->
-    <section class="banner">
-      <div class="banner-bg">
-        <div class="banner-pattern"></div>
-      </div>
-      <div class="banner-content">
-        <div class="banner-seal">归</div>
-        <h1 class="banner-title">归云集</h1>
-        <div class="banner-line"></div>
-        <p class="banner-subtitle">云归何处 · 自在东西</p>
-      </div>
-    </section>
-
-    <!-- 2. 卷目 -->
-    <section class="home-section categories-section">
-      <div class="section-header">
-        <span class="sec-label">卷目</span>
-        <h2 class="sec-title">分类浏览</h2>
-      </div>
-      <div class="categories-showcase">
-        {{ $sortedCats := slice }}
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-          {{ $sortedCats = $sortedCats | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
-        {{ end }}
-        {{ $sortedCats = sort $sortedCats "count" "desc" }}
-        {{ range first 8 $sortedCats }}
-          {{ $displayName := .name }}
-          <a href="{{ "/categories/" | relURL }}{{ .name | urlize }}" class="cat-block">
-            <span class="cat-block-char">{{ substr $displayName 0 1 }}</span>
-            <span class="cat-block-name">{{ $displayName }}</span>
-            <span class="cat-block-count">{{ .count }} 篇</span>
-          </a>
-        {{ end }}
+    <!-- 1. 拾句 · 每日一句 -->
+    <section class="home-section quote-section">
+      <div class="quote-card">
+        <span class="quote-mark">「</span>
+        <p class="quote-text" id="quote-text">云中谁寄锦书来</p>
+        <div class="quote-meta">
+          <span id="quote-author">——</span>
+          <span class="quote-src" id="quote-source"></span>
+        </div>
+        <span class="quote-mark quote-mark-right">」</span>
       </div>
     </section>
 
-    <!-- 3. 精选 -->
+    <!-- 2. 精选 -->
     {{ $featured := where (where .Site.RegularPages "Draft" false) "Params.featured" true }}
     {{ if gt (len $featured) 0 }}
     <section class="home-section featured-section">
@@ -74,7 +51,7 @@
     </section>
     {{ end }}
 
-    <!-- 4. 笔墨 -->
+    <!-- 3. 笔墨 -->
     <section class="home-section stream-section">
       <div class="section-header">
         <span class="sec-label">笔墨</span>

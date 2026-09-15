@@ -42,6 +42,9 @@
     {{ with resources.Get "almanac.js" }}
       <script src="{{ .RelPermalink }}"></script>
     {{ end }}
+    {{ with resources.Get "quotes.js" | minify }}
+      <script src="{{ .RelPermalink }}" defer></script>
+    {{ end }}
   {{ end }}
   <script src="{{ "js/main.js" | relURL }}"></script>
 </body>

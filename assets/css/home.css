@@ -15,6 +15,56 @@
 .home-main .home-section { padding-left: 0; padding-right: 0; }
 .home-main .home-section:first-child { padding-top: var(--space-lg); }
 
+/* ════════ 拾句 · 每日一句 ════════ */
+.quote-section { padding-top: var(--space-lg); }
+
+.quote-card {
+  position: relative;
+  background: var(--paper-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 34px 38px 26px;
+  text-align: center;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-size: 2.2rem;
+  color: var(--gold);
+  opacity: 0.55;
+  font-family: var(--font-serif);
+  line-height: 1;
+}
+.quote-mark-right {
+  top: auto;
+  left: auto;
+  right: 18px;
+  bottom: 8px;
+}
+
+.quote-text {
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+  line-height: 1.9;
+  color: var(--ink-dark);
+  letter-spacing: 0.04em;
+  margin: 0 auto 14px;
+  max-width: 620px;
+}
+
+.quote-meta {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.quote-meta #quote-author { color: var(--cinnabar); }
+.quote-src::before { content: '· '; }
+
 /* ════════ 侧栏 ════════ */
 .home-side {
   position: sticky;
