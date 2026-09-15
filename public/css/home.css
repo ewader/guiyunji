@@ -16,7 +16,8 @@
 .home-main .home-section:first-child { padding-top: var(--space-lg); }
 
 /* ════════ 拾句 · 每日一句 ════════ */
-.quote-section { padding-top: var(--space-lg); }
+.home-layout { padding-top: 96px; }
+.quote-section { padding-top: 6px; }
 
 .quote-card {
   position: relative;
