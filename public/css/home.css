@@ -1,0 +1,179 @@
+/* ════════ 首页双栏布局（主栏 + 侧栏黄历） ════════ */
+.home-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 36px;
+  align-items: start;
+}
+
+.home-main { min-width: 0; }
+
+/* 主栏区块取消原有容器宽度（由 .home-layout 控制） */
+.home-main .home-section { padding-left: 0; padding-right: 0; }
+.home-main .home-section:first-child { padding-top: var(--space-lg); }
+
+/* ════════ 侧栏 ════════ */
+.home-side {
+  position: sticky;
+  top: 76px;
+  display: grid;
+  gap: 22px;
+  margin-top: var(--space-lg);
+}
+
+.sidebar-widget {
+  background: var(--paper-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.widget-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--teal);
+}
+
+.widget-title {
+  color: var(--paper);
+  font-size: 1.02rem;
+  letter-spacing: 0.14em;
+}
+
+.almanac-week {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+}
+
+.widget-body { padding: 18px 20px 20px; }
+
+/* ════════ 今日黄历 ════════ */
+.almanac-body { padding-top: 16px; }
+
+.almanac-date {
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 14px 10px 12px;
+  margin-bottom: 14px;
+}
+.almanac-date span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-light);
+}
+.almanac-date b {
+  display: block;
+  font-size: 2.6rem;
+  line-height: 1.25;
+  color: var(--cinnabar);
+  font-weight: 600;
+}
+
+.almanac-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.almanac-grid > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 7px 10px;
+  font-size: 0.85rem;
+}
+.almanac-grid i {
+  font-style: normal;
+  color: var(--gold-dark);
+  flex: none;
+}
+.almanac-grid span {
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.almanac-yiji {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.almanac-yiji > div {
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.almanac-yiji .yi {
+  background: var(--cinnabar-light);
+  border: 1px solid rgba(192, 64, 64, 0.18);
+}
+.almanac-yiji .ji {
+  background: var(--teal-glow);
+  border: 1px solid rgba(47, 74, 63, 0.18);
+}
+.almanac-yiji h4 {
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+.almanac-yiji .yi h4 { color: var(--cinnabar); }
+.almanac-yiji .ji h4 { color: var(--teal); }
+.almanac-yiji p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--ink);
+  margin: 0;
+  max-height: 6.2em;
+  overflow: auto;
+}
+
+.almanac-pos {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  text-align: center;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+/* 黄历加载失败兜底 */
+.almanac-fallback { text-align: center; color: var(--ink-muted); font-size: 0.85rem; padding: 6px 0; }
+
+/* ════════ 岁时 · 节气（侧栏紧凑版） ════════ */
+.solar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.solar-item {
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 8px 2px;
+  font-size: 0.86rem;
+  color: var(--ink-light);
+}
+.solar-item.current {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+  color: #fff;
+}
+
+/* ════════ 响应式：窄屏折叠单栏 ════════ */
+@media (max-width: 960px) {
+  .home-layout { grid-template-columns: 1fr; }
+  .home-side { position: static; margin-top: 0; }
+  .almanac-yiji p { max-height: none; }
+}
