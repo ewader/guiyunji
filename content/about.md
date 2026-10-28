@@ -28,4 +28,4 @@ url = '/about/'
 
 ---
 
-联系邮箱：contact@l22.org
+联系邮箱：ewader@gmail.com
