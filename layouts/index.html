@@ -9,10 +9,31 @@
 {{ end }}
 {{ $cats = sort $cats "count" "desc" }}
 
-{{/* 精选：优先 featured，否则取最新三篇 */}}
-{{ $featured := where $posts "Params.featured" true }}
-{{ if eq (len $featured) 0 }}{{ $featured = first 3 $posts }}{{ end }}
-{{ $fallbackImg := slice "images/theme/thumb-plum.jpg" "images/theme/thumb-guqin.jpg" "images/theme/thumb-porcelain.jpg" "images/theme/hero-ink.jpg" }}
+{{/* 精选：最新一篇常驻 + 两篇每周轮换（同一周内所有人看到同一组，跨周自动换）
+     候选池只收「本地配图」或「无图（走绢本底图）」的文章——早期那批外链 pexels 图片
+     色彩跳脱，会破坏纸墨版面，故排除。新文章一旦配了本地封面就自动入池。*/}}
+{{ $fallbackImg := slice "images/theme/thumb-plum.jpg" "images/theme/thumb-guqin.jpg" "images/theme/hero-ink.jpg" }}
+{{ $pool := slice }}
+{{ range $posts }}
+  {{ if not (hasPrefix (.Params.image | default "") "http") }}
+    {{ $pool = $pool | append . }}
+  {{ end }}
+{{ end }}
+{{ $featured := slice }}
+{{ with $pool }}
+  {{ $latest := index . 0 }}
+  {{ $rest := after 1 . }}
+  {{ $n := len $rest }}
+  {{ $featured = $featured | append $latest }}
+  {{ if gt $n 1 }}
+    {{/* 以「Unix 周序」为种子，从 newest-1 起顺次取两篇，跨周自动推进 */}}
+    {{ $week := int (div now.Unix 604800) }}
+    {{ $start := mod (mul $week 2) $n }}
+    {{ range $k := seq 0 1 }}
+      {{ $featured = $featured | append (index $rest (mod (add $start $k) $n)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{/* 二十四节气 */}}
 {{ $solar := slice
