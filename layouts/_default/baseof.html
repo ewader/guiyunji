@@ -3,15 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="keywords" content="{{ .Site.Params.keywords }}">
   <meta name="theme-color" content="#f5f0e5">
 
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  {{/* ── 描述：页面自述 → 文章摘要 → 列表页自动生成 → 站点兜底 ── */}}
+  {{ $desc := .Site.Params.description }}
+  {{ if .Description }}
+    {{ $desc = .Description }}
+  {{ else if and .IsPage .Section }}
+    {{ $desc = .Summary | plainify | truncate 110 }}
+  {{ else if in (slice "section" "term") .Kind }}
+    {{ $names := slice }}
+    {{ $pool := .Pages }}
+    {{ with .Paginator }}{{ $pool = .Pages }}{{ end }}
+    {{ range first 4 $pool }}{{ $names = $names | append .Title }}{{ end }}
+    {{ $prefix := "" }}
+    {{ with .Paginator }}{{ if gt .PageNumber 1 }}{{ $prefix = printf "第 %d 页 · " .PageNumber }}{{ end }}{{ end }}
+    {{ $kindWord := "卷目" }}
+    {{ if eq .Kind "term" }}{{ $kindWord = cond (eq .Type "categories") "分类" "标签" }}{{ end }}
+    {{ $desc = printf "%s归云集「%s」%s，共 %d 篇：%s。" $prefix .Title $kindWord (len .Pages) (delimit $names "、") }}
+  {{ end }}
+  <meta name="description" content="{{ $desc }}">
+
+  {{/* ── 关键词：文章用自身标签，其余用站点关键词 ── */}}
+  {{ $kw := .Site.Params.keywords }}
+  {{ with .Params.tags }}{{ $kw = delimit . "，" }}{{ end }}
+  <meta name="keywords" content="{{ $kw }}">
+
+  {{/* ── 标题：首页用 homeTitle；分类/标签加后缀区分同名项；分页补页码 ── */}}
+  {{ $pageTitle := printf "%s — %s" .Title .Site.Title }}
+  {{ if .IsHome }}
+    {{ $pageTitle = .Site.Params.homeTitle | default .Site.Title }}
+  {{ else if eq .Kind "term" }}
+    {{ $label := cond (eq .Type "categories") "分类" "标签" }}
+    {{ $pageTitle = printf "%s · %s — %s" .Title $label .Site.Title }}
+    {{ with .Paginator }}
+      {{ if gt .PageNumber 1 }}
+        {{ $pageTitle = printf "%s · %s（第 %d 页）— %s" $.Title $label .PageNumber $.Site.Title }}
+      {{ end }}
+    {{ end }}
+  {{ else if in (slice "section" "term") .Kind }}
+    {{ with .Paginator }}
+      {{ if gt .PageNumber 1 }}
+        {{ $pageTitle = printf "%s（第 %d 页）— %s" $.Title .PageNumber $.Site.Title }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <title>{{ $pageTitle }}</title>
+
+  {{/* ── canonical：分页页自指，避免第 2 页起被误判为重复内容 ── */}}
+  {{ $canonical := .Permalink }}
+  {{ if in (slice "section" "term") .Kind }}
+    {{ with .Paginator }}{{ $canonical = .URL | absURL }}{{ end }}
+  {{ end }}
+  <link rel="canonical" href="{{ $canonical }}">
+
+  {{/* ── 收录策略：只挂一两篇的标签页不参与索引（分类页是主导航，一律照常收录） ── */}}
+  {{ if eq .Kind "404" }}
+    <meta name="robots" content="noindex,nofollow">
+  {{ else if and (eq .Kind "term") (eq .Type "tags") (lt (len .Pages) 3) }}
+    <meta name="robots" content="noindex,follow">
+  {{ end }}
 
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+
+  {{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.baiduSiteVerification }}<meta name="baidu-site-verification" content="{{ . }}">{{ end }}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,23 +81,74 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
   {{ end }}
 
-  {{/* 社交分享卡片：文章有封面用封面，否则用站点默认图 */}}
-  {{ $desc := .Site.Params.description }}
-  {{ with .Description }}{{ $desc = . }}{{ end }}
+  {{/* ── 社交分享卡片：文章有封面用封面，否则用站点默认图 ── */}}
   {{ $ogImg := .Site.Params.ogImage | absURL }}
+  {{ $ogIsDefault := true }}
   {{ with .Params.image }}
-    {{ if not (hasPrefix . "http") }}{{ $ogImg = . | absURL }}{{ end }}
+    {{ if not (hasPrefix . "http") }}{{ $ogImg = . | absURL }}{{ $ogIsDefault = false }}{{ end }}
   {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ $pageTitle }}{{ else }}{{ .Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ $ogImg }}">
+  {{ if $ogIsDefault }}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ .Site.Title }}——{{ .Site.Params.tagline }}">
+  {{ end }}
+  <meta property="og:locale" content="zh_CN">
+  {{ if .IsPage }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{ with .Params.categories }}{{ range first 1 . }}<meta property="article:section" content="{{ . }}">{{ end }}{{ end }}
+    {{ with .Params.tags }}{{ range first 6 . }}<meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
+  {{ end }}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ $pageTitle }}{{ else }}{{ .Title }}{{ end }}">
   <meta name="twitter:description" content="{{ $desc }}">
   <meta name="twitter:image" content="{{ $ogImg }}">
+
+  {{/* ── 结构化数据 ── */}}
+  {{ if .IsHome }}
+    {{ $ld := dict "@context" "https://schema.org" "@type" "WebSite"
+          "name" .Site.Title "alternateName" "Guiyun Collection"
+          "url" .Site.BaseURL "description" $desc "inLanguage" "zh-CN" }}
+    <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+  {{ else if .IsPage }}
+    {{ if .Section }}
+      {{ $author := .Site.Params.author | default .Site.Title }}
+      {{ $org := dict "@type" "Organization" "name" .Site.Title
+             "logo" (dict "@type" "ImageObject" "url" ("images/og-default.jpg" | absURL)) }}
+      {{ $ld := dict "@context" "https://schema.org" "@type" "Article"
+            "headline" .Title "description" $desc "image" (slice $ogImg)
+            "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+            "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+            "author" (dict "@type" "Person" "name" $author)
+            "publisher" $org
+            "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+            "inLanguage" "zh-CN" }}
+      {{ with .Params.tags }}{{ $ld = merge $ld (dict "keywords" (delimit . "，")) }}{{ end }}
+      <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+
+      {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "首页" "item" .Site.BaseURL) }}
+      {{ if .GetTerms "categories" }}
+        {{ with index (.GetTerms "categories") 0 }}
+          {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .LinkTitle "item" .Permalink) }}
+        {{ end }}
+        {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 3 "name" $.Title "item" $.Permalink) }}
+      {{ else }}
+        {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $.Title "item" $.Permalink) }}
+      {{ end }}
+      {{ $bc := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs }}
+      <script type="application/ld+json">{{ $bc | jsonify | safeJS }}</script>
+    {{ else }}
+      {{ $ld := dict "@context" "https://schema.org" "@type" "WebPage"
+            "name" .Title "description" $desc "url" .Permalink "inLanguage" "zh-CN" }}
+      <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+    {{ end }}
+  {{ end }}
 </head>
 <body{{ if .IsHome }} class="home"{{ end }}>
   {{ partial "header.html" . }}

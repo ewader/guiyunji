@@ -38,7 +38,7 @@
     <div class="article-main">
       {{ with .Params.image }}
         <figure class="article-cover">
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="eager" fetchpriority="high" decoding="async">
         </figure>
       {{ end }}
 

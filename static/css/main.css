@@ -1445,6 +1445,8 @@ a.solar-item:hover {
 .article-cover img {
   display: block;
   width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   padding: 16px;
   background: var(--paper-3);
   border: 1px solid var(--rule);
