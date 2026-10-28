@@ -22,6 +22,24 @@
   {{ with .OutputFormats.Get "RSS" }}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
   {{ end }}
+
+  {{/* 社交分享卡片：文章有封面用封面，否则用站点默认图 */}}
+  {{ $desc := .Site.Params.description }}
+  {{ with .Description }}{{ $desc = . }}{{ end }}
+  {{ $ogImg := .Site.Params.ogImage | absURL }}
+  {{ with .Params.image }}
+    {{ if not (hasPrefix . "http") }}{{ $ogImg = . | absURL }}{{ end }}
+  {{ end }}
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $ogImg }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $ogImg }}">
 </head>
 <body{{ if .IsHome }} class="home"{{ end }}>
   {{ partial "header.html" . }}
