@@ -96,7 +96,7 @@
 </section>
 
 {{/* ── 今日 · 一字与黄历 ─────────────────────────────────────────────── */}}
-{{ $ziList := hugo.Data.zi }}
+{{ $ziList := site.Data.zi }}
 {{ $zi := index $ziList (mod now.YearDay (len $ziList)) }}
 <section class="section section--alt today-section">
   <div class="container today-grid">
