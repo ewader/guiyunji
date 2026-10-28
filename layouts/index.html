@@ -92,25 +92,30 @@
       </div>
       <span class="mount-seal" aria-hidden="true">云</span>
     </div>
-    <div class="hero-verse" aria-hidden="true">
-      <p>山中何所有　岭上多白云</p>
-      <span>陶弘景句</span>
-    </div>
   </div>
 </section>
 
-{{/* ── 今日 · 拾句与黄历 ─────────────────────────────────────────────── */}}
+{{/* ── 今日 · 一字与黄历 ─────────────────────────────────────────────── */}}
+{{ $ziList := hugo.Data.zi }}
+{{ $zi := index $ziList (mod now.YearDay (len $ziList)) }}
 <section class="section section--alt today-section">
   <div class="container today-grid">
-    <div class="quote-card">
-      <span class="quote-mark" aria-hidden="true">「</span>
-      <p class="quote-text" id="quote-text">云中谁寄锦书来</p>
-      <div class="quote-meta">
-        <span id="quote-author">—— 李清照</span>
-        <span class="quote-src" id="quote-source">《一剪梅》</span>
+    <aside class="zi-card" aria-label="今日一字">
+      <div class="zi-head">
+        <h2 class="widget-title">今日一字</h2>
+        <span class="zi-py">{{ $zi.py }}</span>
       </div>
-      <span class="quote-mark quote-mark-right" aria-hidden="true">」</span>
-    </div>
+      <div class="zi-body">
+        <div class="zi-plate" aria-hidden="true">
+          <span class="zi-char">{{ $zi.zi }}</span>
+        </div>
+        <div class="zi-notes">
+          <p class="zi-line"><i>字 源</i><span>{{ $zi.shi }}</span></p>
+          <p class="zi-line"><i>本 义</i><span>{{ $zi.yi }}</span></p>
+          <p class="zi-quote">「{{ $zi.ju }}」<span class="zi-from">{{ $zi.chu }}</span></p>
+        </div>
+      </div>
+    </aside>
 
     <aside class="almanac-widget" id="almanac" aria-label="今日黄历">
       <div class="widget-head">

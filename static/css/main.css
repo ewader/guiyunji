@@ -40,7 +40,7 @@
   /* 字体 */
   --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
   --sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --kai: "LXGW WenKai TC", "Kaiti SC", "STKaiti", "KaiTi", "Noto Serif SC", serif;
+  --kai: "LXGW WenKai TC", "LXGW WenKai", "Kaiti SC", "KaiTi", "楷体", "STKaiti", "Noto Serif SC", serif;
   --display: "ZCOOL XiaoWei", "Noto Serif SC", "Songti SC", serif;
 
   /* 尺度 */
@@ -535,30 +535,6 @@ a {
   border-radius: 2px;
 }
 
-.hero-verse {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: flex-start;
-  max-height: 420px;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.34em;
-  color: var(--ink-2);
-}
-
-.hero-verse p {
-  margin: 0;
-}
-
-.hero-verse span {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: var(--ink-3);
-}
-
 /* ── 6. 卷目 ──────────────────────────────────────────────────────────── */
 .cat-grid {
   display: grid;
@@ -721,7 +697,7 @@ a {
   color: #a29a88;
 }
 
-/* ── 7.5 今日 · 拾句与黄历 ───────────────────────────────────────────── */
+/* ── 7.5 今日 · 一字与黄历 ───────────────────────────────────────────── */
 .today-section {
   padding: 52px 0 60px;
 }
@@ -732,65 +708,116 @@ a {
   gap: 24px;
 }
 
-.quote-card {
+/* 今日一字：一张字课 */
+.zi-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  padding: 48px 72px;
+  padding: 24px 36px 32px;
   background: var(--paper-3);
   border: 1px solid var(--rule);
   border-radius: 1px;
-  text-align: center;
 }
 
-.quote-mark {
-  position: absolute;
-  top: 24px;
-  left: 28px;
-  font-family: var(--serif);
-  font-size: 44px;
-  line-height: 1;
-  color: var(--cinnabar);
-  opacity: 0.45;
-  pointer-events: none;
+.zi-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
 }
 
-.quote-mark-right {
-  top: auto;
-  left: auto;
-  right: 28px;
-  bottom: 20px;
-}
-
-.quote-text {
+.zi-head .widget-title {
   margin: 0;
-  max-width: 620px;
+  padding: 0;
+  border: 0;
+}
+
+.zi-py {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--cinnabar);
+}
+
+.zi-body {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+/* 田字格：把字请进帖里 */
+.zi-plate {
+  position: relative;
+  flex: 0 0 186px;
+  width: 186px;
+  height: 186px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule-strong);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--rule-2), var(--rule-2)),
+    linear-gradient(var(--rule-2), var(--rule-2));
+  background-size: 1px calc(100% - 26px), calc(100% - 26px) 1px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.zi-char {
   font-family: var(--kai);
-  font-size: 26px;
-  line-height: 1.9;
-  letter-spacing: 0.12em;
+  font-size: 116px;
+  line-height: 1;
   color: var(--ink);
 }
 
-.quote-meta {
+.zi-notes {
+  flex: 1 1 auto;
+  min-width: 0;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.zi-line {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.95;
+  color: var(--ink-body);
+}
+
+.zi-line i {
+  flex: 0 0 auto;
+  padding-top: 5px;
+  font-style: normal;
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.16em;
   color: var(--ink-3);
 }
 
-.quote-meta #quote-author {
-  color: var(--cinnabar);
+.zi-quote {
+  margin: 8px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--rule);
+  font-family: var(--kai);
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink);
 }
 
-.quote-src::before {
-  content: "· ";
+.zi-from {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--cinnabar);
 }
 
 .almanac-widget {
@@ -1868,10 +1895,6 @@ a.solar-item:hover {
     height: 452px;
   }
 
-  .hero-verse {
-    max-height: 360px;
-  }
-
   .stream-wrap {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 56px;
@@ -1958,11 +1981,6 @@ a.solar-item:hover {
     width: min(420px, 78vw);
     height: auto;
     aspect-ratio: 420 / 528;
-  }
-
-  .hero-verse {
-    max-height: 300px;
-    font-size: 11px;
   }
 
   .cat-grid {
@@ -2098,33 +2116,32 @@ a.solar-item:hover {
     font-size: 16px;
   }
 
-  .hero-verse {
-    display: none;
-  }
-
   .today-section {
     padding: 36px 0 44px;
   }
 
-  .quote-card {
-    gap: 16px;
-    padding: 34px 26px;
+  .zi-card {
+    padding: 22px 22px 26px;
   }
 
-  .quote-text {
-    font-size: 20px;
-    letter-spacing: 0.08em;
+  .zi-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
   }
 
-  .quote-mark {
-    top: 12px;
-    left: 14px;
-    font-size: 32px;
+  .zi-plate {
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
   }
 
-  .quote-mark-right {
-    right: 14px;
-    bottom: 10px;
+  .zi-char {
+    font-size: 78px;
+  }
+
+  .zi-line {
+    font-size: 13px;
   }
 
   .almanac-widget {
