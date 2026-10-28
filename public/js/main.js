@@ -31,16 +31,21 @@ function initMobileMenu() {
   const nav = document.getElementById('headerNav');
   if (!toggle || !nav) return;
 
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    toggle.classList.toggle('active', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+  }
+
   toggle.addEventListener('click', function (e) {
     e.stopPropagation();
-    nav.classList.toggle('open');
-    toggle.classList.toggle('active');
+    setOpen(!nav.classList.contains('open'));
   });
 
   nav.querySelectorAll('.nav-link').forEach(function (link) {
     link.addEventListener('click', function () {
-      nav.classList.remove('open');
-      toggle.classList.remove('active');
+      setOpen(false);
     });
   });
 
@@ -48,8 +53,20 @@ function initMobileMenu() {
     if (nav.classList.contains('open') &&
         !nav.contains(e.target) &&
         !toggle.contains(e.target)) {
-      nav.classList.remove('open');
-      toggle.classList.remove('active');
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1080 && nav.classList.contains('open')) {
+      setOpen(false);
     }
   });
 }

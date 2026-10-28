@@ -67,6 +67,13 @@ path = "page"
 
 # 参数配置
 [params]
+  # 卷首副题与题记
+  subtitle = "云归何处　自在东西"
+  tagline = "一纸松烟，半帘山色。辑录二十四节气之流转、诸子百家之思辨，与琴棋书画、窑火织绣里的中国。"
+
+  # 卷首装裱图（相对 static 目录）
+  heroImage = "images/theme/hero-ink.jpg"
+
   # 网站 Logo
   logo = ""
 

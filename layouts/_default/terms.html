@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $isCat := eq .Data.Singular "category" }}
+<div class="page-head container">
+  <nav class="breadcrumb" aria-label="路径">
+    <a href="{{ "/" | relURL }}">首页</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <div class="page-head-row">
+    <div>
+      <p class="sec-label">卷 目　·　总 目</p>
+      <h1 class="page-title">{{ .Title }}</h1>
+      <p class="page-desc">{{ .Params.description | default "依内容分卷，卷下各篇按时间倒序排列。" }}</p>
+    </div>
+    <div class="page-meta">
+      <span>共 {{ len .Pages }} {{ if $isCat }}卷{{ else }}个标签{{ end }}</span>
+    </div>
+  </div>
+</div>
+
+{{ if $isCat }}
+  <div class="term-grid container">
+    <div class="cat-grid">
+      {{ range .Pages }}
+        {{ $name := partial "category-name" (dict "slug" .Data.Term "default" .Title) }}
+        <a class="cat-block" href="{{ .RelPermalink }}">
+          <span class="cat-seal">{{ range first 1 (split $name "") }}{{ . }}{{ end }}</span>
+          <span class="cat-name">{{ $name }}</span>
+          <span class="cat-count">{{ len .Pages }} 篇</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ else }}
+  <div class="chips container term-cloud">
+    {{ range .Pages }}
+      <a class="chip" href="{{ .RelPermalink }}">{{ .LinkTitle }}<span class="chip-n">{{ len .Pages }}</span></a>
+    {{ end }}
+  </div>
+{{ end }}
+{{ end }}

@@ -1,0 +1,9 @@
+# 本地状态（记忆、验证截图、日志）
+.workbuddy/
+
+# 设计源图，仅本地保留；站点用的是 static/images/theme/*.jpg
+design/source/
+
+# Hugo 构建缓存
+resources/_gen/
+.hugo_build.lock

@@ -3,13 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://guiyun.l22.org/categories/</loc>
-    <lastmod>2026-09-08T08:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://guiyun.l22.org/tags/</loc>
     <lastmod>2026-09-08T08:00:00+08:00</lastmod>
   </url><url>
     <loc>https://guiyun.l22.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</loc>
+    <lastmod>2026-09-08T08:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guiyun.l22.org/categories/</loc>
     <lastmod>2026-09-08T08:00:00+08:00</lastmod>
   </url><url>
     <loc>https://guiyun.l22.org/</loc>

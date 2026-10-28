@@ -1,86 +1,102 @@
 {{ define "main" }}
+{{ $min := math.Ceil (div (float .WordCount) 400.0) }}
+{{ if lt $min 1 }}{{ $min = 1 }}{{ end }}
+{{ $terms := .GetTerms "categories" }}
+
 <article class="article-page">
-  <div class="container">
-    <div class="article-layout">
-      <div class="article-main">
-        <header class="article-header">
-          {{ if .Params.categories }}
-            <div class="article-categories">
-              {{ range .Params.categories }}
-                <a href="{{ "categories/" | relURL }}{{ . | urlize }}" class="article-cat">{{ partial "category-name" (dict "slug" . "default" .) }}</a>
-              {{ end }}
-            </div>
-          {{ end }}
-          <h1 class="article-title">{{ .Title }}</h1>
-          <div class="article-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 年 01 月 02 日" }}</time>
-            <span class="meta-dot">·</span>
-            <span>{{ strings.RuneCount .Plain }} 字</span>
-            <span class="meta-dot">·</span>
-            <span>{{ math.Ceil (div (float (strings.RuneCount .Plain)) 400.0) }} 分钟阅读</span>
-          </div>
-        </header>
+  <header class="article-head container">
+    <nav class="breadcrumb" aria-label="路径">
+      <a href="{{ "/" | relURL }}">首页</a>
+      <span class="sep" aria-hidden="true">/</span>
+      {{ with index $terms 0 }}
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <span class="sep" aria-hidden="true">/</span>
+      {{ end }}
+      <span>{{ .Title }}</span>
+    </nav>
 
-        {{ if .Params.image }}
-        <div class="article-cover">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
-        </div>
+    {{ with $terms }}
+      <div class="article-cats">
+        {{ range first 2 . }}
+          <a class="article-cat" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         {{ end }}
+      </div>
+    {{ end }}
 
-        <div class="article-content">
-          {{ .Content }}
-        </div>
+    <h1 class="article-title">{{ .Title }}</h1>
 
-        {{ if .Params.tags }}
+    <div class="article-meta">
+      <span>文　{{ .Site.Params.author | default .Site.Title }}</span>
+      <span class="meta-dot" aria-hidden="true">·</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 年 01 月 02 日" }}</time>
+      <span class="meta-dot" aria-hidden="true">·</span>
+      <span>阅读约 {{ $min }} 分钟</span>
+    </div>
+  </header>
+
+  <div class="container article-layout">
+    <div class="article-main">
+      {{ with .Params.image }}
+        <figure class="article-cover">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+        </figure>
+      {{ end }}
+
+      <div class="prose">
+        {{ .Content }}
+      </div>
+
+      {{ if .Params.tags }}
         <div class="article-tags">
-          <span class="tags-label">标签</span>
+          <span class="tags-label">标 签</span>
           <div class="tags-list">
             {{ range .Params.tags }}
-              <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+              <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
             {{ end }}
           </div>
         </div>
+      {{ end }}
+
+      <nav class="article-nav" aria-label="前后篇">
+        {{ with .PrevInSection }}
+          <a class="nav-prev" href="{{ .RelPermalink }}">
+            <span class="nav-dir">上 一 篇</span>
+            <span class="nav-title">{{ .Title }}</span>
+          </a>
         {{ end }}
+        {{ with .NextInSection }}
+          <a class="nav-next" href="{{ .RelPermalink }}">
+            <span class="nav-dir">下 一 篇</span>
+            <span class="nav-title">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </nav>
+    </div>
 
-        <nav class="article-nav">
-          {{ with .PrevInSection }}
-            <a href="{{ .RelPermalink }}" class="nav-prev">
-              <span class="nav-dir">← 上一篇</span>
-              <span class="nav-title">{{ .Title }}</span>
-            </a>
-          {{ end }}
-          {{ with .NextInSection }}
-            <a href="{{ .RelPermalink }}" class="nav-next">
-              <span class="nav-dir">下一篇 →</span>
-              <span class="nav-title">{{ .Title }}</span>
-            </a>
-          {{ end }}
-        </nav>
-      </div>
-
-      <aside class="article-sidebar">
-        {{ if .TableOfContents }}
+    <aside class="article-side">
+      {{ if .TableOfContents }}
         <div class="sidebar-widget">
-          <h3 class="widget-title">目次</h3>
+          <h3 class="widget-title">本 文 目 录</h3>
           <div class="widget-body toc-body">
             {{ .TableOfContents }}
           </div>
         </div>
-        {{ end }}
+      {{ end }}
 
-        <div class="sidebar-widget">
-          <h3 class="widget-title">相关文章</h3>
-          <div class="widget-body">
-            {{ $related := .Site.RegularPages.Related . | first 5 }}
-            {{ range $related }}
-              <a href="{{ .RelPermalink }}" class="widget-link">{{ .Title }}</a>
-            {{ else }}
-              <p class="widget-empty">暂无相关文章</p>
+      <div class="sidebar-widget">
+        <h3 class="widget-title">相 关 文 章</h3>
+        <div class="widget-body">
+          {{ $related := .Site.RegularPages.Related . | first 5 }}
+          {{ range $related }}
+            <a class="widget-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ else }}
+            {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+              <a class="widget-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ end }}
-          </div>
+          {{ end }}
         </div>
-      </aside>
-    </div>
+      </div>
+    </aside>
   </div>
 </article>
 {{ end }}

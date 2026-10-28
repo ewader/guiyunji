@@ -1,48 +1,73 @@
 {{ define "main" }}
-<div class="list-page">
-  <div class="container">
-    <header class="list-header">
-      <h1 class="list-title">
-        {{ if eq .Kind "term" }}
-          {{ partial "category-name" (dict "slug" .Data.Term "default" .Data.Term) }}
-        {{ else }}
-          {{ .Title }}
-        {{ end }}
-      </h1>
-      <p class="list-desc">{{ .Params.description | default (printf "共 %d 篇文章" (len .Pages)) }}</p>
-    </header>
+{{ $isTerm := eq .Kind "term" }}
+{{ $title := .Title }}
+{{ if $isTerm }}{{ $title = partial "category-name" (dict "slug" .Data.Term "default" .Data.Term) }}{{ end }}
+{{ $allCats := site.GetPage "/categories" }}
 
-    <div class="list-stream">
-      {{ range .Paginator.Pages.ByDate.Reverse }}
-        <article class="list-item">
-          <time class="list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-          <div class="list-body">
-            <h2 class="list-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <p class="list-item-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
-            <div class="list-item-meta">
-              {{ if .Params.categories }}
-                {{ range first 1 .Params.categories }}
-                  <span class="meta-tag">{{ partial "category-name" (dict "slug" . "default" .) }}</span>
-                {{ end }}
-              {{ end }}
-              <span>{{ math.Ceil (div .WordCount 400.0) }} 分钟</span>
-            </div>
-          </div>
-        </article>
-      {{ end }}
-    </div>
-
-    {{ if gt .Paginator.TotalPages 1 }}
-    <nav class="list-pagination">
-      {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class="page-link">‹ 上一页</a>
-      {{ end }}
-      <span class="page-current">{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" class="page-link">下一页 ›</a>
-      {{ end }}
-    </nav>
+<div class="page-head container">
+  <nav class="breadcrumb" aria-label="路径">
+    <a href="{{ "/" | relURL }}">首页</a>
+    <span class="sep" aria-hidden="true">/</span>
+    {{ if $isTerm }}
+      <a href="{{ "/categories/" | relURL }}">分类</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span>{{ $title }}</span>
+    {{ else }}
+      <span>文章</span>
     {{ end }}
+  </nav>
+
+  <div class="page-head-row">
+    <div>
+      <p class="sec-label">卷 目　·　{{ if $isTerm }}分 类{{ else }}文 章{{ end }}</p>
+      <h1 class="page-title">{{ $title }}</h1>
+      <p class="page-desc">{{ .Params.description | default (printf "此卷辑录 %d 篇，按时间倒序排列。" (len .Pages)) }}</p>
+    </div>
+    <div class="page-meta">
+      <span>共 {{ len .Pages }} 篇</span>
+      <span>按时间倒序</span>
+    </div>
   </div>
 </div>
+
+{{ with $allCats }}
+<div class="chips container">
+  <a class="chip{{ if not $isTerm }} is-active{{ end }}" href="{{ "/posts/" | relURL }}">全部</a>
+  {{ range .Pages }}
+    {{ $name := partial "category-name" (dict "slug" .Data.Term "default" .Title) }}
+    <a class="chip{{ if and $isTerm (eq .Data.Term $.Data.Term) }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ $name }}</a>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="archive container">
+  {{ range $i, $p := .Paginator.Pages }}
+    {{ $cat := "" }}{{ with $p.Params.categories }}{{ $cat = index . 0 }}{{ end }}
+    <a class="archive-item" href="{{ $p.RelPermalink }}">
+      <div class="archive-index">
+        <span>{{ printf "%02d" (add $i 1) }}</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2006.01.02" }}</time>
+        {{ if not $isTerm }}{{ with $cat }}<span class="dot" aria-hidden="true">·</span><span>{{ . }}</span>{{ end }}{{ end }}
+      </div>
+      <h2 class="archive-title">{{ $p.Title }}</h2>
+      <p class="archive-excerpt">{{ $p.Summary | plainify | truncate 52 }}</p>
+    </a>
+  {{ end }}
+</div>
+
+{{ $pag := .Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination container" aria-label="分页">
+  {{ if $pag.HasPrev }}<a class="page-link" href="{{ $pag.Prev.URL }}">上一页</a>{{ end }}
+  {{ range $pag.Pagers }}
+    {{ if eq .PageNumber $pag.PageNumber }}
+      <span class="page-current">{{ .PageNumber }}</span>
+    {{ else }}
+      <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ end }}
+  {{ end }}
+  {{ if $pag.HasNext }}<a class="page-link" href="{{ $pag.Next.URL }}">下一页</a>{{ end }}
+</nav>
+{{ end }}
 {{ end }}

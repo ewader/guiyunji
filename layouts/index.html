@@ -1,84 +1,99 @@
 {{ define "main" }}
+{{ $posts := where .Site.RegularPages "Draft" false }}
+{{ $posts = $posts.ByDate.Reverse }}
 
-<div class="home-layout">  <!-- ═══ 主栏 ═══ -->
-  <div class="home-main">
+{{/* 分类按篇数排序 */}}
+{{ $cats := slice }}
+{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+  {{ $cats = $cats | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
+{{ end }}
+{{ $cats = sort $cats "count" "desc" }}
 
-    <!-- 1. 拾句 · 每日一句 -->
-    <section class="home-section quote-section">
-      <div class="quote-card">
-        <span class="quote-mark">「</span>
-        <p class="quote-text" id="quote-text">云中谁寄锦书来</p>
-        <div class="quote-meta">
-          <span id="quote-author">——</span>
-          <span class="quote-src" id="quote-source"></span>
-        </div>
-        <span class="quote-mark quote-mark-right">」</span>
-      </div>
-    </section>
+{{/* 精选：优先 featured，否则取最新三篇 */}}
+{{ $featured := where $posts "Params.featured" true }}
+{{ if eq (len $featured) 0 }}{{ $featured = first 3 $posts }}{{ end }}
+{{ $fallbackImg := slice "images/theme/thumb-plum.jpg" "images/theme/thumb-guqin.jpg" "images/theme/thumb-porcelain.jpg" "images/theme/hero-ink.jpg" }}
 
-    <!-- 2. 精选 -->
-    {{ $featured := where (where .Site.RegularPages "Draft" false) "Params.featured" true }}
-    {{ if gt (len $featured) 0 }}
-    <section class="home-section featured-section">
-      <div class="section-header">
-        <span class="sec-label">精选</span>
-        <h2 class="sec-title">推荐阅读</h2>
-      </div>
-      <div class="featured-grid">
-        {{ range first 3 $featured.ByDate.Reverse }}
-          <article class="featured-card">
-            {{ if .Params.image }}
-            <div class="fc-image">
-              <a href="{{ .RelPermalink }}"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy"></a>
-            </div>
-            {{ end }}
-            <div class="fc-body">
-              <div class="fc-meta">
-                {{ if .Params.categories }}
-                  {{ range first 1 .Params.categories }}
-                    <span class="fc-tag">{{ . }}</span>
-                  {{ end }}
-                {{ end }}
-                <time class="fc-date">{{ .Date.Format "2006.01.02" }}</time>
-              </div>
-              <h3 class="fc-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <p class="fc-excerpt">{{ .Summary | plainify | truncate 100 }}</p>
-              <a href="{{ .RelPermalink }}" class="fc-read">阅读 →</a>
-            </div>
-          </article>
-        {{ end }}
-      </div>
-    </section>
+{{/* 二十四节气 */}}
+{{ $solar := slice
+  (dict "n" "立春" "m" 2) (dict "n" "雨水" "m" 2)
+  (dict "n" "惊蛰" "m" 3) (dict "n" "春分" "m" 3)
+  (dict "n" "清明" "m" 4) (dict "n" "谷雨" "m" 4)
+  (dict "n" "立夏" "m" 5) (dict "n" "小满" "m" 5)
+  (dict "n" "芒种" "m" 6) (dict "n" "夏至" "m" 6)
+  (dict "n" "小暑" "m" 7) (dict "n" "大暑" "m" 7)
+  (dict "n" "立秋" "m" 8) (dict "n" "处暑" "m" 8)
+  (dict "n" "白露" "m" 9) (dict "n" "秋分" "m" 9)
+  (dict "n" "寒露" "m" 10) (dict "n" "霜降" "m" 10)
+  (dict "n" "立冬" "m" 11) (dict "n" "小雪" "m" 11)
+  (dict "n" "大雪" "m" 12) (dict "n" "冬至" "m" 12)
+  (dict "n" "小寒" "m" 1) (dict "n" "大寒" "m" 1) }}
+{{ $links := dict }}
+{{ range $posts }}
+  {{ $page := . }}
+  {{ range $solar }}
+    {{ if strings.HasPrefix $page.Title .n }}
+      {{ $links = merge $links (dict .n $page.RelPermalink) }}
     {{ end }}
+  {{ end }}
+{{ end }}
+{{ $m := int (now.Format "1") }}
+{{ $d := int (now.Format "2") }}
+{{ $cur := 0 }}
+{{ if eq $m 1 }}
+  {{ $cur = 22 }}{{ if gt $d 15 }}{{ $cur = 23 }}{{ end }}
+{{ else }}
+  {{ $cur = mul (sub $m 2) 2 }}{{ if gt $d 15 }}{{ $cur = add $cur 1 }}{{ end }}
+{{ end }}
 
-    <!-- 3. 笔墨 -->
-    <section class="home-section stream-section">
-      <div class="section-header">
-        <span class="sec-label">笔墨</span>
-        <h2 class="sec-title">最新文章</h2>
-      </div>
-      <div class="stream-list">
-        {{ range first 8 (where .Site.RegularPages "Draft" false).ByDate.Reverse }}
-          <article class="stream-item">
-            <time class="stream-date">{{ .Date.Format "2006.01.02" }}</time>
-            <h3 class="stream-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          </article>
-        {{ end }}
-      </div>
-      <div class="stream-footer">
-        <a href="{{ "posts" | relURL }}" class="btn-more">全部文章 →</a>
-      </div>
-    </section>
-
+{{/* ── 卷首 ───────────────────────────────────────────────────────────── */}}
+<section class="hero container">
+  <div class="hero-text">
+    <p class="eyebrow"><span class="eyebrow-rule"></span>中国传统文化　·　辑录 {{ len $posts }} 篇</p>
+    <h1 class="hero-title">{{ .Site.Title }}</h1>
+    <p class="hero-sub">{{ .Site.Params.subtitle | default "云归何处　自在东西" }}</p>
+    <div class="hero-rule"></div>
+    <p class="hero-lead">{{ .Site.Params.tagline | default .Site.Params.description }}</p>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="#latest">
+        <span>展卷阅读</span>
+        <svg viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5h13M9 1l4.2 4L9 9"></path></svg>
+      </a>
+      <a class="btn btn--ghost" href="{{ "/about/" | relURL }}">关于本集</a>
+    </div>
+    <p class="hero-stats">共 {{ len $posts }} 篇　·　{{ len $cats }} 卷　·　廿四节气</p>
   </div>
 
-  <!-- ═══ 侧栏 ═══ -->
-  <aside class="home-side">
+  <div class="hero-side">
+    <div class="mount">
+      <div class="mount-frame">
+        <img src="{{ (.Site.Params.heroImage | default "images/theme/hero-ink.jpg") | relURL }}" alt="水墨山水" width="420" height="528" loading="eager">
+      </div>
+      <span class="mount-seal" aria-hidden="true">云</span>
+    </div>
+    <div class="hero-verse" aria-hidden="true">
+      <p>山中何所有　岭上多白云</p>
+      <span>陶弘景句</span>
+    </div>
+  </div>
+</section>
 
-    <!-- 今日黄历 -->
-    <div class="sidebar-widget almanac-widget" id="almanac">
+{{/* ── 今日 · 拾句与黄历 ─────────────────────────────────────────────── */}}
+<section class="section section--alt today-section">
+  <div class="container today-grid">
+    <div class="quote-card">
+      <span class="quote-mark" aria-hidden="true">「</span>
+      <p class="quote-text" id="quote-text">云中谁寄锦书来</p>
+      <div class="quote-meta">
+        <span id="quote-author">—— 李清照</span>
+        <span class="quote-src" id="quote-source">《一剪梅》</span>
+      </div>
+      <span class="quote-mark quote-mark-right" aria-hidden="true">」</span>
+    </div>
+
+    <aside class="almanac-widget" id="almanac" aria-label="今日黄历">
       <div class="widget-head">
-        <h3 class="widget-title">今日黄历</h3>
+        <h2 class="widget-title">今日黄历</h2>
         <span class="almanac-week" id="al-week">—</span>
       </div>
       <div class="widget-body almanac-body">
@@ -105,53 +120,122 @@
         </div>
         <div class="almanac-pos" id="al-pos">—</div>
       </div>
+    </aside>
+  </div>
+</section>
+
+{{/* ── 卷目 ───────────────────────────────────────────────────────────── */}}
+<section class="section container" id="categories">
+  <div class="sec-head">
+    <div>
+      <p class="sec-label">卷 一　·　卷 目</p>
+      <h2 class="sec-title">分类浏览</h2>
+    </div>
+    <p class="sec-aside">
+      <span>{{ len $cats }} 卷　{{ len $posts }} 篇</span>
+      <a class="sec-link" href="{{ "/categories/" | relURL }}">
+        <span>全部卷目</span>
+        <svg viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5h13M9 1l4.2 4L9 9"></path></svg>
+      </a>
+    </p>
+  </div>
+
+  <div class="cat-grid">
+    {{ range first 6 $cats }}
+      <a class="cat-block" href="{{ "/categories/" | relURL }}{{ .name | urlize }}/">
+        <span class="cat-seal">{{ range first 1 (split .name "") }}{{ . }}{{ end }}</span>
+        <span class="cat-name">{{ .name }}</span>
+        <span class="cat-count">{{ .count }} 篇</span>
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+{{/* ── 精选 ───────────────────────────────────────────────────────────── */}}
+<section class="featured">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">卷 二　·　精 选</p>
+        <h2 class="sec-title">推荐阅读</h2>
+      </div>
+      <p class="sec-aside">
+        <a class="sec-link" href="{{ "/posts/" | relURL }}">
+          <span>按图索骥　·　全部文章</span>
+          <svg viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5h13M9 1l4.2 4L9 9"></path></svg>
+        </a>
+      </p>
     </div>
 
-    <!-- 岁时 · 节气 -->
-    <div class="sidebar-widget">
-      <div class="widget-head">
-        <h3 class="widget-title">岁时</h3>
-        <span class="almanac-week">当月高亮</span>
+    <div class="feat-grid">
+      {{ range $i, $p := first 3 $featured }}
+        {{ $cat := "" }}{{ with $p.Params.categories }}{{ $cat = index . 0 }}{{ end }}
+        {{ $img := $p.Params.image | default (index $fallbackImg (mod $i (len $fallbackImg))) }}
+        <a class="feat-card" href="{{ $p.RelPermalink }}">
+          <div class="feat-thumb">
+            <img src="{{ $img | relURL }}" alt="{{ $p.Title }}" loading="lazy">
+          </div>
+          <div class="feat-meta">
+            {{ with $cat }}<span class="cat">{{ . }}</span><span class="dot" aria-hidden="true"></span>{{ end }}
+            <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2006.01.02" }}</time>
+          </div>
+          <h3 class="feat-title">{{ $p.Title }}</h3>
+          <p class="feat-excerpt">{{ $p.Summary | plainify | truncate 58 }}</p>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── 岁时 ───────────────────────────────────────────────────────────── */}}
+<section class="section section--alt" id="solar">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">卷 三　·　岁 时</p>
+        <h2 class="sec-title">二十四节气</h2>
       </div>
-      <div class="widget-body">
-        <div class="solar-grid">
-          {{ $currentMonth := now.Format "01" }}
-          {{ $terms := slice
-            (dict "name" "立春" "month" "02")
-            (dict "name" "雨水" "month" "02")
-            (dict "name" "惊蛰" "month" "03")
-            (dict "name" "春分" "month" "03")
-            (dict "name" "清明" "month" "04")
-            (dict "name" "谷雨" "month" "04")
-            (dict "name" "立夏" "month" "05")
-            (dict "name" "小满" "month" "05")
-            (dict "name" "芒种" "month" "06")
-            (dict "name" "夏至" "month" "06")
-            (dict "name" "小暑" "month" "07")
-            (dict "name" "大暑" "month" "07")
-            (dict "name" "立秋" "month" "08")
-            (dict "name" "处暑" "month" "08")
-            (dict "name" "白露" "month" "09")
-            (dict "name" "秋分" "month" "09")
-            (dict "name" "寒露" "month" "10")
-            (dict "name" "霜降" "month" "10")
-            (dict "name" "立冬" "month" "11")
-            (dict "name" "小雪" "month" "11")
-            (dict "name" "大雪" "month" "12")
-            (dict "name" "冬至" "month" "12")
-            (dict "name" "小寒" "month" "01")
-            (dict "name" "大寒" "month" "01")
-          }}
-          {{ range $terms }}
-            <div class="solar-item{{ if eq $currentMonth .month }} current{{ end }}">
-              <span class="solar-name">{{ .name }}</span>
-            </div>
-          {{ end }}
-        </div>
-      </div>
+      <p class="sec-aside"><span>春生　夏长　秋收　冬藏</span></p>
     </div>
 
-  </aside>
-</div>
+    <div class="solar">
+      {{ range $i, $t := $solar }}
+        {{ $u := index $links $t.n }}
+        {{ $cls := cond (eq $i $cur) " is-now" "" }}
+        {{ if $u }}
+          <a class="solar-item{{ $cls }}" href="{{ $u }}">{{ $t.n }}</a>
+        {{ else }}
+          <span class="solar-item{{ $cls }}">{{ $t.n }}</span>
+        {{ end }}
+        {{ if eq $i 11 }}<span class="solar-divider" aria-hidden="true"></span>{{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
 
+{{/* ── 笔墨 ───────────────────────────────────────────────────────────── */}}
+<section class="section container" id="latest">
+  <div class="stream-wrap">
+    <div class="stream-head">
+      <p class="sec-label">卷 四　·　笔 墨</p>
+      <h2 class="sec-title">最新文章</h2>
+      <p class="stream-desc">按日编次，随手记下的节令、器物与人事。</p>
+      <a class="text-link" href="{{ "/posts/" | relURL }}">
+        <span>全部文章</span>
+        <svg viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5h13M9 1l4.2 4L9 9"></path></svg>
+      </a>
+    </div>
+
+    <div class="stream-list">
+      {{ range first 6 $posts }}
+        {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
+        <a class="stream-row" href="{{ .RelPermalink }}">
+          <time class="stream-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+          <h3 class="stream-title">{{ .Title }}</h3>
+          <span class="stream-cat">{{ $cat }}</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}

@@ -1,27 +1,53 @@
+{{ $allCats := site.GetPage "/categories" }}
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-seal">归</div>
-        <p class="footer-desc">{{ .Site.Params.description }}</p>
+        <div class="footer-logo">
+          <span class="footer-seal" aria-hidden="true">归</span>
+          <span class="footer-name">{{ .Site.Title }}</span>
+        </div>
+        <p class="footer-desc">{{ .Site.Params.tagline | default .Site.Params.description }}</p>
       </div>
-      <div class="footer-links">
-        <h4 class="footer-heading">栏目</h4>
-        <div class="footer-links-inline">
-          {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" class="footer-link">{{ .Name }}</a>
-          {{ end }}
+
+      <div class="footer-cols">
+        <div>
+          <h4 class="footer-heading">卷 目</h4>
+          <div class="footer-links-inline">
+            {{ with $allCats }}
+              {{ range first 3 .Pages }}
+                <a class="footer-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">岁 时</h4>
+          <div class="footer-links-inline">
+            <a class="footer-link" href="{{ "/" | relURL }}#solar">二十四节气</a>
+            {{ with site.GetPage "/categories/传统节日" }}
+              <a class="footer-link" href="{{ .RelPermalink }}">传统节日</a>
+            {{ end }}
+            {{ with site.GetPage "/categories/诸子百家" }}
+              <a class="footer-link" href="{{ .RelPermalink }}">诸子百家</a>
+            {{ end }}
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">其 他</h4>
+          <div class="footer-links-inline">
+            <a class="footer-link" href="{{ "/about/" | relURL }}">关于本集</a>
+            <a class="footer-link" href="{{ "/posts/" | relURL }}">全部文章</a>
+            <a class="footer-link" href="{{ "index.xml" | relURL }}">订阅更新</a>
+          </div>
         </div>
       </div>
-      <div class="footer-meta">
-        <h4 class="footer-heading">联系</h4>
-        {{ with .Site.Params.email }}
-          <a href="mailto:{{ . }}" class="footer-link">{{ . }}</a>
-        {{ end }}
-      </div>
     </div>
+
     <div class="footer-bottom">
-      <span>传承不泥古 · 创新不离宗</span>
+      <span>以宣纸为底　以松烟为墨</span>
       <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
     </div>
   </div>
