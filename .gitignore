@@ -7,3 +7,8 @@ design/source/
 # Hugo 构建缓存
 resources/_gen/
 .hugo_build.lock
+
+# 临时文件（截图、图像生成原稿、验证产物），一律不入库
+.tmp/
+# 沙箱安全删除产生的回收目录
+.Trash-*/

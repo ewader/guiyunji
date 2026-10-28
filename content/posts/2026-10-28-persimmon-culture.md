@@ -4,6 +4,8 @@ date = '2026-10-28T08:00:00+08:00'
 draft = false
 categories = ['传统文化']
 tags = ['柿子', '霜降', '民俗', '吉祥文化', '诗词']
+image = '/images/posts/persimmon-culture/cover.jpg'
+images = ['/images/posts/persimmon-culture/cover.jpg']
 url = '/posts/persimmon-culture/'
 slug = 'persimmon-culture'
 +++
