@@ -2,7 +2,7 @@
 title = '菊：霜天晚香里的东方晚节'
 date = '2026-10-29T08:00:00+08:00'
 draft = false
-categories = ['传统文化', '艺术']
+categories = ['传统文化']
 tags = ['菊花', '霜降', '陶渊明', '重阳', '花事']
 image = '/images/posts/chrysanthemum-late-autumn/cover.jpg'
 images = ['/images/posts/chrysanthemum-late-autumn/cover.jpg']

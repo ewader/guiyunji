@@ -31,9 +31,17 @@
 </div>
 
 {{ with $allCats }}
+{{ $order := site.Params.categoryOrder | default slice }}
+{{ $ordered := slice }}
+{{ range $order }}
+  {{ with site.GetPage (printf "/categories/%s" .) }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ end }}
+{{ range .Pages }}
+  {{ if not (in $order .Title) }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ end }}
 <div class="chips container">
   <a class="chip{{ if not $isTerm }} is-active{{ end }}" href="{{ "/posts/" | relURL }}">全部</a>
-  {{ range .Pages }}
+  {{ range $ordered }}
     {{ $name := partial "category-name" (dict "slug" .Data.Term "default" .Title) }}
     <a class="chip{{ if and $isTerm (eq .Data.Term $.Data.Term) }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ $name }}</a>
   {{ end }}

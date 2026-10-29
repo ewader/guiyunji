@@ -81,6 +81,10 @@ path = "page"
   # Open Graph 图片
   ogImage = "/images/og-default.jpg"
 
+  # 分类展示顺序（筛选条按此排列，未列出的分类自动追加在后）
+  # 不设此项时 Hugo 对 taxonomy 页的排序不稳定，每次构建可能换位置
+  categoryOrder = ["传统文化", "艺术", "历史", "岁时节令", "工艺", "建筑"]
+
   # 邮箱
   email = "ewader@gmail.com"
 

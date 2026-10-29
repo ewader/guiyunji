@@ -21,13 +21,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>艺术</title>
-				<link>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</link>
-				<pubDate>Thu, 29 Oct 2026 08:00:00 +0800</pubDate>
-				<guid>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>历史</title>
 				<link>https://www.guiyun.org/categories/%E5%8E%86%E5%8F%B2/</link>
 				<pubDate>Fri, 28 Aug 2026 08:00:00 +0800</pubDate>
@@ -53,6 +46,13 @@
 				<link>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</link>
 				<pubDate>Fri, 07 Aug 2026 08:00:00 +0800</pubDate>
 				<guid>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>艺术</title>
+				<link>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</link>
+				<pubDate>Mon, 13 Jul 2026 08:00:00 +0800</pubDate>
+				<guid>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</guid>
 				<description></description>
 			</item>
 	</channel>
