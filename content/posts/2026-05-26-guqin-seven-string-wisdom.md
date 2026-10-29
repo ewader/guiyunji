@@ -6,11 +6,11 @@ categories = ['艺术']
 tags = ['古琴', '民乐', '文人', '传统文化', '诸子百家']
 url = '/posts/guqin-seven-string-wisdom/'
 slug = 'guqin-seven-string-wisdom'
+image = '/images/posts/guqin-seven-string-wisdom/cover.jpg'
+images = ['/images/posts/guqin-seven-string-wisdom/cover.jpg']
 +++
 
 琴之一字，在中国文化中地位卓然。**古琴**，又称七弦琴，是中国最古老的弹拨乐器之一，其历史可追溯至三千余年前的先秦时代。传说伏羲氏削桐为琴，制五弦；文王、武王各增一弦，遂成七弦，沿用至今。
-
-![古琴](https://images.pexels.com/photos/5096447/pexels-photo-5096447.jpeg/?auto=compress&cs=tinysrgb&w=800)
 
 ## 文人之道，与琴为伴
 
@@ -23,8 +23,6 @@ slug = 'guqin-seven-string-wisdom'
 世界现存乐器中，古琴是唯一使用**减字谱**记谱的。减字谱由唐代曹柔所创，将琴曲指法与音位用汉字部首组合表示，每一个"字"都包含起手、轻重、吟猱等复杂信息。这种谱法不记具体音高，而记"应弹何处、以何指法弹"，保留了极大的诠释空间。
 
 一套完整的古琴减字谱，可以容纳指法、节奏、力度、气息乃至情感提示，堪称一部"立体的音乐文本"。习琴者需经多年口传心授，方能将纸上符号化为指尖流水。
-
-![古琴减字谱](https://images.pexels.com/photos/6678382/pexels-photo-6678382.jpeg/?auto=compress&cs=tinysrgb&w=800)
 
 ## 九霄环佩：名琴的传奇
 

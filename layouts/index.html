@@ -10,21 +10,24 @@
 {{ $cats = sort $cats "count" "desc" }}
 
 {{/* 精选：最新一篇常驻 + 两篇每周轮换（同一周内所有人看到同一组，跨周自动换）
-     候选池只收「本地配图」或「无图（走绢本底图）」的文章——早期那批外链 pexels 图片
-     色彩跳脱，会破坏纸墨版面，故排除。新文章一旦配了本地封面就自动入池。*/}}
+     轮换池优先取「有本地配图」的文章；不足两篇时才回落到无图文章（走绢本底图）。*/}}
 {{ $fallbackImg := slice "images/theme/thumb-plum.jpg" "images/theme/thumb-guqin.jpg" "images/theme/hero-ink.jpg" }}
-{{ $pool := slice }}
+{{ $withImg := slice }}
 {{ range $posts }}
-  {{ if not (hasPrefix (.Params.image | default "") "http") }}
-    {{ $pool = $pool | append . }}
+  {{ if and .Params.image (not (hasPrefix .Params.image "http")) }}
+    {{ $withImg = $withImg | append . }}
   {{ end }}
 {{ end }}
 {{ $featured := slice }}
-{{ with $pool }}
+{{ with $posts }}
   {{ $latest := index . 0 }}
-  {{ $rest := after 1 . }}
-  {{ $n := len $rest }}
   {{ $featured = $featured | append $latest }}
+  {{ $rest := slice }}
+  {{ range $withImg }}
+    {{ if ne .RelPermalink $latest.RelPermalink }}{{ $rest = $rest | append . }}{{ end }}
+  {{ end }}
+  {{ if lt (len $rest) 2 }}{{ $rest = after 1 . }}{{ end }}
+  {{ $n := len $rest }}
   {{ if gt $n 1 }}
     {{/* 以「Unix 周序」为种子，从 newest-1 起顺次取两篇，跨周自动推进 */}}
     {{ $week := int (div now.Unix 604800) }}

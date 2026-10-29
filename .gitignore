@@ -15,3 +15,4 @@ resources/_gen/
 
 # 临时文件（截图、草稿）
 .tmp/
+generated-images/

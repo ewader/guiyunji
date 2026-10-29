@@ -6,6 +6,8 @@ categories = ['艺术']
 tags = ['昆曲', '戏曲', '非遗', '百戏之祖', '水磨腔']
 url = '/posts/kunqu-classical-opera/'
 slug = 'kunqu-classical-opera'
+image = '/images/posts/kunqu-classical-opera/cover.jpg'
+images = ['/images/posts/kunqu-classical-opera/cover.jpg']
 +++
 
 ## 昆曲：百戏之祖的千古风雅
@@ -25,5 +27,3 @@ slug = 'kunqu-classical-opera'
 昆曲的表演体系极为考究，讲究"歌舞合一"：演员的每一个身段、每一次转身都伴随着唱腔的起伏，做、打、唱、表融为一体。舞台上不需要繁复的布景，一桌一椅、一把折扇，便能以虚拟化的表演呈现千军万马、山川湖海。这种"以形传神"的美学原则，深刻影响了此后的京剧、越剧等各大剧种。
 
 在喧嚣的都市中，听一段水磨腔，或许能让忙碌的现代人找到一片宁静的心田。昆曲不急不躁的韵律，正是一种关于慢、关于静、关于回望内心的生活哲学。
-
-*相关图片：pexels 上有古筝、戏曲脸谱等可配图*
