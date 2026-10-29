@@ -2,7 +2,7 @@
 title = '七夕节：银河之畔的千年浪漫'
 date = '2026-08-05T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['七夕', '牛郎织女', '乞巧', '中国传统节日']
 url = '/posts/qixi-festival-chinese-valentine/'
 slug = 'qixi-festival-chinese-valentine'

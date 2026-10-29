@@ -2,7 +2,7 @@
 title = '香囊端阳：一枚香囊里的东方美学'
 date = '2026-05-25T08:00:00+08:00'
 draft = false
-categories = ['民俗']
+categories = ['岁时节令']
 tags = ['香囊', '端午节', '中医草药', '传统手工艺', '芳香疗法']
 url = '/posts/chinese-sachet-fragrant-elegance/'
 slug = 'chinese-sachet-fragrant-elegance'

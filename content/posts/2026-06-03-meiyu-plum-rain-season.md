@@ -2,7 +2,7 @@
 title = '梅雨：江南烟雨里的黄梅时节'
 date = '2026-06-03T08:00:00+08:00'
 draft = false
-categories = ['传统文化', '民俗']
+categories = ['岁时节令']
 tags = ['二十四节气', '芒种', '夏至', '梅雨', '江南', '农耕文化', '时令']
 url = '/posts/meiyu-plum-rain-season/'
 slug = 'meiyu-plum-rain-season'

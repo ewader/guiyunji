@@ -2,7 +2,7 @@
 title = '夏至：日长之至，光影流转中的千年智慧'
 date = '2026-06-15T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['夏至', '二十四节气', '传统民俗', '阴阳哲学']
 url = '/posts/summer-solstice-xiazhi/'
 slug = 'summer-solstice-xiazhi'

@@ -2,7 +2,7 @@
 title = '立春：万物复苏，一年之计始于春'
 date = '2026-02-04T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['立春', '二十四节气', '传统民俗', '春天']
 url = '/posts/start-of-spring-lichun/'
 slug = 'start-of-spring-lichun'

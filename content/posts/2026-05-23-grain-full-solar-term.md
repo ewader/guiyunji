@@ -1,13 +1,13 @@
----
-title: "小满：小麦初盈，万物见长"
-date: 2026-05-23T14:50:00+08:00
-draft: false
-categories: ["传统文化"]
-tags: ["小满", "二十四节气", "农耕", "夏收", "芒种"]
-author: "归云集"
-url: /posts/grain-full-solar-term/
-slug: grain-full-solar-term
----
++++
+title = '小满：小麦初盈，万物见长'
+date = '2026-05-23T14:50:00+08:00'
+draft = false
+categories = ['岁时节令']
+tags = ['小满', '二十四节气', '农耕', '夏收', '芒种']
+author = '归云集'
+url = '/posts/grain-full-solar-term/'
+slug = 'grain-full-solar-term'
++++
 
 "四月中，小满者，物致于此小得盈满。"——《月令七十二候集解》
 

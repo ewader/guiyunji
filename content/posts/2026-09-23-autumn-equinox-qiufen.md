@@ -2,7 +2,7 @@
 title = '秋分：昼夜平分，桂子飘香'
 date = '2025-09-23T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['秋分', '二十四节气', '传统民俗', '秋天']
 url = '/posts/autumn-equinox-qiufen/'
 slug = 'autumn-equinox-qiufen'

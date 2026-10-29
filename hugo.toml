@@ -40,8 +40,8 @@ path = "page"
     url = "/categories/历史"
     weight = 4
   [[menu.main]]
-    name = "传统节日"
-    url = "/categories/传统节日"
+    name = "岁时节令"
+    url = "/categories/岁时节令"
     weight = 5
   [[menu.main]]
     name = "工艺"

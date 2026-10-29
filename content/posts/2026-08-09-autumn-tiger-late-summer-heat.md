@@ -2,7 +2,7 @@
 title = '秋老虎：立秋后的"返暑"与古人的避暑智慧'
 date = '2026-08-09T08:00:00+08:00'
 draft = false
-categories = ['传统文化', '节气民俗']
+categories = ['岁时节令']
 tags = ['秋老虎', '立秋', '避暑', '养生', '二十四节气']
 url = '/posts/autumn-tiger-late-summer-heat/'
 slug = 'autumn-tiger-late-summer-heat'

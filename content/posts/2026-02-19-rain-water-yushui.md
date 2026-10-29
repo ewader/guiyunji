@@ -2,7 +2,7 @@
 title = '雨水：东风解冻，散而为雨'
 date = '2026-02-19T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['雨水', '二十四节气', '传统民俗', '春天']
 url = '/posts/rain-water-yushui/'
 slug = 'rain-water-yushui'

@@ -2,7 +2,7 @@
 title = '庄子与逍遥游：大鹏展翅下的精神自由'
 date = '2026-08-17T08:00:00+08:00'
 draft = false
-categories = ['诸子百家']
+categories = ['传统文化']
 tags = ['庄子', '道家', '逍遥游', '先秦哲学', '自由']
 url = '/posts/zhuangzi-xiaoyaoyou-freedom/'
 slug = 'zhuangzi-xiaoyaoyou-freedom'

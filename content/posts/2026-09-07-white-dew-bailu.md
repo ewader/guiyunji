@@ -2,7 +2,7 @@
 title = '白露：露凝而白，秋意渐浓'
 date = '2025-09-07T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['白露', '二十四节气', '传统民俗', '秋天']
 url = '/posts/white-dew-bailu/'
 slug = 'white-dew-bailu'

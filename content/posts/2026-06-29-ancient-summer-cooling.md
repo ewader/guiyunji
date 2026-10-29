@@ -2,7 +2,7 @@
 title = '古人夏天怎么过？冰窖、酥山、竹夫人的消暑智慧'
 date = '2026-06-29T08:00:00+08:00'
 draft = false
-categories = ['民俗']
+categories = ['传统文化']
 tags = ['消暑', '古代生活', '饮食文化', '夏日']
 url = '/posts/ancient-summer-cooling-wisdom/'
 slug = 'ancient-summer-cooling-wisdom'

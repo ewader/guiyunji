@@ -2,7 +2,7 @@
 title = '茶马古道：千年商路的文化印记'
 date = '2026-08-28T08:00:00+08:00'
 draft = false
-categories = ['传统文化', '历史']
+categories = ['历史']
 tags = ['茶马古道', '贸易', '文化交流', '马帮']
 url = '/posts/tea-horse-road-culture/'
 slug = 'tea-horse-road-culture'

@@ -2,7 +2,7 @@
 title = '晒秋：屋顶上的丰收画卷'
 date = '2026-08-24T08:00:00+08:00'
 draft = false
-categories = ['民俗']
+categories = ['岁时节令']
 tags = ['晒秋', '传统民俗', '丰收', '山居生活']
 url = '/posts/shaiqiu-autumn-harvest-custom/'
 slug = 'shaiqiu-autumn-harvest-custom'

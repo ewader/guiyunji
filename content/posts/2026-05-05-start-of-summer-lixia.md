@@ -2,7 +2,7 @@
 title = '立夏：绿荫初浓，万物繁茂'
 date = '2026-05-05T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['立夏', '二十四节气', '传统民俗', '夏天']
 url = '/posts/start-of-summer-lixia/'
 slug = 'start-of-summer-lixia'

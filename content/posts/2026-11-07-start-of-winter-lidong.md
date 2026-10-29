@@ -2,7 +2,7 @@
 title = '立冬：朔风起，万物藏'
 date = '2025-11-07T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['立冬', '二十四节气', '传统民俗', '冬天']
 url = '/posts/start-of-winter-lidong/'
 slug = 'start-of-winter-lidong'

@@ -2,7 +2,7 @@
 title = '冬至：阴极之至，阳气始生'
 date = '2025-12-22T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['冬至', '二十四节气', '传统民俗', '冬天']
 url = '/posts/winter-solstice-dongzhi/'
 slug = 'winter-solstice-dongzhi'

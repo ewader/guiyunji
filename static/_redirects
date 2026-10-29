@@ -1,0 +1,20 @@
+# 分类体系调整（2026-10）：旧分类页 301 到新归属，避免外链与搜索快照 404
+
+# 「传统节日」更名「岁时节令」
+/categories/传统节日            /categories/岁时节令            301
+/categories/传统节日/*          /categories/岁时节令/:splat     301
+/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5      /categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4       301
+/categories/%E4%BC%A0%E7%BB%9F%E8%8A%82%E6%97%A5/*    /categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/:splat 301
+
+# 并入「岁时节令」的时令类分类
+/categories/节气民俗            /categories/岁时节令            301
+
+# 并入「传统文化」的分类
+/categories/民俗                /categories/传统文化            301
+/categories/诸子百家            /categories/传统文化            301
+/categories/茶道                /categories/传统文化            301
+/categories/汉服                /categories/传统文化            301
+
+# 并入「艺术」的分类
+/categories/诗词                /categories/艺术                301
+/categories/书画                /categories/艺术                301

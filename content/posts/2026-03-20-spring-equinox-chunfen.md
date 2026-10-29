@@ -2,7 +2,7 @@
 title = '春分：昼夜均分，草长莺飞'
 date = '2026-03-20T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['春分', '二十四节气', '传统民俗', '春天']
 url = '/posts/spring-equinox-chunfen/'
 slug = 'spring-equinox-chunfen'

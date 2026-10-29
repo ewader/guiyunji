@@ -2,7 +2,7 @@
 title = '小暑：温风至，盛夏始'
 date = '2025-07-07T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['小暑', '二十四节气', '传统民俗', '夏天']
 url = '/posts/minor-heat-xiaoshu/'
 slug = 'minor-heat-xiaoshu'

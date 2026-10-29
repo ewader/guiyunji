@@ -2,7 +2,7 @@
 title = '中国十二生肖：动物背后的文化密码'
 date = '2026-05-29T08:00:00+08:00'
 draft = false
-categories = ['民俗']
+categories = ['传统文化']
 tags = ['十二生肖', '传统文化', '民俗', '生肖故事', '中国智慧']
 url = '/posts/chinese-zodiac-animal-culture/'
 slug = 'chinese-zodiac-animal-culture'

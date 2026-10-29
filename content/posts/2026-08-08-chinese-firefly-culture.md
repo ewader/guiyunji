@@ -2,7 +2,7 @@
 title = '流萤照夜：夏夜微光里的诗意中国'
 date = '2026-08-08T08:00:00+08:00'
 draft = false
-categories = ['民俗']
+categories = ['岁时节令']
 tags = ['萤火虫', '夏夜', '诗词', '传统民俗']
 url = '/posts/chinese-firefly-culture/'
 slug = 'chinese-firefly-culture'

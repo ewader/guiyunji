@@ -2,7 +2,7 @@
 title = '惊蛰：春雷乍动，万物生机'
 date = '2026-03-05T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['惊蛰', '二十四节气', '传统民俗', '春天']
 url = '/posts/insects-awaken-jingzhe/'
 slug = 'insects-awaken-jingzhe'

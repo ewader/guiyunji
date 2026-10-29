@@ -2,7 +2,7 @@
 title = '蝉鸣夏日长——中国古诗词中的蝉意象'
 date = '2026-07-02T08:00:00+08:00'
 draft = false
-categories = ['诗词', '传统文化']
+categories = ['艺术']
 tags = ['蝉', '咏物诗', '夏日', '唐诗', '虞世南', '骆宾王', '李商隐']
 url = '/posts/cicada-in-chinese-culture/'
 slug = 'cicada-in-chinese-culture'

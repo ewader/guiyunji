@@ -2,7 +2,7 @@
 title = '粽子：一枚粽叶包裹的千年滋味'
 date = '2026-06-07T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['端午节', '粽子', '传统美食', '民俗文化', '屈原']
 url = '/posts/zongzi-thousand-year-flavor/'
 slug = 'zongzi-thousand-year-flavor'

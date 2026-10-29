@@ -2,7 +2,7 @@
 title = '芒种：北方麦黄，江南梅熟——一个"忙种"的节气'
 date = '2026-06-01T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['岁时节令']
 tags = ['二十四节气', '芒种', '农耕文化', '古诗词', '时令']
 url = '/posts/grain-in-ear-mangzhong/'
 slug = 'grain-in-ear-mangzhong'

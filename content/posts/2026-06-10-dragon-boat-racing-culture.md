@@ -2,7 +2,7 @@
 title = '龙舟竞渡：从图腾祭祀到世界赛场——端午龙舟的文化源流'
 date = '2026-06-10T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['端午节', '龙舟', '传统节日', '民俗', '屈原']
 url = '/posts/dragon-boat-racing-culture/'
 slug = 'dragon-boat-racing-culture'

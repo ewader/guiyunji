@@ -2,7 +2,7 @@
 title = '立秋：一叶知秋，凉风渐至'
 date = '2025-08-07T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['立秋', '二十四节气', '传统民俗', '秋天']
 url = '/posts/start-of-autumn-liqiu/'
 slug = 'start-of-autumn-liqiu'

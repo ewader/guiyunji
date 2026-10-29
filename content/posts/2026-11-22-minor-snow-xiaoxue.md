@@ -2,7 +2,7 @@
 title = '小雪：虹藏不见，初雪霏微'
 date = '2025-11-22T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['小雪', '二十四节气', '传统民俗', '冬天']
 url = '/posts/minor-snow-xiaoxue/'
 slug = 'minor-snow-xiaoxue'

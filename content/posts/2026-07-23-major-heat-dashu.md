@@ -2,7 +2,7 @@
 title = '大暑：炎蒸极盛，万物荣华'
 date = '2025-07-23T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['大暑', '二十四节气', '传统民俗', '夏天']
 url = '/posts/major-heat-dashu/'
 slug = 'major-heat-dashu'

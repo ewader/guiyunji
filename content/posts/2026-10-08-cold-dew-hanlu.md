@@ -2,7 +2,7 @@
 title = '寒露：露水渐寒，菊有黄华'
 date = '2025-10-08T08:00:00+08:00'
 draft = false
-categories = ['传统节日']
+categories = ['岁时节令']
 tags = ['寒露', '二十四节气', '传统民俗', '秋天']
 url = '/posts/cold-dew-hanlu/'
 slug = 'cold-dew-hanlu'
