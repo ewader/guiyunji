@@ -20,9 +20,17 @@
 </div>
 
 {{ if $isCat }}
+  {{ $order := site.Params.categoryOrder | default slice }}
+  {{ $ordered := slice }}
+  {{ range $order }}
+    {{ with site.GetPage (printf "/categories/%s" .) }}{{ $ordered = $ordered | append . }}{{ end }}
+  {{ end }}
+  {{ range .Pages }}
+    {{ if not (in $order .Title) }}{{ $ordered = $ordered | append . }}{{ end }}
+  {{ end }}
   <div class="term-grid container">
     <div class="cat-grid">
-      {{ range .Pages }}
+      {{ range $ordered }}
         {{ $name := partial "category-name" (dict "slug" .Data.Term "default" .Title) }}
         <a class="cat-block" href="{{ .RelPermalink }}">
           <span class="cat-seal">{{ range first 1 (split $name "") }}{{ . }}{{ end }}</span>
