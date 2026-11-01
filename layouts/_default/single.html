@@ -86,11 +86,11 @@
       <div class="sidebar-widget">
         <h3 class="widget-title">相 关 文 章</h3>
         <div class="widget-body">
-          {{ $related := .Site.RegularPages.Related . | first 5 }}
+          {{ $related := where (.Site.RegularPages.Related .) "Permalink" "ne" .Permalink | first 5 }}
           {{ range $related }}
             <a class="widget-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
           {{ else }}
-            {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+            {{ range first 4 (where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink) }}
               <a class="widget-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ end }}
           {{ end }}
