@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 08 Nov 2026 08:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Mon, 09 Nov 2026 08:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://www.guiyun.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>岁时节令</title>
+				<link>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</link>
+				<pubDate>Mon, 09 Nov 2026 08:00:00 +0800</pubDate>
+				<guid>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>传统文化</title>
 				<link>https://www.guiyun.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</link>
@@ -25,13 +32,6 @@
 				<link>https://www.guiyun.org/categories/%E5%8E%86%E5%8F%B2/</link>
 				<pubDate>Fri, 28 Aug 2026 08:00:00 +0800</pubDate>
 				<guid>https://www.guiyun.org/categories/%E5%8E%86%E5%8F%B2/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>岁时节令</title>
-				<link>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</link>
-				<pubDate>Thu, 27 Aug 2026 08:00:00 +0800</pubDate>
-				<guid>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</guid>
 				<description></description>
 			</item>
 			<item>
