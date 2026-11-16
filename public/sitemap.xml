@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.guiyun.org/posts/song-winter-cabbage/</loc>
+    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
+  </url>
+  <url>
     <loc>https://www.guiyun.org/tags/</loc>
     <lastmod>2026-11-17T08:00:00+08:00</lastmod>
   </url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://www.guiyun.org/tags/%E7%AB%8B%E5%86%AC/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/song-winter-cabbage/</loc>
     <lastmod>2026-11-17T08:00:00+08:00</lastmod>
   </url>
   <url>
