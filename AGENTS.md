@@ -1,98 +1,37 @@
-# 项目概览
+# 归云集（guiyun）
 
-这是一个基于 **Hugo** 静态站点生成器的博客项目，名为 "guiyun"（归云）。Hugo 是一个用 Go 语言编写的快速、现代化的静态网站生成器。
+中国传统文化题材的 Hugo 静态站，日更一篇。线上 <https://www.guiyun.org>，由 Cloudflare Pages 从 GitHub 自动构建。
 
-## 项目类型
+## 事实
 
-- **类型**: 静态网站/博客
-- **核心技术**: Hugo (Go 语言)
-- **用途**: 博客或内容网站
+- 仓库：`git@github.com:ewader/guiyunji.git`，分支 `main`
+- 线上构建用 **Hugo 0.147**，本机是 0.169 —— 模板只能用 0.147 就有的函数，**禁用 `hugo.Data`**（本地能过、线上静默失败，站点停在旧版）
+- `public/` 是入库的构建产物，必须跟着提交
+- 线上不返回 `Last-Modified`／`ETag`，判断生效看新路径 404→200，再核对正文
+- push 的密钥：`GIT_SSH_COMMAND='ssh -F /dev/null -o StrictHostKeyChecking=no -o UserKnownHostsFile=/home/liu/.ssh/known_hosts -i /home/liu/.ssh/id_rsa'`
 
-## 项目结构
-
-```
-/home/liu/blog/guiyun/
-├── hugo.toml          # Hugo 主配置文件
-├── archetypes/        # 内容原型模板
-│   └── default.md     # 默认的 Markdown 文章模板
-├── assets/            # 资源文件（CSS、JS 等，目前为空）
-├── content/           # 网站内容目录（Markdown 文章，目前为空）
-├── data/              # 数据文件（目前为空）
-├── i18n/              # 国际化文件（目前为空）
-├── layouts/           # 自定义布局模板（目前为空）
-├── static/            # 静态文件（图片、 favicon 等，目前为空）
-└── themes/            # Hugo 主题目录（目前为空）
-```
-
-## 配置说明
-
-### hugo.toml
-
-当前配置：
-- **baseURL**: `https://example.org/` - 需要更新为实际域名
-- **languageCode**: `en-us` - 英文语言设置
-- **title**: `My New Hugo Project` - 网站标题（需要更新）
-
-## 构建和运行
-
-### 前置要求
-- Hugo 静态站点生成器（需要安装）
-
-### 常用命令
+## 命令
 
 ```bash
-# 构建网站（生成到 public/ 目录）
-hugo
-
-# 启动本地开发服务器（默认端口 1313）
-hugo server
-
-# 启动开发服务器并监听文件变化
-hugo server --watch
-
-# 构建并包含草稿
-hugo -D
-
-# 创建新文章
-hugo new content/posts/my-first-post.md
+hugo --cleanDestinationDir     # 构建（cleanDestinationDir 会删一批孤儿文件，diff 里成批删除属正常）
+cd public && python3 -m http.server 8099   # 本地看效果
 ```
 
-## 开发约定
+**不要跑 `hugo server`**：它把 `public/` 全量重建成 `http://localhost:1313` 的 baseURL 并插入 livereload 脚本，一次污染上千个文件。
 
-### 内容创建
-- 使用 `hugo new content/<path>/<filename>.md` 创建新文章
-- 新文章会自动使用 `archetypes/default.md` 模板
-- Markdown 文件使用 Front Matter（前置元数据）格式
+## 内容约定
 
-### Front Matter 格式
-新文章默认包含：
-```toml
-+++
-date = '{{ .Date }}'
-draft = true
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-+++
+- 文章：`content/posts/YYYY-MM-DD-<english-slug>.md`，`date` 固定 `T08:00:00+08:00`
+- front matter 必带 `image`（单数，模板读这个）与 `images`（社交分享），都指向 `/images/posts/<slug>/cover.jpg`
+- 封面：3:2，1400×934，JPG；站内风格是绢本设色／工笔小品，主体偏一侧、大片留白
+- 出图与裁切脚本在 `~/bin/ai-illustration.py`、`~/bin/cover-crop.py`，用法见技能 `guiyun-daily-article`
+
+## 目录
+
 ```
-
-### 主题管理
-- 当前 `themes/` 目录为空，项目未安装任何主题
-- 可以通过添加子模块或下载主题到 `themes/` 目录
-- 也可以使用自定义布局（`layouts/` 目录）
-
-### 内容组织
-- 所有网站内容应放在 `content/` 目录下
-- 静态资源（图片、CSS、JS）放在 `static/` 目录
-- 可处理的资源（Sass、PostCSS 等）放在 `assets/` 目录
-
-## 待办事项
-
-- [ ] 更新 `hugo.toml` 中的 `baseURL` 为实际域名
-- [ ] 更新 `hugo.toml` 中的 `title` 为实际网站标题
-- [ ] 考虑安装或创建 Hugo 主题
-- [ ] 在 `content/` 目录下创建博客文章
-- [ ] 配置语言设置（如需要中文支持）
-
-## 相关资源
-
-- [Hugo 官方文档](https://gohugo.io/documentation/)
-- [Hugo 主题库](https://themes.gohugo.io/)
+content/posts/     文章
+static/images/posts/<slug>/cover.jpg   每篇封面
+layouts/           模板（改动要格外小心 0.147 兼容）
+public/            构建产物，入库
+.tmp/              临时件，已 gitignore
+```
