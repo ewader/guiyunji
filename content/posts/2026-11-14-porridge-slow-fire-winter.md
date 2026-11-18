@@ -2,7 +2,7 @@
 title = '粥：一瓯慢火，暖过三冬'
 date = '2026-11-14T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['粥', '立冬', '地始冻', '随园食单', '陆游']
 image = '/images/posts/porridge-slow-fire-winter/cover.jpg'
 images = ['/images/posts/porridge-slow-fire-winter/cover.jpg']

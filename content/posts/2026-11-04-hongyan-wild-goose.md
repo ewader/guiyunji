@@ -2,7 +2,7 @@
 title = '鸿雁：一字横秋，帛书千里'
 date = '2026-11-04T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['鸿雁', '物候', '婚俗', '书信', '诗词']
 image = '/images/posts/hongyan-wild-goose/cover.jpg'
 images = ['/images/posts/hongyan-wild-goose/cover.jpg']

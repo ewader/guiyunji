@@ -2,7 +2,7 @@
 title = '葡萄：丝绸之路上的千年琼浆'
 date = '2026-08-18T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['葡萄', '丝绸之路', '张骞', '唐诗', '饮食文化']
 url = '/posts/chinese-grape-culture/'
 slug = 'chinese-grape-culture'

@@ -2,7 +2,7 @@
 title = '枫：一树霜红，千载题诗'
 date = '2026-10-31T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['枫', '红叶', '霜降', '红叶题诗', '秋色']
 image = '/images/posts/maple-frost-red/cover.jpg'
 images = ['/images/posts/maple-frost-red/cover.jpg']

@@ -2,7 +2,7 @@
 title = '菹：秋蔬入瓮，一冬清味'
 date = '2026-11-03T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['腌菜', '菹', '冬藏', '白菜', '立冬']
 image = '/images/posts/zhai-cai-winter-pickle/cover.jpg'
 images = ['/images/posts/zhai-cai-winter-pickle/cover.jpg']

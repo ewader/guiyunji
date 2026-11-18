@@ -2,7 +2,7 @@
 title = '促织：一声秋在床下'
 date = '2026-11-01T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['蟋蟀', '促织', '秋声', '草虫', '时序']
 image = '/images/posts/cuzhi-autumn-cricket/cover.jpg'
 images = ['/images/posts/cuzhi-autumn-cricket/cover.jpg']

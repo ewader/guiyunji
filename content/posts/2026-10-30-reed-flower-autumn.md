@@ -2,7 +2,7 @@
 title = '蒹葭苍苍：一丛芦花里的秋水远人'
 date = '2026-10-30T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['芦苇', '蒹葭', '霜降', '诗经', '秋日风物']
 image = '/images/posts/reed-flower-autumn/cover.jpg'
 images = ['/images/posts/reed-flower-autumn/cover.jpg']

@@ -2,7 +2,7 @@
 title = '中国紫砂壶文化 — 泥土与茶香的千年对话'
 date = '2026-08-12T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['紫砂壶', '茶文化', '宜兴', '传统工艺', '陶艺']
 url = '/posts/chinese-zisha-purple-clay-teapot/'
 slug = 'chinese-zisha-purple-clay-teapot'

@@ -2,7 +2,7 @@
 title = '北方的冬天，从一窖白菜开始'
 date = '2026-11-17T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['菘', '白菜', '立冬', '冬储', '蔬食']
 image = '/images/posts/song-winter-cabbage/cover.jpg'
 images = ['/images/posts/song-winter-cabbage/cover.jpg']

@@ -2,7 +2,7 @@
 title = '橘：霜后丹黄，自有岁寒心'
 date = '2026-11-05T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['橘', '物候', '屈原', '岁朝清供', '诗词']
 image = '/images/posts/tangerine-south-country/cover.jpg'
 images = ['/images/posts/tangerine-south-country/cover.jpg']

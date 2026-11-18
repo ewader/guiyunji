@@ -2,7 +2,7 @@
 title = '桂花：秋来第一香的东方意蕴'
 date = '2026-09-08T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['桂花', '民俗', '诗词']
 url = '/posts/chinese-osmanthus-culture/'
 slug = 'chinese-osmanthus-culture'

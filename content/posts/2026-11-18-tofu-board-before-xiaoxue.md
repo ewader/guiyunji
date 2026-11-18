@@ -2,7 +2,7 @@
 title = '小雪前四日，做一板豆腐'
 date = '2026-11-18T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['豆腐', '小雪', '岁时饮食', '石磨', '冻豆腐']
 image = '/images/posts/tofu-board-before-xiaoxue/cover.jpg'
 images = ['/images/posts/tofu-board-before-xiaoxue/cover.jpg']

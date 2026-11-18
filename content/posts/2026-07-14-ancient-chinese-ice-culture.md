@@ -2,7 +2,7 @@
 title = '中国古代冰文化：从冰鉴到冰窖'
 date = '2026-07-14T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['冰文化', '冰鉴', '冰窖', '夏日', '古代生活']
 url = '/posts/ancient-chinese-ice-culture/'
 slug = 'ancient-chinese-ice-culture'

@@ -2,7 +2,7 @@
 title = '围棋——黑白之间的东方智慧'
 date = '2026-06-17T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['艺术']
 tags = ['围棋', '四艺', '东方哲学']
 url = '/posts/weiqi-oriental-wisdom/'
 slug = 'weiqi-oriental-wisdom'

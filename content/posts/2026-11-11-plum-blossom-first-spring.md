@@ -2,7 +2,7 @@
 title = '梅：十月先开，一枝春信'
 date = '2026-11-11T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['梅', '早梅', '林逋', '折梅寄远', '立冬']
 image = '/images/posts/plum-blossom-first-spring/cover.jpg'
 images = ['/images/posts/plum-blossom-first-spring/cover.jpg']

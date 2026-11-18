@@ -2,7 +2,7 @@
 title = '中国象棋：楚河汉界间的千年智慧'
 date = '2026-07-28T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['艺术']
 tags = ['象棋', '棋文化', '博弈', '智慧']
 url = '/posts/chinese-xiangqi-chess-culture/'
 slug = 'chinese-xiangqi-chess-culture'

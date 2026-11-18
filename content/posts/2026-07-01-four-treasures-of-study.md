@@ -2,7 +2,7 @@
 title = '文房四宝：笔墨纸砚里的千年文脉'
 date = '2026-07-01T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['文房四宝', '书法', '传统文化', '笔墨纸砚']
 url = '/posts/four-treasures-of-study/'
 slug = 'four-treasures-of-study'

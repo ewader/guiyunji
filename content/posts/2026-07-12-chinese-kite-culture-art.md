@@ -2,7 +2,7 @@
 title = '风筝：一线牵起的千年风雅'
 date = '2026-07-12T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['风筝', '民俗', '手工艺', '非遗']
 url = '/posts/chinese-kite-culture-art/'
 slug = 'chinese-kite-culture-art'

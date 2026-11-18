@@ -537,8 +537,8 @@ a {
 /* ── 6. 卷目 ──────────────────────────────────────────────────────────── */
 .cat-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px 40px;
 }
 
 .cat-block {
@@ -1900,12 +1900,6 @@ a.solar-item:hover {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 56px;
   }
-}
-
-@media (max-width: 1080px) {
-  :root {
-    --gutter: 48px;
-  }
 
   .header-inner {
     height: 76px;
@@ -1958,6 +1952,13 @@ a.solar-item:hover {
 
   .nav-link.active {
     color: var(--cinnabar);
+  }
+
+}
+
+@media (max-width: 1080px) {
+  :root {
+    --gutter: 48px;
   }
 
   /* 今日双栏改为上下 */

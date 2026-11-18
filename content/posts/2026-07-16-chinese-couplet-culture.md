@@ -2,7 +2,7 @@
 title = '楹联千古事——中国对联文化'
 date = '2026-07-16T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['艺术']
 tags = ['对联', '楹联', '书法', '文学', '民俗']
 url = '/posts/chinese-couplet-culture/'
 slug = 'chinese-couplet-culture'

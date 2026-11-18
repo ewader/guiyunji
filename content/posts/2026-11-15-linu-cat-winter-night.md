@@ -2,7 +2,7 @@
 title = '狸奴：寒夜暖足，一灯如豆'
 date = '2026-11-15T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['猫', '狸奴', '立冬', '地始冻', '陆游']
 image = '/images/posts/linu-cat-winter-night/cover.jpg'
 images = ['/images/posts/linu-cat-winter-night/cover.jpg']

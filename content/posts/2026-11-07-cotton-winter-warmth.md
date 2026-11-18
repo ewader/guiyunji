@@ -2,7 +2,7 @@
 title = '棉：立冬授衣，一絮暖天下'
 date = '2026-11-07T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['棉', '立冬', '衣被天下', '黄道婆', '民生']
 image = '/images/posts/cotton-winter-warmth/cover.jpg'
 images = ['/images/posts/cotton-winter-warmth/cover.jpg']

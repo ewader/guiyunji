@@ -2,7 +2,7 @@
 title = '栗：战栗之礼，甘香之实'
 date = '2026-11-16T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['栗', '立冬', '礼俗', '服食', '诗词']
 image = '/images/posts/chestnut-ritual-and-sweet/cover.jpg'
 images = ['/images/posts/chestnut-ritual-and-sweet/cover.jpg']

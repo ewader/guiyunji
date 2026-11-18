@@ -2,7 +2,7 @@
 title = '禾乃登：处暑田头的七千年稻香'
 date = '2026-08-23T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['稻作文化', '处暑', '农耕文明', '五谷', '丰收']
 url = '/posts/chinese-rice-culture/'
 slug = 'chinese-rice-culture'

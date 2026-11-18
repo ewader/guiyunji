@@ -2,7 +2,7 @@
 title = '手炉：袖底一炉冬日暖'
 date = '2026-11-06T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['手炉', '暖炉会', '开炉', '铜器', '冬藏']
 image = '/images/posts/hand-warmer-winter/cover.jpg'
 images = ['/images/posts/hand-warmer-winter/cover.jpg']

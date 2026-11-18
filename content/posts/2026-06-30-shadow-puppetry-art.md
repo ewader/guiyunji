@@ -2,7 +2,7 @@
 title = '皮影戏：光影之间的千年传奇'
 date = '2026-06-30T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['艺术']
 tags = ['皮影戏', '民间艺术', '非物质文化遗产', '光影艺术']
 url = '/posts/shadow-puppetry-art/'
 slug = 'shadow-puppetry-art'

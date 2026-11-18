@@ -2,7 +2,7 @@
 title = '西瓜入华千年史：从西域贡果到消夏之王'
 date = '2026-07-15T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['西瓜', '饮食文化', '夏季民俗', '丝绸之路']
 url = '/posts/chinese-watermelon-culture/'
 slug = 'chinese-watermelon-culture'

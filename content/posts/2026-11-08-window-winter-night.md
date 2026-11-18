@@ -2,7 +2,7 @@
 title = '窗：一棂灯影，借尽四时'
 date = '2026-11-08T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['建筑']
 tags = ['窗', '窗棂', '借景', '冬夜', '园林']
 image = '/images/posts/window-winter-night/cover.jpg'
 images = ['/images/posts/window-winter-night/cover.jpg']

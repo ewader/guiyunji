@@ -2,7 +2,7 @@
 title = '香道——沉静心灵的传统艺术'
 date = '2026-05-24T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['香道', '香文化', '沉香', '品香', '传统艺术', '文人雅事']
 url = '/posts/chinese-incense-ceremony/'
 slug = 'chinese-incense-ceremony'

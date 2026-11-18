@@ -2,7 +2,7 @@
 title = '井：冻土之下，一脉常温'
 date = '2026-11-12T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['建筑']
 tags = ['井', '立冬', '地始冻', '井卦', '市井']
 image = '/images/posts/well-water-winter/cover.jpg'
 images = ['/images/posts/well-water-winter/cover.jpg']

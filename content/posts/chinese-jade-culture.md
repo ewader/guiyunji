@@ -2,7 +2,7 @@
 title = '中国玉文化：温润如玉的东方美学'
 date = '2026-07-20T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['玉文化', '传统美学', '礼仪制度', '东方哲学']
 url = '/posts/chinese-jade-culture/'
 slug = 'chinese-jade-culture'

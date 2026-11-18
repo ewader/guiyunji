@@ -2,7 +2,7 @@
 title = '荷韵清风——夏日荷花的文化意象'
 date = '2026-07-09T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['荷花', '夏日', '诗词', '民俗']
 url = '/posts/lotus-summer-poetry-culture/'
 slug = 'lotus-summer-poetry-culture'

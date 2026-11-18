@@ -2,7 +2,7 @@
 title = '中国扇文化——方寸之间的风雅'
 date = '2026-06-26T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['器物']
 tags = ['扇文化', '传统工艺', '民俗']
 url = '/posts/chinese-fan-culture/'
 slug = 'chinese-fan-culture'

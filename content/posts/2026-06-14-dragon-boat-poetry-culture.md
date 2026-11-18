@@ -2,7 +2,7 @@
 title = '端午诗词：一纸端阳，千古辞章'
 date = '2026-06-14T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['艺术']
 tags = ['端午节', '诗词', '屈原', '传统文化', '民俗']
 url = '/posts/dragon-boat-poetry-culture/'
 slug = 'dragon-boat-poetry-culture'

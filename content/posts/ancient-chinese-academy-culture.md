@@ -2,7 +2,7 @@
 title = '中国古代书院文化：千年弦歌不绝'
 date = '2026-07-27T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['历史']
 tags = ['书院', '教育', '科举', '儒学', '文化']
 url = '/posts/ancient-chinese-academy-culture/'
 slug = 'ancient-chinese-academy-culture'

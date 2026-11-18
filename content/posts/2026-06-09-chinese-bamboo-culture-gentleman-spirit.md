@@ -2,7 +2,7 @@
 title = '中国竹文化—君子之风与东方气节'
 date = '2026-06-09T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['竹子', '四君子', '传统文化', '诗词', '国画', '文人精神', '节气']
 url = '/posts/chinese-bamboo-culture-gentleman-spirit/'
 slug = 'chinese-bamboo-culture-gentleman-spirit'

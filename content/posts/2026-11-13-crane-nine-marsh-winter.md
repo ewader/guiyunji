@@ -2,7 +2,7 @@
 title = '鹤：九皋一声，霜天万里'
 date = '2026-11-13T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['鹤', '九皋', '仙禽', '林逋', '补子']
 image = '/images/posts/crane-nine-marsh-winter/cover.jpg'
 images = ['/images/posts/crane-nine-marsh-winter/cover.jpg']

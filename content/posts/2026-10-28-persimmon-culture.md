@@ -2,7 +2,7 @@
 title = '柿：霜后枝头的一树如意红'
 date = '2026-10-28T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['柿子', '霜降', '民俗', '吉祥文化', '诗词']
 image = '/images/posts/persimmon-culture/cover.jpg'
 images = ['/images/posts/persimmon-culture/cover.jpg']

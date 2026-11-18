@@ -28,33 +28,41 @@ path = "page"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "传统文化"
-    url = "/categories/传统文化"
+    name = "岁时节令"
+    url = "/categories/岁时节令"
     weight = 2
+  [[menu.main]]
+    name = "草木虫鱼"
+    url = "/categories/草木虫鱼"
+    weight = 3
+  [[menu.main]]
+    name = "饮食"
+    url = "/categories/饮食"
+    weight = 4
+  [[menu.main]]
+    name = "器物"
+    url = "/categories/器物"
+    weight = 5
   [[menu.main]]
     name = "艺术"
     url = "/categories/艺术"
-    weight = 3
-  [[menu.main]]
-    name = "历史"
-    url = "/categories/历史"
-    weight = 4
-  [[menu.main]]
-    name = "岁时节令"
-    url = "/categories/岁时节令"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "工艺"
     url = "/categories/工艺"
-    weight = 6
+    weight = 7
   [[menu.main]]
     name = "建筑"
     url = "/categories/建筑"
-    weight = 7
+    weight = 8
+  [[menu.main]]
+    name = "历史"
+    url = "/categories/历史"
+    weight = 9
   [[menu.main]]
     name = "关于"
     url = "/about"
-    weight = 8
+    weight = 10
 
 # 参数配置
 [params]
@@ -83,7 +91,7 @@ path = "page"
 
   # 分类展示顺序（筛选条按此排列，未列出的分类自动追加在后）
   # 不设此项时 Hugo 对 taxonomy 页的排序不稳定，每次构建可能换位置
-  categoryOrder = ["传统文化", "艺术", "历史", "岁时节令", "工艺", "建筑"]
+  categoryOrder = ["岁时节令", "草木虫鱼", "饮食", "器物", "艺术", "工艺", "建筑", "历史", "传统文化"]
 
   # 邮箱
   email = "ewader@gmail.com"

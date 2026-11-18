@@ -2,7 +2,7 @@
 title = '甜粽子、咸粽子'
 date = '2026-06-17T21:30:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['饮食']
 tags = ['饮食', '南北差异', '随笔']
 url = '/posts/zongzi-sweet-salty/'
 slug = 'zongzi-sweet-salty'

@@ -2,12 +2,16 @@
 {{ $posts := where .Site.RegularPages "Draft" false }}
 {{ $posts = $posts.ByDate.Reverse }}
 
-{{/* 分类按篇数排序 */}}
+{{/* 卷目：按 categoryOrder 排（同篇数时顺序固定），首页只列前八卷
+     「传统文化」是兜底卷，不上首页；全集仍可在 /categories/ 看到 */}}
 {{ $cats := slice }}
-{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-  {{ $cats = $cats | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
+{{ range $c := site.Params.categoryOrder }}
+  {{ with site.GetPage (printf "/categories/%s" $c) }}
+    {{ $cats = $cats | append (dict "name" .LinkTitle "count" (len .Pages)) }}
+  {{ end }}
 {{ end }}
-{{ $cats = sort $cats "count" "desc" }}
+{{ $catTotal := 0 }}
+{{ with site.GetPage "/categories" }}{{ $catTotal = len .Pages }}{{ end }}
 
 {{/* 精选：最新一篇常驻 + 两篇每周轮换（同一周内所有人看到同一组，跨周自动换）
      轮换池优先取「有本地配图」的文章；不足两篇时才回落到无图文章（走绢本底图）。*/}}
@@ -161,7 +165,7 @@
       <h2 class="sec-title">分类浏览</h2>
     </div>
     <p class="sec-aside">
-      <span>{{ len $cats }} 卷　{{ len $posts }} 篇</span>
+      <span>{{ $catTotal }} 卷　{{ len $posts }} 篇</span>
       <a class="sec-link" href="{{ "/categories/" | relURL }}">
         <span>全部卷目</span>
         <svg viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5h13M9 1l4.2 4L9 9"></path></svg>
@@ -170,7 +174,7 @@
   </div>
 
   <div class="cat-grid">
-    {{ range first 6 $cats }}
+    {{ range first 8 $cats }}
       <a class="cat-block" href="{{ "/categories/" | relURL }}{{ .name | urlize }}/">
         <span class="cat-seal">{{ range first 1 (split .name "") }}{{ . }}{{ end }}</span>
         <span class="cat-name">{{ .name }}</span>

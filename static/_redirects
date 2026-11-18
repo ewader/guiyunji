@@ -28,17 +28,17 @@
 /categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96    301
 /categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6/*    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/:splat    301
 
-# 茶道 → 传统文化
-/categories/茶道    /categories/传统文化    301
-/categories/茶道/*    /categories/传统文化/:splat    301
-/categories/%E8%8C%B6%E9%81%93    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96    301
-/categories/%E8%8C%B6%E9%81%93/*    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/:splat    301
+# 茶道 → 饮食（茶道、茶文化两篇已归饮食）
+/categories/茶道    /categories/饮食    301
+/categories/茶道/*    /categories/饮食/:splat    301
+/categories/%E8%8C%B6%E9%81%93    /categories/%E9%A5%AE%E9%A3%9F    301
+/categories/%E8%8C%B6%E9%81%93/*    /categories/%E9%A5%AE%E9%A3%9F/:splat    301
 
-# 汉服 → 传统文化
-/categories/汉服    /categories/传统文化    301
-/categories/汉服/*    /categories/传统文化/:splat    301
-/categories/%E6%B1%89%E6%9C%8D    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96    301
-/categories/%E6%B1%89%E6%9C%8D/*    /categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/:splat    301
+# 汉服 → 器物
+/categories/汉服    /categories/器物    301
+/categories/汉服/*    /categories/器物/:splat    301
+/categories/%E6%B1%89%E6%9C%8D    /categories/%E5%99%A8%E7%89%A9    301
+/categories/%E6%B1%89%E6%9C%8D/*    /categories/%E5%99%A8%E7%89%A9/:splat    301
 
 # 诗词 → 艺术
 /categories/诗词    /categories/艺术    301

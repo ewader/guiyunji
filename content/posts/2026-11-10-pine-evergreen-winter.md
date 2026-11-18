@@ -2,7 +2,7 @@
 title = '松：后凋之木，岁寒之心'
 date = '2026-11-10T08:00:00+08:00'
 draft = false
-categories = ['传统文化']
+categories = ['草木虫鱼']
 tags = ['松', '岁寒三友', '君子', '松烟墨', '立冬']
 image = '/images/posts/pine-evergreen-winter/cover.jpg'
 images = ['/images/posts/pine-evergreen-winter/cover.jpg']
