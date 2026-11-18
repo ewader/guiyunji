@@ -96,6 +96,8 @@
           {{ end }}
         </div>
       </div>
+
+      {{ if eq .Section "posts" }}{{ partial "jyx.html" (dict "variant" "sidebar" "page" .) }}{{ end }}
     </aside>
   </div>
 </article>

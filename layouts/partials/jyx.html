@@ -1,0 +1,22 @@
+{{- /*
+  镜缘轩小片（自家的店）
+  用法：{{ partial "jyx.html" (dict "variant" "sidebar" "page" .) }}
+  variant: sidebar（文章页侧栏）| home（首页末尾，文案与链接分两栏）
+  样式见 static/css/main.css 的 .jyx 段，改文案只改这里
+*/ -}}
+{{- $v := .variant | default "sidebar" -}}
+{{- $url := "https://shop.jooj.vip/" -}}
+
+<div class="jyx jyx--{{ $v }}" role="complementary" aria-label="镜缘轩">
+  <p class="jyx-head">
+    <span class="jyx-seal" aria-hidden="true">镜</span>
+    <span class="jyx-kicker">镜缘轩　JYX OPTICAL</span>
+  </p>
+  {{ if eq $v "home" }}
+    <p class="jyx-text">写字楼里的一家眼镜店，二〇一二年开到现在。验光、配镜、换镜片，都做。</p>
+    <p class="jyx-meta">郑州中原万达广场写字楼 B1020　·　13027511600</p>
+  {{ else }}
+    <p class="jyx-text">写字楼里的眼镜店，二〇一二年开到现在。验光、配镜都做。</p>
+  {{ end }}
+  <a class="jyx-link" href="{{ $url }}" target="_blank" rel="noopener">去店里看看 →</a>
+</div>
