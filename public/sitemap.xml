@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.guiyun.org/tags/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/tofu-board-before-xiaoxue/</loc>
+    <lastmod>2026-11-18T08:00:00+08:00</lastmod>
+  </url>
+  <url>
     <loc>https://www.guiyun.org/posts/song-winter-cabbage/</loc>
     <lastmod>2026-11-17T08:00:00+08:00</lastmod>
   </url>
   <url>
-    <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
     <loc>https://www.guiyun.org/tags/%E7%AB%8B%E5%86%AC/</loc>
-    <lastmod>2026-11-17T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/</loc>
     <lastmod>2026-11-17T08:00:00+08:00</lastmod>
   </url>
   <url>
