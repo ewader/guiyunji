@@ -1058,13 +1058,36 @@ a {
   transition: color 0.35s var(--ease);
 }
 
+/* 三态：已过（淡墨，可点）／当前（朱砂 + 字重 + 短横）／未到（更淡，不可点）
+   由 assets/almanac.js 按农历库算出的当前节气来加类 */
+.solar-item.is-past {
+  color: var(--ink-2);
+}
+
+.solar-item.is-future {
+  color: var(--ink-3);
+}
+
+a.solar-item.is-past:hover,
 a.solar-item:hover {
   color: var(--cinnabar);
 }
 
 .solar-item.is-now {
+  position: relative;
   color: var(--cinnabar);
   font-weight: 600;
+}
+
+.solar-item.is-now::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 16px;
+  height: 2px;
+  margin-left: -8px;
+  background: var(--cinnabar);
 }
 
 /* ── 9. 笔墨 ──────────────────────────────────────────────────────────── */
