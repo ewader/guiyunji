@@ -534,6 +534,77 @@ a {
   border-radius: 2px;
 }
 
+/* 卷首侧图：每日轮换的文章封面，图上压日期/卷名与标题，整块点进文章 */
+.mount--lead {
+  display: block;
+  text-decoration: none;
+  color: var(--cream);
+  border-radius: 1px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mount--lead .mount-frame {
+  position: relative;
+}
+
+.mount--lead img {
+  width: 420px;
+  height: 315px;
+  transition: transform 0.6s ease;
+}
+
+.mount--lead:hover img {
+  transform: scale(1.025);
+}
+
+.mount--lead:hover {
+  border-color: var(--rule-strong);
+  box-shadow: 0 10px 26px rgba(25, 24, 21, 0.14);
+}
+
+.lead-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 64px 22px 20px;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(18, 17, 15, 0.86) 0%,
+    rgba(18, 17, 15, 0.62) 42%,
+    rgba(18, 17, 15, 0) 100%
+  );
+}
+
+.lead-meta {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(247, 241, 228, 0.82);
+}
+
+.lead-title {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 印章挪到右上角，别压标题 */
+.mount--lead .mount-seal {
+  top: 26px;
+  right: 26px;
+  bottom: auto;
+}
+
 /* ── 6. 卷目 ──────────────────────────────────────────────────────────── */
 .cat-grid {
   display: grid;
@@ -1889,11 +1960,28 @@ a.solar-item:hover {
 
   .hero {
     gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 392px);
+  }
+
+  /* 侧图卡片宽 = 图 360 + 内边距 32；列宽锁死，不然卡片会把页面撑出横向滚动 */
+  .hero-side .mount {
+    flex: 0 1 auto;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .mount img {
     width: 360px;
-    height: 452px;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 420 / 528;
+  }
+
+  .mount--lead img {
+    width: 360px;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
   }
 
   .stream-wrap {
@@ -1983,6 +2071,12 @@ a.solar-item:hover {
     width: min(420px, 78vw);
     height: auto;
     aspect-ratio: 420 / 528;
+  }
+
+  .mount--lead img {
+    width: min(420px, 78vw);
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .cat-grid {
@@ -2116,6 +2210,21 @@ a.solar-item:hover {
     width: 30px;
     height: 30px;
     font-size: 16px;
+  }
+
+  .mount--lead .mount-seal {
+    top: 18px;
+    right: 18px;
+    bottom: auto;
+  }
+
+  .lead-caption {
+    padding: 48px 16px 16px;
+    gap: 6px;
+  }
+
+  .lead-title {
+    font-size: 20px;
   }
 
   .today-section {

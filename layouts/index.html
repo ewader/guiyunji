@@ -95,13 +95,41 @@
     <p class="hero-stats">共 {{ len $posts }} 篇　·　{{ len $cats }} 卷　·　廿四节气</p>
   </div>
 
+  {{/* 卷首侧图：每天轮一篇带本地封面的文章，图上压标题，整块点进文章。
+       种子用「年×366+年序日」再乘 7 取模，相邻两天隔着跳，同一天内所有人看到同一篇。
+       排除掉最新一篇（它已经在下面「推荐阅读」第一条，别重样）。*/}}
+  {{ $leadPool := slice }}
+  {{ $latestArt := index $posts 0 }}
+  {{ range $withImg }}
+    {{ if ne .RelPermalink $latestArt.RelPermalink }}{{ $leadPool = $leadPool | append . }}{{ end }}
+  {{ end }}
+  {{ if eq (len $leadPool) 0 }}{{ $leadPool = $withImg }}{{ end }}
+  {{ $leadPick := false }}
+  {{ if gt (len $leadPool) 0 }}
+    {{ $seed := add (mul now.Year 366) now.YearDay }}
+    {{ $leadPick = index $leadPool (mod (mul $seed 7) (len $leadPool)) }}
+  {{ end }}
+
   <div class="hero-side">
-    <div class="mount">
-      <div class="mount-frame">
-        <img src="{{ (.Site.Params.heroImage | default "images/theme/hero-ink.jpg") | relURL }}" alt="水墨山水" width="420" height="528" loading="eager">
+    {{ with $leadPick }}
+      <a class="mount mount--lead" href="{{ .RelPermalink }}" aria-label="今日卷首：{{ .Title }}">
+        <div class="mount-frame">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" width="420" height="315" loading="eager">
+          <span class="lead-caption">
+            <span class="lead-meta">{{ .Date.Format "2006.01.02" }}{{ with .Params.categories }}　·　{{ index . 0 }}{{ end }}</span>
+            <span class="lead-title">{{ .Title }}</span>
+          </span>
+        </div>
+        <span class="mount-seal" aria-hidden="true">读</span>
+      </a>
+    {{ else }}
+      <div class="mount">
+        <div class="mount-frame">
+          <img src="{{ (.Site.Params.heroImage | default "images/theme/hero-ink.jpg") | relURL }}" alt="水墨山水" width="420" height="528" loading="eager">
+        </div>
+        <span class="mount-seal" aria-hidden="true">云</span>
       </div>
-      <span class="mount-seal" aria-hidden="true">云</span>
-    </div>
+    {{ end }}
   </div>
 </section>
 
