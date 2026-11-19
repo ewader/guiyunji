@@ -28,8 +28,17 @@
       // 四格：生肖 / 星座 / 节气 / 冲煞
       el('al-shengxiao').textContent = lunar.getYearShengXiao();
       el('al-xingzuo').textContent = solar.getXingZuo() + '座';
-      el('al-jieqi').textContent = lunar.getJieQi() || lunar.getPrevJieQi(true).getName();
+      var jieqiName = lunar.getJieQi() || lunar.getPrevJieQi(true).getName();
+      el('al-jieqi').textContent = jieqiName;
       el('al-chongsha').textContent = '冲' + lunar.getDayChongShengXiao() + ' 煞' + lunar.getDaySha();
+
+      // 首页「二十四节气」栏：用同一套判定给当前节气加高亮。
+      // 这段原先是写在 Hugo 模板里按月估的（每月 16 号就跳到下一节气），
+      // 挪到这里以后，交节时刻由库算，不用每年手工维护日期表。
+      var solarItems = document.querySelectorAll('.solar-item');
+      for (var i = 0; i < solarItems.length; i++) {
+        solarItems[i].classList.toggle('is-now', solarItems[i].textContent.trim() === jieqiName);
+      }
 
       // 宜 / 忌（各取前 8 项，避免溢出）
       el('al-yi').textContent = lunar.getDayYi().slice(0, 8).join(' ') || '—';
