@@ -163,7 +163,8 @@
   {{ if .IsHome }}
     <script src="{{ "js/lunar.min.js" | relURL }}"></script>
     {{ with resources.Get "almanac.js" }}
-      <script src="{{ .RelPermalink }}"></script>
+      {{ $almanac := . | fingerprint }}
+      <script src="{{ $almanac.RelPermalink }}"></script>
     {{ end }}
   {{ end }}
   <script src="{{ "js/main.js" | relURL }}"></script>

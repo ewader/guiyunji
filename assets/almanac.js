@@ -20,8 +20,10 @@
       // 日期卡：公历 / 日 / 农历+干支
       el('al-solar').textContent = solar.getYear() + ' 年 ' + solar.getMonth() + ' 月';
       el('al-day').textContent = solar.getDay();
+      // 农历：原来用 lunar.toString().slice(-3) 截尾巴，十月初十会截成「月十一」，改成按字段拼
       el('al-lunar').textContent =
-        '农历 ' + lunar.getYearInGanZhi() + ' 年 · ' + lunar.toString().slice(-3);
+        '农历 ' + lunar.getYearInGanZhi() + ' 年 · ' +
+        lunar.getMonthInChinese() + '月' + lunar.getDayInChinese();
 
       // 四格：生肖 / 星座 / 节气 / 冲煞
       el('al-shengxiao').textContent = lunar.getYearShengXiao();

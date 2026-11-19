@@ -40,20 +40,21 @@
   {{ end }}
 {{ end }}
 
-{{/* 二十四节气 */}}
+{{/* 二十四节气：md = 交节那天的「月日」整数（如 1107 = 11 月 7 日）。
+     日期取 2026 年实际交节时刻，逐年浮动一天以内，够用；改这个表就能更新。 */}}
 {{ $solar := slice
-  (dict "n" "立春" "m" 2) (dict "n" "雨水" "m" 2)
-  (dict "n" "惊蛰" "m" 3) (dict "n" "春分" "m" 3)
-  (dict "n" "清明" "m" 4) (dict "n" "谷雨" "m" 4)
-  (dict "n" "立夏" "m" 5) (dict "n" "小满" "m" 5)
-  (dict "n" "芒种" "m" 6) (dict "n" "夏至" "m" 6)
-  (dict "n" "小暑" "m" 7) (dict "n" "大暑" "m" 7)
-  (dict "n" "立秋" "m" 8) (dict "n" "处暑" "m" 8)
-  (dict "n" "白露" "m" 9) (dict "n" "秋分" "m" 9)
-  (dict "n" "寒露" "m" 10) (dict "n" "霜降" "m" 10)
-  (dict "n" "立冬" "m" 11) (dict "n" "小雪" "m" 11)
-  (dict "n" "大雪" "m" 12) (dict "n" "冬至" "m" 12)
-  (dict "n" "小寒" "m" 1) (dict "n" "大寒" "m" 1) }}
+  (dict "n" "立春" "md" 204) (dict "n" "雨水" "md" 218)
+  (dict "n" "惊蛰" "md" 305) (dict "n" "春分" "md" 320)
+  (dict "n" "清明" "md" 405) (dict "n" "谷雨" "md" 420)
+  (dict "n" "立夏" "md" 505) (dict "n" "小满" "md" 521)
+  (dict "n" "芒种" "md" 605) (dict "n" "夏至" "md" 621)
+  (dict "n" "小暑" "md" 707) (dict "n" "大暑" "md" 723)
+  (dict "n" "立秋" "md" 807) (dict "n" "处暑" "md" 823)
+  (dict "n" "白露" "md" 907) (dict "n" "秋分" "md" 923)
+  (dict "n" "寒露" "md" 1008) (dict "n" "霜降" "md" 1023)
+  (dict "n" "立冬" "md" 1107) (dict "n" "小雪" "md" 1122)
+  (dict "n" "大雪" "md" 1207) (dict "n" "冬至" "md" 1222)
+  (dict "n" "小寒" "md" 105) (dict "n" "大寒" "md" 120) }}
 {{ $links := dict }}
 {{/* 节气入口只认「节气名：…」或「节气名节…」开头的节气专文。
      原来只判 HasPrefix 节气名，会把「小雪前四日，做一板豆腐」当成小雪节气文，
@@ -66,13 +67,16 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $m := int (now.Format "1") }}
-{{ $d := int (now.Format "2") }}
-{{ $cur := 0 }}
-{{ if eq $m 1 }}
-  {{ $cur = 22 }}{{ if gt $d 15 }}{{ $cur = 23 }}{{ end }}
-{{ else }}
-  {{ $cur = mul (sub $m 2) 2 }}{{ if gt $d 15 }}{{ $cur = add $cur 1 }}{{ end }}
+{{/* 当前节气：今天之前最近的那个交节日；1 月 1–4 日还算在上一年的冬至里。
+     原来按「每月 15 日」一刀切，16 号起就跳到下一个节气，小雪会被提前六天点亮。 */}}
+{{ $todayMd := int (now.Format "0102") }}
+{{ $curName := "冬至" }}
+{{ $curMd := 0 }}
+{{ range $solar }}
+  {{ if and (le .md $todayMd) (ge .md $curMd) }}
+    {{ $curMd = .md }}
+    {{ $curName = .n }}
+  {{ end }}
 {{ end }}
 
 {{/* ── 卷首 ───────────────────────────────────────────────────────────── */}}
@@ -236,7 +240,7 @@
     <div class="solar">
       {{ range $i, $t := $solar }}
         {{ $u := index $links $t.n }}
-        {{ $cls := cond (eq $i $cur) " is-now" "" }}
+        {{ $cls := cond (eq $t.n $curName) " is-now" "" }}
         {{ if $u }}
           <a class="solar-item{{ $cls }}" href="{{ $u }}">{{ $t.n }}</a>
         {{ else }}
