@@ -18,6 +18,7 @@
               {{ range first 3 .Pages }}
                 <a class="footer-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
               {{ end }}
+              <a class="footer-link" href="{{ "/categories/" | relURL }}">全部卷目</a>
             {{ end }}
           </div>
         </div>
