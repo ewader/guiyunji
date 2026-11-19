@@ -9,7 +9,10 @@ defaultContentLanguage = "zh-cn"
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
-buildFuture = true
+# 未来日期的文章不入构建。站里提前备着 5 篇节气文（小雪/大雪/冬至/小寒/大寒），
+# 打开 buildFuture 会让它们排到首页「最新文章」「推荐阅读」第一屏，访客看到未来的日期。
+# 节气当天 08:30 cron 那次 push 就会把它们带上线（date 是当天 08:00，已过）。
+buildFuture = false
 
 # 分页配置
 [pagination]

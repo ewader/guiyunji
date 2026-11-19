@@ -2,58 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/tags/%E4%BC%A0%E7%BB%9F%E6%B0%91%E4%BF%97/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/major-cold-dahan/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/tags/%E5%86%AC%E5%A4%A9/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/tags/%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%8A%82%E6%B0%94/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-19T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-19T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/</loc>
-    <lastmod>2027-01-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/minor-cold-xiaohan/</loc>
-    <lastmod>2027-01-05T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/winter-solstice-dongzhi/</loc>
-    <lastmod>2026-12-22T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/major-snow-daxue/</loc>
-    <lastmod>2026-12-07T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/minor-snow-xiaoxue/</loc>
-    <lastmod>2026-11-22T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-19T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/%E5%99%A8%E7%89%A9/</loc>
+    <lastmod>2026-11-19T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/</loc>
     <lastmod>2026-11-19T08:00:00+08:00</lastmod>
   </url>
   <url>
@@ -129,8 +93,20 @@
     <lastmod>2026-11-09T08:00:00+08:00</lastmod>
   </url>
   <url>
+    <loc>https://www.guiyun.org/categories/%E5%B2%81%E6%97%B6%E8%8A%82%E4%BB%A4/</loc>
+    <lastmod>2026-11-09T08:00:00+08:00</lastmod>
+  </url>
+  <url>
     <loc>https://www.guiyun.org/posts/window-winter-night/</loc>
     <lastmod>2026-11-08T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/tags/%E4%BC%A0%E7%BB%9F%E6%B0%91%E4%BF%97/</loc>
+    <lastmod>2026-11-07T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/tags/%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%8A%82%E6%B0%94/</loc>
+    <lastmod>2026-11-07T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/posts/start-of-winter-lidong/</loc>

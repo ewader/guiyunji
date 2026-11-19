@@ -57,10 +57,13 @@
   (dict "n" "大雪" "m" 12) (dict "n" "冬至" "m" 12)
   (dict "n" "小寒" "m" 1) (dict "n" "大寒" "m" 1) }}
 {{ $links := dict }}
+{{/* 节气入口只认「节气名：…」或「节气名节…」开头的节气专文。
+     原来只判 HasPrefix 节气名，会把「小雪前四日，做一板豆腐」当成小雪节气文，
+     让首页节气栏的小雪链到豆腐那篇。*/}}
 {{ range $posts }}
   {{ $page := . }}
   {{ range $solar }}
-    {{ if strings.HasPrefix $page.Title .n }}
+    {{ if or (strings.HasPrefix $page.Title (printf "%s：" .n)) (strings.HasPrefix $page.Title (printf "%s节" .n)) }}
       {{ $links = merge $links (dict .n $page.RelPermalink) }}
     {{ end }}
   {{ end }}
