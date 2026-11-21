@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2026-11-20T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/</loc>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</loc>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/</loc>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/door-god-woodblock/</loc>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/</loc>
+    <lastmod>2026-11-21T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/%E8%8D%89%E6%9C%A8%E8%99%AB%E9%B1%BC/</loc>
     <lastmod>2026-11-20T08:00:00+08:00</lastmod>
   </url>
   <url>
-    <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2026-11-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/</loc>
-    <lastmod>2026-11-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
     <loc>https://www.guiyun.org/posts/ginkgo-gold/</loc>
-    <lastmod>2026-11-20T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/</loc>
     <lastmod>2026-11-20T08:00:00+08:00</lastmod>
   </url>
   <url>
@@ -294,10 +302,6 @@
   </url>
   <url>
     <loc>https://www.guiyun.org/tags/%E9%9D%9E%E7%89%A9%E8%B4%A8%E6%96%87%E5%8C%96%E9%81%97%E4%BA%A7/</loc>
-    <lastmod>2026-08-07T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</loc>
     <lastmod>2026-08-07T08:00:00+08:00</lastmod>
   </url>
   <url>

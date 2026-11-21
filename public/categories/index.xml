@@ -6,8 +6,15 @@
     <description>Recent content in 分类浏览 on 归云集</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Nov 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.guiyun.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工艺</title>
+      <link>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</link>
+      <pubDate>Sat, 21 Nov 2026 08:00:00 +0800</pubDate>
+      <guid>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</guid>
+      <description></description>
+    </item>
     <item>
       <title>草木虫鱼</title>
       <link>https://www.guiyun.org/categories/%E8%8D%89%E6%9C%A8%E8%99%AB%E9%B1%BC/</link>
@@ -62,13 +69,6 @@
       <link>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</link>
       <pubDate>Mon, 10 Aug 2026 08:00:00 +0800</pubDate>
       <guid>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>工艺</title>
-      <link>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</link>
-      <pubDate>Fri, 07 Aug 2026 08:00:00 +0800</pubDate>
-      <guid>https://www.guiyun.org/categories/%E5%B7%A5%E8%89%BA/</guid>
       <description></description>
     </item>
   </channel>
