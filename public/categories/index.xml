@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 23 Nov 2026 08:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Tue, 24 Nov 2026 08:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://www.guiyun.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>饮食</title>
+				<link>https://www.guiyun.org/categories/%E9%A5%AE%E9%A3%9F/</link>
+				<pubDate>Tue, 24 Nov 2026 08:00:00 +0800</pubDate>
+				<guid>https://www.guiyun.org/categories/%E9%A5%AE%E9%A3%9F/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>器物</title>
 				<link>https://www.guiyun.org/categories/%E5%99%A8%E7%89%A9/</link>
@@ -39,13 +46,6 @@
 				<link>https://www.guiyun.org/categories/%E8%8D%89%E6%9C%A8%E8%99%AB%E9%B1%BC/</link>
 				<pubDate>Fri, 20 Nov 2026 08:00:00 +0800</pubDate>
 				<guid>https://www.guiyun.org/categories/%E8%8D%89%E6%9C%A8%E8%99%AB%E9%B1%BC/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>饮食</title>
-				<link>https://www.guiyun.org/categories/%E9%A5%AE%E9%A3%9F/</link>
-				<pubDate>Wed, 18 Nov 2026 08:00:00 +0800</pubDate>
-				<guid>https://www.guiyun.org/categories/%E9%A5%AE%E9%A3%9F/</guid>
 				<description></description>
 			</item>
 			<item>
