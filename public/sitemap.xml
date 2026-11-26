@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2026-11-25T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/%E5%BB%BA%E7%AD%91/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/kang-heated-winter/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/tags/%E9%99%86%E6%B8%B8/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/</loc>
+    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/%E8%8D%89%E6%9C%A8%E8%99%AB%E9%B1%BC/</loc>
     <lastmod>2026-11-25T08:00:00+08:00</lastmod>
   </url>
   <url>
-    <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2026-11-25T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/</loc>
-    <lastmod>2026-11-25T08:00:00+08:00</lastmod>
-  </url>
-  <url>
     <loc>https://www.guiyun.org/posts/narcissus-after-xiaoxue/</loc>
-    <lastmod>2026-11-25T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/</loc>
     <lastmod>2026-11-25T08:00:00+08:00</lastmod>
   </url>
   <url>
@@ -111,10 +123,6 @@
   <url>
     <loc>https://www.guiyun.org/posts/crane-nine-marsh-winter/</loc>
     <lastmod>2026-11-13T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E5%BB%BA%E7%AD%91/</loc>
-    <lastmod>2026-11-12T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/posts/well-water-winter/</loc>
