@@ -9,7 +9,7 @@ images = ['/images/posts/tang-pozi-winter/cover.jpg']
 url = '/posts/tang-pozi-winter/'
 slug = 'tang-pozi-winter'
 +++
-小雪一过，夜就长得没有道理。院角的水缸结一层薄冰，屋里的炉子封了火，只剩一点红。上床那一段最难熬：被子是冷的，脚伸进去，像踩着一块湿布，半天暖不过来。
+脚伸进被子，像踩着一块湿布，半天暖不过来。院角的水缸结了一层薄冰，屋里的炉子封了火，只剩一点红。
 
 旧时人家的办法，是灌一只汤婆子。
 
