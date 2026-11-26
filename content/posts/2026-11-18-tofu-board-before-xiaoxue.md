@@ -9,7 +9,7 @@ images = ['/images/posts/tofu-board-before-xiaoxue/cover.jpg']
 url = '/posts/tofu-board-before-xiaoxue/'
 slug = 'tofu-board-before-xiaoxue'
 +++
-小雪前这几天，天亮得晚，院子里先白的是缸沿。薄霜结了一圈，手指一按，裂成几块，露出底下青灰的陶。这时候该泡豆子了。
+院子里先白的是缸沿。薄霜结了一圈，手指一按，裂成几块，露出底下青灰的陶。这时候该泡豆子了。
 
 豆子倒进瓦盆，凉水没过去两指，搁在灶房墙角。一夜工夫，豆皮起皱，豆瓣鼓起来，掰开看，中间还剩一点白心。泡到这个分上正好；泡过了头发酸，磨出来的豆腐带馊气，一锅浆都救不回来。
 
