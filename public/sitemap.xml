@@ -2,15 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/</loc>
-    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/</loc>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/shuoshu-winter-night/</loc>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</loc>
+    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/%E5%BB%BA%E7%AD%91/</loc>
@@ -22,10 +34,6 @@
   </url>
   <url>
     <loc>https://www.guiyun.org/tags/%E9%99%86%E6%B8%B8/</loc>
-    <lastmod>2026-11-26T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/posts/</loc>
     <lastmod>2026-11-26T08:00:00+08:00</lastmod>
   </url>
   <url>
@@ -314,10 +322,6 @@
   </url>
   <url>
     <loc>https://www.guiyun.org/tags/%E6%B0%91%E4%B9%90/</loc>
-    <lastmod>2026-08-10T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E8%89%BA%E6%9C%AF/</loc>
     <lastmod>2026-08-10T08:00:00+08:00</lastmod>
   </url>
   <url>
