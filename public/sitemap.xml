@@ -2,19 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.guiyun.org/tags/</loc>
-    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/posts/dongxue-winter-school/</loc>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/categories/</loc>
-    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/</loc>
-    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guiyun.org/categories/%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/posts/</loc>
-    <lastmod>2026-11-27T08:00:00+08:00</lastmod>
+    <lastmod>2026-11-28T08:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.guiyun.org/posts/shuoshu-winter-night/</loc>
@@ -246,10 +254,6 @@
   </url>
   <url>
     <loc>https://www.guiyun.org/posts/tea-horse-road-culture/</loc>
-    <lastmod>2026-08-28T08:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://www.guiyun.org/categories/%E5%8E%86%E5%8F%B2/</loc>
     <lastmod>2026-08-28T08:00:00+08:00</lastmod>
   </url>
   <url>
